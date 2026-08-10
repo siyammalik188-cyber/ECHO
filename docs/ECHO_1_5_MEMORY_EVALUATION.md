@@ -12,12 +12,14 @@ existing behaviour, not a training procedure.
 
 ## 1. Why there are no numbers
 
-The harness and the labelled dataset are complete and committed. The run did not
-happen, because **this environment has no model credentials.**
+The harness and the labelled dataset are complete and committed. Two runs have
+been attempted. Neither produced a single model response, for two different
+reasons, both recorded here rather than merely asserted.
 
-`ANTHROPIC_BASE_URL` is set, but no API key or auth token is present, and there
-is no `ant` CLI or credential profile on the box. A minimal live call fails
-before reaching the network:
+### Attempt 1 — no credentials
+
+`ANTHROPIC_BASE_URL` was set, but no API key, auth token, or `ant` credential
+profile existed on the box. The call failed before reaching the network:
 
 ```
 TypeError: "Could not resolve authentication method. Expected one of api_key,
@@ -25,22 +27,32 @@ auth_token, or credentials to be set. Or for one of the `X-Api-Key` or
 `Authorization` headers to be explicitly omitted"
 ```
 
-The full evaluation was attempted anyway so the failure is on the record rather
-than merely asserted. All 14 cases failed identically:
+All 14 cases failed identically. Raw record:
+`evaluation/results/raw_20260810T180651Z.json` — 14 records, 14 errors, zero
+proposed memories.
+
+### Attempt 2 — credentials valid, account has no credits
+
+An API key was then supplied. **It authenticated successfully** — the request
+reached Anthropic and was rejected on billing, not on auth:
 
 ```
-$ python -m evaluation.run_evaluation --runs 1
-[run 1/1] 01-nothing-greeting ... ERROR TypeError: "Could not resolve authentication method..."
-[run 1/1] 02-nothing-question ... ERROR TypeError: "Could not resolve authentication method..."
-...
-14/14 case runs failed with an error.
-No case produced output; there is nothing to score.
+$ python -m evaluation.run_evaluation --only 01-nothing-greeting
+[run 1/1] 01-nothing-greeting ... ERROR BadRequestError: Error code: 400 -
+{'type': 'error', 'error': {'type': 'invalid_request_error',
+ 'message': 'Your credit balance is too low to access the Anthropic API.
+  Please go to Plans & Billing to upgrade or purchase credits.'},
+ 'request_id': 'req_011CduXCwQQqjQfBUoXkyJKu'}
 exit code: 2
 ```
 
-The raw record of that attempt is committed at
-`evaluation/results/raw_20260810T180651Z.json` — 14 records, every one an error,
-zero proposed memories.
+Raw record: `evaluation/results/raw_20260810T181329Z.json`. The run was stopped
+after one case rather than burning 41 further calls on a guaranteed failure.
+
+This is a meaningfully better position than attempt 1: the harness, the
+credential path, the beta headers, the structured-output request shape and the
+error handling all reached the API successfully. The only remaining obstacle is
+account balance.
 
 **No precision, recall, calibration, or example figures are reported below,
 because none were measured.** Every results section is explicitly empty. There
@@ -49,6 +61,8 @@ except by running the harness.
 
 ### To produce the real baseline
 
+Add credits to the Anthropic account, then:
+
 ```bash
 export ANTHROPIC_API_KEY=sk-ant-...
 python -m evaluation.run_evaluation --runs 3
@@ -56,8 +70,13 @@ python -m evaluation.report evaluation/results/raw_<stamp>.json \
     --out docs/ECHO_1_5_MEMORY_EVALUATION.md
 ```
 
-Roughly 14 calls per pass. The report section of this file is then overwritten
-with measured values.
+**Estimated cost.** 14 calls per pass. Each call sends roughly 400 input tokens
+(system prompt plus transcript) and returns on the order of 1,500 output tokens,
+since thinking is on by default on Claude Opus 5 and is billed as output. At
+$5/$25 per Mtok that is about **$0.04 per call** — roughly **$0.55 for a single
+pass** and **$1.60 for the three-pass baseline**. Treat these as order-of-
+magnitude figures, not a quote; thinking length is the dominant and least
+predictable term.
 
 ---
 
