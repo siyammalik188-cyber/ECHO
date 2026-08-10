@@ -1,16 +1,69 @@
 # ECHO
 
-A minimal experimental conversational agent. It does five things and nothing else:
-
-1. sends a conversation to an LLM,
-2. receives the response,
-3. maintains the current conversation in memory,
-4. saves the conversation to disk,
-5. reloads it later and keeps going.
+A minimal experimental conversational agent with a persistent memory system.
 
 No chatbot UI, no autonomous loop, no vector DB, no RAG, no web search, no
-self-modification, no multi-agent orchestration. This is a foundation to extend
-one capability at a time.
+self-modification, no multi-agent orchestration, **no learning or belief
+updating**. This is a foundation to extend one capability at a time.
+
+## Three kinds of state, kept separate
+
+The distinction is the point of the design, so it is enforced structurally
+rather than by convention.
+
+| | What it holds | Scope | Survives restart? |
+| --- | --- | --- | --- |
+| **Conversation history** (`conversation.py`) | The verbatim transcript — what was *said* | One conversation | Yes, as `<root>/conversations/<id>.json` |
+| **Persistent memory** (`memory.py`, `memory_store.py`) | Discrete extracted statements — what is *known* | Every conversation | Yes, as `<root>/memories.json` |
+| **Temporary context** (`context.py`) | Scratch for the turn being taken now | One turn | **No — by design** |
+
+`WorkingContext` has no `to_dict` and no `save`. That is not an oversight: if
+temporary state could be persisted it eventually would be, and the line between
+what ECHO knows and what it happens to be holding would blur. A test asserts
+those methods do not exist.
+
+Recalled memories reach the model by being folded into the **system prompt for a
+single call**. They are never appended as messages, so a memory that informs a
+reply does not thereby become conversation history.
+
+## Nothing becomes a memory by accident
+
+`Agent.send()` creates no memories. Ever. The only path from conversation to
+persistent memory is `Agent.remember()`, and two gates stand in the way:
+
+1. **Extraction** — a *separate* model call with its own prompt and a strict JSON
+   schema reads the transcript and proposes discrete durable statements. The
+   prompt says plainly that most conversations contain nothing worth recording
+   and an empty list is the correct, common answer. It extracts statements; it
+   does not summarize.
+2. **Thresholds** — proposals below `MIN_CONFIDENCE` (0.6) or `MIN_IMPORTANCE`
+   (0.3) are discarded in `consolidate()`, in ordinary Python, regardless of what
+   the extractor thought. The judgment is ECHO's, not the extractor's.
+
+Malformed proposals are dropped rather than stored badly, and identical content
+is not stored twice — an exact-match guard so re-running extraction doesn't pile
+up copies. That guard is **not** belief updating: nothing is merged, reconciled,
+superseded, or revised.
+
+### The memory record
+
+```python
+Memory(
+    id,                    # unique, generated
+    content,               # one self-contained sentence
+    memory_type,           # identity | preference | fact | goal | decision
+    source_conversation,   # the conversation id it was extracted from
+    confidence,            # 0.0–1.0 — how sure we are it's true
+    importance,            # 0.0–1.0 — how much it should matter later
+    created_at,
+    last_accessed,         # None until first retrieved
+    access_count,          # incremented on every retrieval
+)
+```
+
+`confidence` and `importance` are separate on purpose: a throwaway remark can be
+certainly true and not worth keeping. Retrieval genuinely mutates
+`last_accessed` and `access_count` — those fields are used, not decorative.
 
 ## Install
 
@@ -22,62 +75,69 @@ export ANTHROPIC_API_KEY=sk-ant-...     # or see .env.example
 ## Use it as a library
 
 ```python
-from echo import Agent, AnthropicLLM, Conversation
+from echo import Agent, AnthropicLLM, Conversation, LLMMemoryExtractor
 
-agent = Agent(AnthropicLLM(), Conversation(system="Be brief."))
-print(agent.send("Hi, I'm Sam."))
-agent.save()                             # -> conversations/<id>.json
+llm = AnthropicLLM()
+agent = Agent(llm, Conversation(system="Be brief."),
+              directory="echo_data", extractor=LLMMemoryExtractor(llm))
 
-# later, in a different process
-resumed = Agent.resume(agent.id, AnthropicLLM())
-print(resumed.send("What's my name?"))   # the model sees the earlier turns
+agent.send("Hi, I live in Dhaka and I prefer short answers.")
+agent.remember()      # -> [Memory(...), Memory(...)]  — the deliberate step
+agent.save()
+
+# later, in a different process, in a different conversation
+later = Agent(llm, Conversation(), directory="echo_data")
+later.recall("where does the user live")   # loads hits into temporary context
+later.send("Remind me where I live?")      # the model sees the memory
 ```
 
 ## Use it from the terminal
 
 ```bash
-python -m echo                           # new conversation
-python -m echo --system "Be brief."      # with a system prompt
-python -m echo --list                    # saved conversation ids
-python -m echo --resume <id>             # continue one
+python -m echo                    # new conversation
+python -m echo --resume <id>      # continue one
+python -m echo --list             # saved conversation ids
 ```
+
+In the loop: `/remember`, `/recall <text>`, `/memories`, `/context`, `/forget`,
+`/help`, `/quit`.
 
 ## Architecture
 
-Four modules, each with one job, wired in one direction:
-
 ```
-cli.py  ──>  agent.py  ──>  llm.py          (talks to the model)
-                 │
-                 ├──────>  conversation.py  (in-memory state)
-                 └──────>  storage.py       (JSON files on disk)
+cli.py ──> agent.py ──> llm.py           (the only file that knows a provider exists)
+              │
+              ├──> conversation.py       history   — durable, per-conversation
+              ├──> storage.py              └─ <root>/conversations/<id>.json
+              │
+              ├──> extraction.py         the deliberate step
+              │       └──> memory.py     memory    — durable, cross-conversation
+              │            memory_store.py  └─ <root>/memories.json
+              │
+              └──> context.py            temporary — never written anywhere
 ```
-
-- **`conversation.py`** — `Message` and `Conversation`. Pure state. Never touches
-  the network or the disk. Serializes to a dict with a `schema_version`.
-- **`storage.py`** — `save` / `load` / `list_ids` / `exists`. One JSON file per
-  conversation, named by id. Writes go to a temp file and are renamed, so an
-  interrupted save can't leave a half-written file. Ids are validated against
-  `[A-Za-z0-9_-]+` so they can't escape the storage directory.
-- **`llm.py`** — the only file that knows a provider exists. `LLMClient` is a
-  one-method protocol (`complete(messages, system) -> str`); `AnthropicLLM`
-  implements it against the Claude Messages API.
-- **`agent.py`** — `send()` is one round trip: append the user turn, call the
-  model with the full history, append the reply. If the call fails, the user
-  turn is rolled back so the conversation never holds an unanswered question.
 
 Conversation history is resent in full on every turn — the API is stateless, and
-that is the whole memory model for now. There is no truncation or compaction
+that is the whole short-term memory model. There is no truncation or compaction
 yet; long conversations will eventually hit the context window.
+
+Transcripts live in their own subdirectory so listing conversations can never
+pick up the memory store. (An earlier layout put both at the data root; `--list`
+reported `memories` as a conversation and `--resume memories` would have tried to
+parse the store as a transcript. The subdirectory removes the collision by
+construction rather than by filtering filenames.)
 
 ## Model configuration
 
-`AnthropicLLM` defaults to `claude-opus-5` with `max_tokens=16000` and thinking
-left at the model's default. It opts into server-side refusal fallbacks
-(`fallbacks="default"`), so a request the safety classifiers decline is re-run on
-Anthropic's recommended fallback model inside the same call instead of coming
-back empty. That is the only non-obvious request parameter; it is three lines at
-the top of `complete()` and is safe to delete.
+`AnthropicLLM` defaults to `claude-opus-5`, `max_tokens=16000`, thinking left at
+the model's default. It implements two protocols: `LLMClient.complete()` for
+conversational replies and `StructuredLLMClient.complete_structured()` for
+schema-constrained JSON, which extraction uses.
+
+It opts into server-side refusal fallbacks (`fallbacks="default"`) so a request
+the safety classifiers decline is re-run on Anthropic's recommended fallback
+model rather than coming back empty. That is the only non-obvious request
+parameter; it is two entries in `_request()` and is safe to delete.
 
 ## Tests
 
@@ -85,51 +145,96 @@ the top of `complete()` and is safe to delete.
 python -m pytest
 ```
 
-29 tests, all offline — no API key needed, no network calls.
+**97 tests, all offline** — no API key, no network.
 
-### What the tests cover
+### The four required proofs
+
+`tests/test_memory_requirements.py` is written to be read as evidence:
+
+| # | Requirement | Test |
+| --- | --- | --- |
+| 1 | A conversation can create a memory | `test_1_a_conversation_can_create_a_memory` |
+| 2 | The memory survives restarting the program | `test_2_memory_survives_restarting_the_program` — every in-memory object is deleted; only files remain |
+| 3 | The memory can be retrieved later | `test_3_the_memory_can_be_retrieved_later` — new process, new conversation, found by search |
+| 4 | Ordinary conversation text does not automatically become permanent memory | `test_4_*` — four separate angles (see below) |
+
+Requirement 4 is proved four ways, because it is the easy one to fake:
+
+- **`test_4`** — three exchanges produce six transcript messages and zero
+  memories; the extractor is never even called by `send()`.
+- **`test_4b`** — running extraction over small talk returns nothing. The
+  extractor ran and declined; running it is not the same as agreeing to remember.
+- **`test_4c`** — an *eager* extractor proposing low-value candidates still yields
+  nothing, because the threshold gate is ECHO's own code.
+- **`test_4d`** — `remember()` refuses without an extractor, so there is no
+  default path that quietly turns conversation into memory.
+
+### What else is covered
 
 | Area | What is checked |
 | --- | --- |
 | `conversation.py` | ordering, role validation, dict round trip, schema-version rejection, system prompt kept out of the `messages` payload |
-| `storage.py` | save/load equality, JSON readability, directory creation, overwrite leaves no temp file, sorted listing, missing-id error, path-traversal rejection |
-| `agent.py` | both turns recorded, full history resent each turn, system prompt passed separately, rollback on failure, save → resume → continue across a simulated restart |
-| `llm.py` | request shape (model, messages, system, fallback opt-in), text-block joining, non-text blocks ignored, refusal raises, empty response raises |
+| `storage.py` | save/load equality, JSON readability, directory creation, overwrite leaves no temp file, sorted listing, missing-id error, path-traversal rejection, no collision with the memory store |
+| `memory.py` | every required field present, unique ids, enum coercion, score range validation, empty content rejected, `touch()` accounting, dict round trip |
+| `memory_store.py` | missing file is empty not an error, save/load round trip, schema versioning, atomic write, exact-duplicate suppression, keyword search + ranking + limits, stopword handling, access tracking survives reload, listing does not count as access |
+| `extraction.py` | candidate validation, separate call with its own prompt and schema, empty extraction is normal, malformed rows dropped, empty conversation not sent, confidence/importance gates, thresholds applied by ECHO, re-running does not duplicate |
+| `context.py` | rendering, dedup, clearing, **no serialization methods exist**, saving writes no context, context does not survive a restart, the three kinds of state stay separate |
+| `agent.py` | both turns recorded, full history resent, system prompt passed separately, rollback on failure, save → resume → continue across a simulated restart |
+| `llm.py` | request shape, fallback opt-in, text-block joining, non-text blocks ignored, refusal raises, structured JSON parsed, non-JSON and wrong-type responses raise |
 
 ### What is *simulated* rather than genuinely implemented
 
-Being precise about this, since it's the thing worth knowing:
+Being precise about this, since it is the thing worth knowing:
 
-- **The model itself, in the tests.** `tests/fakes.py` defines `FakeLLM`, which
-  returns canned strings, and `ExplodingLLM`, which always raises. Every
-  `agent.py` test runs against these. They exist only in `tests/` — nothing in
+- **The model, in tests.** `tests/fakes.py` defines `FakeLLM`,
+  `FakeStructuredLLM`, `FakeExtractor`, and `ExplodingLLM`. Every agent and
+  extraction test runs against these. They exist only in `tests/` — nothing in
   the `echo` package fakes a model response.
 - **The Anthropic SDK, in `test_llm.py`.** `StubSDK` mimics the small slice of
-  `anthropic.Anthropic` that `AnthropicLLM` touches, and returns hand-built
+  `anthropic.Anthropic` that `AnthropicLLM` touches and returns hand-built
   response objects. This genuinely exercises ECHO's request-building and
-  response-parsing code, but it does **not** verify that the real API accepts
-  that request shape or returns that response shape. The first real call is the
-  first time that's tested.
+  response-parsing code, but it does **not** verify the real API accepts that
+  request shape or returns that response shape.
+- **Extraction *quality*, everywhere.** The tests prove the extraction
+  *mechanism* — that it is a separate call, that its output is filtered, that
+  nothing bypasses it. They cannot prove the prompt makes good judgments about
+  what is worth remembering. That requires a live model and real conversations,
+  and has not been measured.
 
-Everything else is real: the file I/O is real file I/O in a `tmp_path`, the
-serialization is the same code the CLI uses, and `AnthropicLLM.complete()` is
-the real code path against a live API when you run it.
+Everything else is real: file I/O is real file I/O in a `tmp_path`, the
+serialization is the same code the CLI uses, the threshold gate is real code, and
+`AnthropicLLM` is the real code path against a live API.
 
 ### What is not covered
 
-- No live API call is made in the test suite. Sending a real request requires a
-  key and a network, and is not part of `pytest`.
-- The CLI loop (`cli.py`) has no automated test; it was smoke-tested by hand.
-- Concurrency: two processes writing the same conversation id will have a
-  last-writer-wins race. The atomic rename prevents corruption, not lost updates.
+- No live API call in the test suite.
+- The extraction prompt has never run against a real model. **This is the most
+  likely place for the system to disappoint in practice** — the plumbing is
+  tested, the judgment is not.
+- `cli.py` has no automated test; it was smoke-tested by hand.
+- Retrieval is keyword overlap. It will miss paraphrases (`"Where's home?"` won't
+  match `"Sam lives in Dhaka."`). Adequate for proving the shape; a real system
+  needs embeddings, which are explicitly out of scope for now.
+- Consolidation re-reads the whole transcript each run; the exact-duplicate guard
+  is what keeps that from producing copies. There is no per-message watermark.
+- Concurrency: two processes writing the same store will have a last-writer-wins
+  race. The atomic rename prevents corruption, not lost updates.
+
+## Deliberately not built yet
+
+No learning and no belief updating, as specified. Memories are never revised,
+merged, contradicted, decayed, or re-scored after creation. `confidence` and
+`importance` are set once at extraction and never move. When two memories
+conflict, both simply sit in the store.
 
 ## Where this goes next
 
 The seams are deliberate. Adding a capability should mean touching one file:
 
-- **Streaming** → `llm.py` (add a `stream()` method to the protocol).
-- **A different provider** → a second class in `llm.py`.
-- **Tool use** → `agent.py` grows a loop around `send()`; `Message` grows a
-  content-block type.
-- **A database instead of JSON** → `storage.py` keeps its four function names.
-- **Summarization / context management** → a function over `Conversation`.
+- **Semantic retrieval** → `memory_store.search()` keeps its signature.
+- **Belief updating / contradiction handling** → a new module over `MemoryStore`.
+- **Memory decay or re-scoring** → uses `last_accessed` / `access_count`, already
+  recorded.
+- **Automatic consolidation** → call `remember()` on a trigger; the gate stays.
+- **A database instead of JSON** → `MemoryStore` keeps its method names.
+- **Streaming, tool use, a different provider** → `llm.py`.

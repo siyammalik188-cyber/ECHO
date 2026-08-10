@@ -92,3 +92,61 @@ def test_an_empty_response_raises():
     llm, _ = make_llm(SimpleNamespace(stop_reason="max_tokens", content=[]))
     with pytest.raises(LLMError):
         llm.complete([{"role": "user", "content": "hi"}])
+
+
+# ------------------------------------------------- structured output (extraction)
+
+
+def test_structured_response_is_parsed_into_a_dict():
+    llm, sdk = make_llm(
+        SimpleNamespace(
+            stop_reason="end_turn",
+            content=[block("text", '{"memories": [{"content": "x"}]}')],
+        )
+    )
+    schema = {"type": "object", "properties": {}}
+
+    payload = llm.complete_structured([{"role": "user", "content": "go"}], schema)
+
+    assert payload == {"memories": [{"content": "x"}]}
+    assert sdk.request["output_config"] == {
+        "format": {"type": "json_schema", "schema": schema}
+    }
+
+
+def test_structured_requests_keep_the_fallback_optin():
+    llm, sdk = make_llm(
+        SimpleNamespace(stop_reason="end_turn", content=[block("text", "{}")])
+    )
+    llm.complete_structured([{"role": "user", "content": "go"}], {"type": "object"})
+
+    assert sdk.request["betas"] == [FALLBACK_BETA]
+    assert sdk.request["fallbacks"] == "default"
+
+
+def test_non_json_in_a_structured_response_raises():
+    llm, _ = make_llm(
+        SimpleNamespace(stop_reason="end_turn", content=[block("text", "not json")])
+    )
+    with pytest.raises(LLMError, match="valid JSON"):
+        llm.complete_structured([{"role": "user", "content": "go"}], {"type": "object"})
+
+
+def test_a_json_array_where_an_object_was_expected_raises():
+    llm, _ = make_llm(
+        SimpleNamespace(stop_reason="end_turn", content=[block("text", "[1, 2]")])
+    )
+    with pytest.raises(LLMError, match="expected an object"):
+        llm.complete_structured([{"role": "user", "content": "go"}], {"type": "object"})
+
+
+def test_a_refusal_on_a_structured_request_still_raises():
+    llm, _ = make_llm(
+        SimpleNamespace(
+            stop_reason="refusal",
+            stop_details=SimpleNamespace(category="cyber"),
+            content=[],
+        )
+    )
+    with pytest.raises(LLMError, match="cyber"):
+        llm.complete_structured([{"role": "user", "content": "go"}], {"type": "object"})

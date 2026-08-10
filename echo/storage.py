@@ -1,4 +1,14 @@
-"""Persistence: one conversation per JSON file on the local filesystem."""
+"""Persistence: one conversation per JSON file on the local filesystem.
+
+Layout under the data root:
+
+    <root>/
+        conversations/<id>.json   one transcript each
+        memories.json             the persistent memory store
+
+Conversations get their own subdirectory so that listing them can never pick up
+the memory store — the two kinds of state do not share a namespace.
+"""
 
 from __future__ import annotations
 
@@ -9,7 +19,14 @@ from pathlib import Path
 
 from .conversation import Conversation
 
-DEFAULT_DIR = Path("conversations")
+DEFAULT_ROOT = Path("echo_data")
+CONVERSATIONS_DIRNAME = "conversations"
+DEFAULT_DIR = DEFAULT_ROOT / CONVERSATIONS_DIRNAME
+
+
+def conversations_dir(root: Path | str = DEFAULT_ROOT) -> Path:
+    """Where transcripts live under a data root."""
+    return Path(root) / CONVERSATIONS_DIRNAME
 
 # Conversation ids become filenames, so keep them boring.
 _SAFE_ID = re.compile(r"^[A-Za-z0-9_-]+$")

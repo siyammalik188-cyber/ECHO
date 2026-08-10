@@ -81,8 +81,18 @@ def test_resume_after_a_process_restart_sees_what_was_on_disk(tmp_path):
     agent.save()
     del agent  # nothing in memory survives; only the file does
 
-    ids = storage.list_ids(tmp_path)
+    ids = storage.list_ids(storage.conversations_dir(tmp_path))
     assert len(ids) == 1
 
     resumed = Agent.resume(ids[0], FakeLLM(), directory=tmp_path)
     assert [m.content for m in resumed.conversation.messages] == ["first", "one"]
+
+
+def test_listing_conversations_never_picks_up_the_memory_store(tmp_path):
+    """The two kinds of durable state do not share a filename namespace."""
+    agent = Agent(FakeLLM(["one"]), directory=tmp_path)
+    agent.send("first")
+    agent.save()
+
+    assert (tmp_path / "memories.json").is_file()
+    assert storage.list_ids(storage.conversations_dir(tmp_path)) == [agent.id]
