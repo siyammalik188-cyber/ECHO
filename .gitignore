@@ -6,3 +6,7 @@ __pycache__/
 venv/
 .env
 echo_data/
+
+# Raw evaluation output is committed deliberately (reproducibility), so it is
+# NOT ignored. Nothing to exclude here — this note exists to prevent someone
+# adding evaluation/results/ to this file later.
