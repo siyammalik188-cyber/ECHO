@@ -1,0 +1,824 @@
+{
+  "generated_at": "2026-08-10T22:31:54.931407+00:00",
+  "evidence_scale": 1.0,
+  "min_relevance": 0.2,
+  "totals": {
+    "scenarios": 6,
+    "correct_belief_updates": 6,
+    "incorrect_belief_updates": 0,
+    "failures_to_update": 0,
+    "overreactions_to_weak_evidence": 0,
+    "resistance_to_strong_contradiction": 0,
+    "moved_toward_truth": 3,
+    "total_revisions_applied": 30,
+    "total_evidence_considered": 32
+  },
+  "persistence": {
+    "original_belief_available": true,
+    "revision_history_available": true,
+    "final_confidence_available": true,
+    "revision_evidence_available": true,
+    "beliefs_checked": 6,
+    "all_passed": true
+  },
+  "scenarios": [
+    {
+      "id": "S1-belief-correct",
+      "ground_truth": true,
+      "initial_confidence": 0.7344853437972199,
+      "final_confidence": 0.86056612703835,
+      "correct": true,
+      "belief": {
+        "belief_id": "BEL-8c4de9dc21",
+        "proposition": "Dr Vance's unscheduled fertiliser application caused the orchid deaths.",
+        "confidence": 0.86056612703835,
+        "supporting_evidence": [
+          "EV-A-S1",
+          "EV-B-S1",
+          "EV-C-S1",
+          "EV-E-S1"
+        ],
+        "contradicting_evidence": [
+          "EV-D-S1"
+        ],
+        "created_at": "2026-08-10T22:31:54.926108+00:00",
+        "updated_at": "2026-08-10T22:31:54.926274+00:00",
+        "revision_count": 5,
+        "revision_history": [
+          {
+            "id": "REV-70589a2bf3",
+            "at": "2026-08-10T22:31:54.926177+00:00",
+            "evidence_id": "EV-A-S1",
+            "previous_confidence": 0.5,
+            "new_confidence": 0.610639233949222,
+            "delta": 0.110639,
+            "applied": true,
+            "reason": "Applied EV-A-S1 (station activity log), which supports the proposition. Weighted moderately: reliability 0.90 × relevance 0.50 = 0.45, giving a log-odds shift of +0.450. Confidence 0.500 → 0.611 (+0.111).",
+            "evidence_snapshot": {
+              "id": "EV-A-S1",
+              "description": "Station log records an unscheduled fertiliser application at 23:40, logged by Vance.",
+              "source": "station activity log",
+              "reliability": 0.9,
+              "relevance": 0.5,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920600+00:00",
+              "weight": 0.45
+            }
+          },
+          {
+            "id": "REV-d0b7308f83",
+            "at": "2026-08-10T22:31:54.926203+00:00",
+            "evidence_id": "EV-B-S1",
+            "previous_confidence": 0.610639233949222,
+            "new_confidence": 0.6726070170677605,
+            "delta": 0.061968,
+            "applied": true,
+            "reason": "Applied EV-B-S1 (lab technician, visual inspection), which supports the proposition. Weighted barely: reliability 0.60 × relevance 0.45 = 0.27, giving a log-odds shift of +0.270. Confidence 0.611 → 0.673 (+0.062).",
+            "evidence_snapshot": {
+              "id": "EV-B-S1",
+              "description": "A lab technician noticed an unidentified white residue on the soil surface the next morning.",
+              "source": "lab technician, visual inspection",
+              "reliability": 0.6,
+              "relevance": 0.45,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920654+00:00",
+              "weight": 0.27
+            }
+          },
+          {
+            "id": "REV-1c1dbf3ca1",
+            "at": "2026-08-10T22:31:54.926232+00:00",
+            "evidence_id": "EV-C-S1",
+            "previous_confidence": 0.6726070170677605,
+            "new_confidence": 0.7344853437972199,
+            "delta": 0.061878,
+            "applied": true,
+            "reason": "Applied EV-C-S1 (keycard access system), which supports the proposition. Weighted barely: reliability 0.85 × relevance 0.35 = 0.30, giving a log-odds shift of +0.297. Confidence 0.673 → 0.734 (+0.062).",
+            "evidence_snapshot": {
+              "id": "EV-C-S1",
+              "description": "Keycard records show Vance was the only person to enter the greenhouse overnight.",
+              "source": "keycard access system",
+              "reliability": 0.85,
+              "relevance": 0.35,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920660+00:00",
+              "weight": 0.2975
+            }
+          },
+          {
+            "id": "REV-12df01615c",
+            "at": "2026-08-10T22:31:54.926254+00:00",
+            "evidence_id": "EV-D-S1",
+            "previous_confidence": 0.7344853437972199,
+            "new_confidence": 0.7145324397353954,
+            "delta": -0.019953,
+            "applied": true,
+            "reason": "Applied EV-D-S1 (anonymous note), which contradicts the proposition. Weighted barely, because the source is weak: reliability 0.20 × relevance 0.50 = 0.10, giving a log-odds shift of -0.100. Confidence 0.734 → 0.715 (-0.020).",
+            "evidence_snapshot": {
+              "id": "EV-D-S1",
+              "description": "An anonymous note left at reception claims the heating failed that night.",
+              "source": "anonymous note",
+              "reliability": 0.2,
+              "relevance": 0.5,
+              "stance": "contradicts",
+              "recorded_at": "2026-08-10T22:31:54.920666+00:00",
+              "weight": 0.1
+            }
+          },
+          {
+            "id": "REV-2a7c8b25db",
+            "at": "2026-08-10T22:31:54.926274+00:00",
+            "evidence_id": "EV-E-S1",
+            "previous_confidence": 0.7145324397353954,
+            "new_confidence": 0.86056612703835,
+            "delta": 0.146034,
+            "applied": true,
+            "reason": "Applied EV-E-S1 (accredited external laboratory), which supports the proposition. Weighted heavily, since it is both reliable and highly pertinent: reliability 0.95 × relevance 0.95 = 0.90, giving a log-odds shift of +0.902. Confidence 0.715 → 0.861 (+0.146).",
+            "evidence_snapshot": {
+              "id": "EV-E-S1",
+              "description": "Mass-spectrometry assay identifies the residue as Vance's compound at four times the phytotoxic threshold.",
+              "source": "accredited external laboratory",
+              "reliability": 0.95,
+              "relevance": 0.95,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920671+00:00",
+              "weight": 0.9025
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "S2-belief-incorrect",
+      "ground_truth": false,
+      "initial_confidence": 0.7344853437972199,
+      "final_confidence": 0.3537719416690998,
+      "correct": true,
+      "belief": {
+        "belief_id": "BEL-732f77e6f5",
+        "proposition": "Dr Vance's unscheduled fertiliser application caused the orchid deaths.",
+        "confidence": 0.3537719416690998,
+        "supporting_evidence": [
+          "EV-A-S2",
+          "EV-B-S2",
+          "EV-C-S2"
+        ],
+        "contradicting_evidence": [
+          "EV-D-S2",
+          "EV-E-S2"
+        ],
+        "created_at": "2026-08-10T22:31:54.926283+00:00",
+        "updated_at": "2026-08-10T22:31:54.926391+00:00",
+        "revision_count": 5,
+        "revision_history": [
+          {
+            "id": "REV-840875c05b",
+            "at": "2026-08-10T22:31:54.926305+00:00",
+            "evidence_id": "EV-A-S2",
+            "previous_confidence": 0.5,
+            "new_confidence": 0.610639233949222,
+            "delta": 0.110639,
+            "applied": true,
+            "reason": "Applied EV-A-S2 (station activity log), which supports the proposition. Weighted moderately: reliability 0.90 × relevance 0.50 = 0.45, giving a log-odds shift of +0.450. Confidence 0.500 → 0.611 (+0.111).",
+            "evidence_snapshot": {
+              "id": "EV-A-S2",
+              "description": "Station log records an unscheduled fertiliser application at 23:40, logged by Vance.",
+              "source": "station activity log",
+              "reliability": 0.9,
+              "relevance": 0.5,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920680+00:00",
+              "weight": 0.45
+            }
+          },
+          {
+            "id": "REV-cac4c3a131",
+            "at": "2026-08-10T22:31:54.926323+00:00",
+            "evidence_id": "EV-B-S2",
+            "previous_confidence": 0.610639233949222,
+            "new_confidence": 0.6726070170677605,
+            "delta": 0.061968,
+            "applied": true,
+            "reason": "Applied EV-B-S2 (lab technician, visual inspection), which supports the proposition. Weighted barely: reliability 0.60 × relevance 0.45 = 0.27, giving a log-odds shift of +0.270. Confidence 0.611 → 0.673 (+0.062).",
+            "evidence_snapshot": {
+              "id": "EV-B-S2",
+              "description": "A lab technician noticed an unidentified white residue on the soil surface the next morning.",
+              "source": "lab technician, visual inspection",
+              "reliability": 0.6,
+              "relevance": 0.45,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920685+00:00",
+              "weight": 0.27
+            }
+          },
+          {
+            "id": "REV-521eccc122",
+            "at": "2026-08-10T22:31:54.926352+00:00",
+            "evidence_id": "EV-C-S2",
+            "previous_confidence": 0.6726070170677605,
+            "new_confidence": 0.7344853437972199,
+            "delta": 0.061878,
+            "applied": true,
+            "reason": "Applied EV-C-S2 (keycard access system), which supports the proposition. Weighted barely: reliability 0.85 × relevance 0.35 = 0.30, giving a log-odds shift of +0.297. Confidence 0.673 → 0.734 (+0.062).",
+            "evidence_snapshot": {
+              "id": "EV-C-S2",
+              "description": "Keycard records show Vance was the only person to enter the greenhouse overnight.",
+              "source": "keycard access system",
+              "reliability": 0.85,
+              "relevance": 0.35,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920691+00:00",
+              "weight": 0.2975
+            }
+          },
+          {
+            "id": "REV-e356f3f0ac",
+            "at": "2026-08-10T22:31:54.926372+00:00",
+            "evidence_id": "EV-D-S2",
+            "previous_confidence": 0.7344853437972199,
+            "new_confidence": 0.5405358392737895,
+            "delta": -0.19395,
+            "applied": true,
+            "reason": "Applied EV-D-S2 (building telemetry, dual-sensor), which contradicts the proposition. Weighted heavily, since it is both reliable and highly pertinent: reliability 0.95 × relevance 0.90 = 0.85, giving a log-odds shift of -0.855. Confidence 0.734 → 0.541 (-0.194).",
+            "evidence_snapshot": {
+              "id": "EV-D-S2",
+              "description": "Heating telemetry shows a six-hour outage with the greenhouse reaching -4 °C, corroborated by an independent sensor.",
+              "source": "building telemetry, dual-sensor",
+              "reliability": 0.95,
+              "relevance": 0.9,
+              "stance": "contradicts",
+              "recorded_at": "2026-08-10T22:31:54.920699+00:00",
+              "weight": 0.855
+            }
+          },
+          {
+            "id": "REV-1694014dcc",
+            "at": "2026-08-10T22:31:54.926391+00:00",
+            "evidence_id": "EV-E-S2",
+            "previous_confidence": 0.5405358392737895,
+            "new_confidence": 0.3537719416690998,
+            "delta": -0.186764,
+            "applied": true,
+            "reason": "Applied EV-E-S2 (accredited external laboratory), which contradicts the proposition. Weighted heavily, since it is both reliable and highly pertinent: reliability 0.90 × relevance 0.85 = 0.77, giving a log-odds shift of -0.765. Confidence 0.541 → 0.354 (-0.187).",
+            "evidence_snapshot": {
+              "id": "EV-E-S2",
+              "description": "Mass-spectrometry assay identifies the residue as inert calcium carbonate with no phytotoxic activity.",
+              "source": "accredited external laboratory",
+              "reliability": 0.9,
+              "relevance": 0.85,
+              "stance": "contradicts",
+              "recorded_at": "2026-08-10T22:31:54.920704+00:00",
+              "weight": 0.765
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "S3-weak-noise",
+      "ground_truth": true,
+      "initial_confidence": 0.7344853437972199,
+      "final_confidence": 0.6768865103304775,
+      "correct": true,
+      "belief": {
+        "belief_id": "BEL-4a37fa2584",
+        "proposition": "Dr Vance's unscheduled fertiliser application caused the orchid deaths.",
+        "confidence": 0.6768865103304775,
+        "supporting_evidence": [
+          "EV-A-S3",
+          "EV-B-S3",
+          "EV-C-S3"
+        ],
+        "contradicting_evidence": [
+          "EV-D1-S3",
+          "EV-D2-S3",
+          "EV-D3-S3",
+          "EV-D4-S3"
+        ],
+        "created_at": "2026-08-10T22:31:54.926400+00:00",
+        "updated_at": "2026-08-10T22:31:54.926518+00:00",
+        "revision_count": 7,
+        "revision_history": [
+          {
+            "id": "REV-fce54de602",
+            "at": "2026-08-10T22:31:54.926419+00:00",
+            "evidence_id": "EV-A-S3",
+            "previous_confidence": 0.5,
+            "new_confidence": 0.610639233949222,
+            "delta": 0.110639,
+            "applied": true,
+            "reason": "Applied EV-A-S3 (station activity log), which supports the proposition. Weighted moderately: reliability 0.90 × relevance 0.50 = 0.45, giving a log-odds shift of +0.450. Confidence 0.500 → 0.611 (+0.111).",
+            "evidence_snapshot": {
+              "id": "EV-A-S3",
+              "description": "Station log records an unscheduled fertiliser application at 23:40, logged by Vance.",
+              "source": "station activity log",
+              "reliability": 0.9,
+              "relevance": 0.5,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920711+00:00",
+              "weight": 0.45
+            }
+          },
+          {
+            "id": "REV-8758bf1033",
+            "at": "2026-08-10T22:31:54.926435+00:00",
+            "evidence_id": "EV-B-S3",
+            "previous_confidence": 0.610639233949222,
+            "new_confidence": 0.6726070170677605,
+            "delta": 0.061968,
+            "applied": true,
+            "reason": "Applied EV-B-S3 (lab technician, visual inspection), which supports the proposition. Weighted barely: reliability 0.60 × relevance 0.45 = 0.27, giving a log-odds shift of +0.270. Confidence 0.611 → 0.673 (+0.062).",
+            "evidence_snapshot": {
+              "id": "EV-B-S3",
+              "description": "A lab technician noticed an unidentified white residue on the soil surface the next morning.",
+              "source": "lab technician, visual inspection",
+              "reliability": 0.6,
+              "relevance": 0.45,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920715+00:00",
+              "weight": 0.27
+            }
+          },
+          {
+            "id": "REV-9034be4faf",
+            "at": "2026-08-10T22:31:54.926456+00:00",
+            "evidence_id": "EV-C-S3",
+            "previous_confidence": 0.6726070170677605,
+            "new_confidence": 0.7344853437972199,
+            "delta": 0.061878,
+            "applied": true,
+            "reason": "Applied EV-C-S3 (keycard access system), which supports the proposition. Weighted barely: reliability 0.85 × relevance 0.35 = 0.30, giving a log-odds shift of +0.297. Confidence 0.673 → 0.734 (+0.062).",
+            "evidence_snapshot": {
+              "id": "EV-C-S3",
+              "description": "Keycard records show Vance was the only person to enter the greenhouse overnight.",
+              "source": "keycard access system",
+              "reliability": 0.85,
+              "relevance": 0.35,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920720+00:00",
+              "weight": 0.2975
+            }
+          },
+          {
+            "id": "REV-ca22a50ffb",
+            "at": "2026-08-10T22:31:54.926471+00:00",
+            "evidence_id": "EV-D1-S3",
+            "previous_confidence": 0.7344853437972199,
+            "new_confidence": 0.7211151780228631,
+            "delta": -0.01337,
+            "applied": true,
+            "reason": "Applied EV-D1-S3 (second-hand hearsay), which contradicts the proposition. Weighted barely, because the source is weak: reliability 0.15 × relevance 0.45 = 0.07, giving a log-odds shift of -0.068. Confidence 0.734 → 0.721 (-0.013).",
+            "evidence_snapshot": {
+              "id": "EV-D1-S3",
+              "description": "A junior intern says they 'heard the heating was playing up'.",
+              "source": "second-hand hearsay",
+              "reliability": 0.15,
+              "relevance": 0.45,
+              "stance": "contradicts",
+              "recorded_at": "2026-08-10T22:31:54.920724+00:00",
+              "weight": 0.0675
+            }
+          },
+          {
+            "id": "REV-5c4fb34403",
+            "at": "2026-08-10T22:31:54.926486+00:00",
+            "evidence_id": "EV-D2-S3",
+            "previous_confidence": 0.7211151780228631,
+            "new_confidence": 0.7113603297751802,
+            "delta": -0.009755,
+            "applied": true,
+            "reason": "Applied EV-D2-S3 (canteen rumour), which contradicts the proposition. Weighted barely, because the source is weak: reliability 0.12 × relevance 0.40 = 0.05, giving a log-odds shift of -0.048. Confidence 0.721 → 0.711 (-0.010).",
+            "evidence_snapshot": {
+              "id": "EV-D2-S3",
+              "description": "A canteen rumour blames the cistern water.",
+              "source": "canteen rumour",
+              "reliability": 0.12,
+              "relevance": 0.4,
+              "stance": "contradicts",
+              "recorded_at": "2026-08-10T22:31:54.920728+00:00",
+              "weight": 0.048
+            }
+          },
+          {
+            "id": "REV-f75607b2b2",
+            "at": "2026-08-10T22:31:54.926501+00:00",
+            "evidence_id": "EV-D3-S3",
+            "previous_confidence": 0.7113603297751802,
+            "new_confidence": 0.6877239608057475,
+            "delta": -0.023636,
+            "applied": true,
+            "reason": "Applied EV-D3-S3 (inspector, unsupported assertion), which contradicts the proposition. Weighted barely, because the source is weak: reliability 0.25 × relevance 0.45 = 0.11, giving a log-odds shift of -0.113. Confidence 0.711 → 0.688 (-0.024).",
+            "evidence_snapshot": {
+              "id": "EV-D3-S3",
+              "description": "The inspector asserts, without evidence, that Vance is being scapegoated.",
+              "source": "inspector, unsupported assertion",
+              "reliability": 0.25,
+              "relevance": 0.45,
+              "stance": "contradicts",
+              "recorded_at": "2026-08-10T22:31:54.920732+00:00",
+              "weight": 0.1125
+            }
+          },
+          {
+            "id": "REV-884dab7c72",
+            "at": "2026-08-10T22:31:54.926518+00:00",
+            "evidence_id": "EV-D4-S3",
+            "previous_confidence": 0.6877239608057475,
+            "new_confidence": 0.6768865103304775,
+            "delta": -0.010837,
+            "applied": true,
+            "reason": "Applied EV-D4-S3 (anonymous forum post), which contradicts the proposition. Weighted barely, because the source is weak: reliability 0.10 × relevance 0.50 = 0.05, giving a log-odds shift of -0.050. Confidence 0.688 → 0.677 (-0.011).",
+            "evidence_snapshot": {
+              "id": "EV-D4-S3",
+              "description": "An unsigned forum post claims a similar die-off happened without any fertiliser involved.",
+              "source": "anonymous forum post",
+              "reliability": 0.1,
+              "relevance": 0.5,
+              "stance": "contradicts",
+              "recorded_at": "2026-08-10T22:31:54.920736+00:00",
+              "weight": 0.05
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "S4-irrelevant-contradiction",
+      "ground_truth": true,
+      "initial_confidence": 0.7344853437972199,
+      "final_confidence": 0.7344853437972199,
+      "correct": true,
+      "belief": {
+        "belief_id": "BEL-57c90f334a",
+        "proposition": "Dr Vance's unscheduled fertiliser application caused the orchid deaths.",
+        "confidence": 0.7344853437972199,
+        "supporting_evidence": [
+          "EV-A-S4",
+          "EV-B-S4",
+          "EV-C-S4"
+        ],
+        "contradicting_evidence": [
+          "EV-D1-S4",
+          "EV-D2-S4"
+        ],
+        "created_at": "2026-08-10T22:31:54.926526+00:00",
+        "updated_at": "2026-08-10T22:31:54.926596+00:00",
+        "revision_count": 3,
+        "revision_history": [
+          {
+            "id": "REV-5b637ba312",
+            "at": "2026-08-10T22:31:54.926542+00:00",
+            "evidence_id": "EV-A-S4",
+            "previous_confidence": 0.5,
+            "new_confidence": 0.610639233949222,
+            "delta": 0.110639,
+            "applied": true,
+            "reason": "Applied EV-A-S4 (station activity log), which supports the proposition. Weighted moderately: reliability 0.90 × relevance 0.50 = 0.45, giving a log-odds shift of +0.450. Confidence 0.500 → 0.611 (+0.111).",
+            "evidence_snapshot": {
+              "id": "EV-A-S4",
+              "description": "Station log records an unscheduled fertiliser application at 23:40, logged by Vance.",
+              "source": "station activity log",
+              "reliability": 0.9,
+              "relevance": 0.5,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920741+00:00",
+              "weight": 0.45
+            }
+          },
+          {
+            "id": "REV-152ca55c20",
+            "at": "2026-08-10T22:31:54.926557+00:00",
+            "evidence_id": "EV-B-S4",
+            "previous_confidence": 0.610639233949222,
+            "new_confidence": 0.6726070170677605,
+            "delta": 0.061968,
+            "applied": true,
+            "reason": "Applied EV-B-S4 (lab technician, visual inspection), which supports the proposition. Weighted barely: reliability 0.60 × relevance 0.45 = 0.27, giving a log-odds shift of +0.270. Confidence 0.611 → 0.673 (+0.062).",
+            "evidence_snapshot": {
+              "id": "EV-B-S4",
+              "description": "A lab technician noticed an unidentified white residue on the soil surface the next morning.",
+              "source": "lab technician, visual inspection",
+              "reliability": 0.6,
+              "relevance": 0.45,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920746+00:00",
+              "weight": 0.27
+            }
+          },
+          {
+            "id": "REV-8323e099e2",
+            "at": "2026-08-10T22:31:54.926571+00:00",
+            "evidence_id": "EV-C-S4",
+            "previous_confidence": 0.6726070170677605,
+            "new_confidence": 0.7344853437972199,
+            "delta": 0.061878,
+            "applied": true,
+            "reason": "Applied EV-C-S4 (keycard access system), which supports the proposition. Weighted barely: reliability 0.85 × relevance 0.35 = 0.30, giving a log-odds shift of +0.297. Confidence 0.673 → 0.734 (+0.062).",
+            "evidence_snapshot": {
+              "id": "EV-C-S4",
+              "description": "Keycard records show Vance was the only person to enter the greenhouse overnight.",
+              "source": "keycard access system",
+              "reliability": 0.85,
+              "relevance": 0.35,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920750+00:00",
+              "weight": 0.2975
+            }
+          },
+          {
+            "id": "REV-521c891be0",
+            "at": "2026-08-10T22:31:54.926582+00:00",
+            "evidence_id": "EV-D1-S4",
+            "previous_confidence": 0.7344853437972199,
+            "new_confidence": 0.7344853437972199,
+            "delta": 0.0,
+            "applied": false,
+            "reason": "Not applied. EV-D1-S4 (finance committee minutes) has relevance 0.05, below the 0.20 threshold, so it does not bear on this proposition. Confidence unchanged at 0.734.",
+            "evidence_snapshot": {
+              "id": "EV-D1-S4",
+              "description": "Vance disputed the greenhouse budget allocation in February.",
+              "source": "finance committee minutes",
+              "reliability": 0.95,
+              "relevance": 0.05,
+              "stance": "contradicts",
+              "recorded_at": "2026-08-10T22:31:54.920754+00:00",
+              "weight": 0.0475
+            }
+          },
+          {
+            "id": "REV-cf38c11731",
+            "at": "2026-08-10T22:31:54.926596+00:00",
+            "evidence_id": "EV-D2-S4",
+            "previous_confidence": 0.7344853437972199,
+            "new_confidence": 0.7344853437972199,
+            "delta": 0.0,
+            "applied": false,
+            "reason": "Not applied. EV-D2-S4 (site incident report) has relevance 0.10, below the 0.20 threshold, so it does not bear on this proposition. Confidence unchanged at 0.734.",
+            "evidence_snapshot": {
+              "id": "EV-D2-S4",
+              "description": "A vehicle reversed into the greenhouse loading bay on 3 March, nine days before the incident.",
+              "source": "site incident report",
+              "reliability": 0.9,
+              "relevance": 0.1,
+              "stance": "contradicts",
+              "recorded_at": "2026-08-10T22:31:54.920758+00:00",
+              "weight": 0.09
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "S5-gradual-accumulation",
+      "ground_truth": false,
+      "initial_confidence": 0.7344853437972199,
+      "final_confidence": 0.44398610945538003,
+      "correct": true,
+      "belief": {
+        "belief_id": "BEL-5deea53054",
+        "proposition": "Dr Vance's unscheduled fertiliser application caused the orchid deaths.",
+        "confidence": 0.44398610945538003,
+        "supporting_evidence": [
+          "EV-A-S5",
+          "EV-B-S5",
+          "EV-C-S5"
+        ],
+        "contradicting_evidence": [
+          "EV-D1-S5",
+          "EV-D2-S5",
+          "EV-D3-S5"
+        ],
+        "created_at": "2026-08-10T22:31:54.926604+00:00",
+        "updated_at": "2026-08-10T22:31:54.926698+00:00",
+        "revision_count": 6,
+        "revision_history": [
+          {
+            "id": "REV-6405f4413c",
+            "at": "2026-08-10T22:31:54.926623+00:00",
+            "evidence_id": "EV-A-S5",
+            "previous_confidence": 0.5,
+            "new_confidence": 0.610639233949222,
+            "delta": 0.110639,
+            "applied": true,
+            "reason": "Applied EV-A-S5 (station activity log), which supports the proposition. Weighted moderately: reliability 0.90 × relevance 0.50 = 0.45, giving a log-odds shift of +0.450. Confidence 0.500 → 0.611 (+0.111).",
+            "evidence_snapshot": {
+              "id": "EV-A-S5",
+              "description": "Station log records an unscheduled fertiliser application at 23:40, logged by Vance.",
+              "source": "station activity log",
+              "reliability": 0.9,
+              "relevance": 0.5,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920763+00:00",
+              "weight": 0.45
+            }
+          },
+          {
+            "id": "REV-f26f8f6eed",
+            "at": "2026-08-10T22:31:54.926637+00:00",
+            "evidence_id": "EV-B-S5",
+            "previous_confidence": 0.610639233949222,
+            "new_confidence": 0.6726070170677605,
+            "delta": 0.061968,
+            "applied": true,
+            "reason": "Applied EV-B-S5 (lab technician, visual inspection), which supports the proposition. Weighted barely: reliability 0.60 × relevance 0.45 = 0.27, giving a log-odds shift of +0.270. Confidence 0.611 → 0.673 (+0.062).",
+            "evidence_snapshot": {
+              "id": "EV-B-S5",
+              "description": "A lab technician noticed an unidentified white residue on the soil surface the next morning.",
+              "source": "lab technician, visual inspection",
+              "reliability": 0.6,
+              "relevance": 0.45,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920767+00:00",
+              "weight": 0.27
+            }
+          },
+          {
+            "id": "REV-914a0e3eb8",
+            "at": "2026-08-10T22:31:54.926654+00:00",
+            "evidence_id": "EV-C-S5",
+            "previous_confidence": 0.6726070170677605,
+            "new_confidence": 0.7344853437972199,
+            "delta": 0.061878,
+            "applied": true,
+            "reason": "Applied EV-C-S5 (keycard access system), which supports the proposition. Weighted barely: reliability 0.85 × relevance 0.35 = 0.30, giving a log-odds shift of +0.297. Confidence 0.673 → 0.734 (+0.062).",
+            "evidence_snapshot": {
+              "id": "EV-C-S5",
+              "description": "Keycard records show Vance was the only person to enter the greenhouse overnight.",
+              "source": "keycard access system",
+              "reliability": 0.85,
+              "relevance": 0.35,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920771+00:00",
+              "weight": 0.2975
+            }
+          },
+          {
+            "id": "REV-55eeeda3b9",
+            "at": "2026-08-10T22:31:54.926668+00:00",
+            "evidence_id": "EV-D1-S5",
+            "previous_confidence": 0.7344853437972199,
+            "new_confidence": 0.6467993925579857,
+            "delta": -0.087686,
+            "applied": true,
+            "reason": "Applied EV-D1-S5 (greenhouse inventory audit), which contradicts the proposition. Weighted moderately: reliability 0.75 × relevance 0.55 = 0.41, giving a log-odds shift of -0.413. Confidence 0.734 → 0.647 (-0.088).",
+            "evidence_snapshot": {
+              "id": "EV-D1-S5",
+              "description": "Two orchids in a separate room that received no fertiliser also died.",
+              "source": "greenhouse inventory audit",
+              "reliability": 0.75,
+              "relevance": 0.55,
+              "stance": "contradicts",
+              "recorded_at": "2026-08-10T22:31:54.920775+00:00",
+              "weight": 0.4125
+            }
+          },
+          {
+            "id": "REV-9e6e431b6d",
+            "at": "2026-08-10T22:31:54.926681+00:00",
+            "evidence_id": "EV-D2-S5",
+            "previous_confidence": 0.6467993925579857,
+            "new_confidence": 0.5634067862621936,
+            "delta": -0.083393,
+            "applied": true,
+            "reason": "Applied EV-D2-S5 (historical trial records), which contradicts the proposition. Weighted moderately: reliability 0.70 × relevance 0.50 = 0.35, giving a log-odds shift of -0.350. Confidence 0.647 → 0.563 (-0.083).",
+            "evidence_snapshot": {
+              "id": "EV-D2-S5",
+              "description": "The same compound was applied in January with no ill effects.",
+              "source": "historical trial records",
+              "reliability": 0.7,
+              "relevance": 0.5,
+              "stance": "contradicts",
+              "recorded_at": "2026-08-10T22:31:54.920779+00:00",
+              "weight": 0.35
+            }
+          },
+          {
+            "id": "REV-1bb71c209c",
+            "at": "2026-08-10T22:31:54.926698+00:00",
+            "evidence_id": "EV-D3-S5",
+            "previous_confidence": 0.5634067862621936,
+            "new_confidence": 0.44398610945538003,
+            "delta": -0.119421,
+            "applied": true,
+            "reason": "Applied EV-D3-S5 (water quality sampling), which contradicts the proposition. Weighted moderately: reliability 0.80 × relevance 0.60 = 0.48, giving a log-odds shift of -0.480. Confidence 0.563 → 0.444 (-0.119).",
+            "evidence_snapshot": {
+              "id": "EV-D3-S5",
+              "description": "Cistern water sampled on 13 March shows elevated herbicide residue.",
+              "source": "water quality sampling",
+              "reliability": 0.8,
+              "relevance": 0.6,
+              "stance": "contradicts",
+              "recorded_at": "2026-08-10T22:31:54.920783+00:00",
+              "weight": 0.48
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "S6-alternative-proposition",
+      "ground_truth": true,
+      "initial_confidence": 0.8076791784227771,
+      "final_confidence": 0.7604230019887311,
+      "correct": true,
+      "belief": {
+        "belief_id": "BEL-6dbc4beb81",
+        "proposition": "Contaminated cistern water caused the orchid deaths.",
+        "confidence": 0.7604230019887311,
+        "supporting_evidence": [
+          "EV-A-S6",
+          "EV-B-S6",
+          "EV-C-S6"
+        ],
+        "contradicting_evidence": [
+          "EV-D-S6"
+        ],
+        "created_at": "2026-08-10T22:31:54.926706+00:00",
+        "updated_at": "2026-08-10T22:31:54.926762+00:00",
+        "revision_count": 4,
+        "revision_history": [
+          {
+            "id": "REV-80b181a2fa",
+            "at": "2026-08-10T22:31:54.926722+00:00",
+            "evidence_id": "EV-A-S6",
+            "previous_confidence": 0.5,
+            "new_confidence": 0.617747874769249,
+            "delta": 0.117748,
+            "applied": true,
+            "reason": "Applied EV-A-S6 (water quality sampling), which supports the proposition. Weighted moderately: reliability 0.80 × relevance 0.60 = 0.48, giving a log-odds shift of +0.480. Confidence 0.500 → 0.618 (+0.118).",
+            "evidence_snapshot": {
+              "id": "EV-A-S6",
+              "description": "Cistern water sampled on 13 March shows elevated herbicide residue.",
+              "source": "water quality sampling",
+              "reliability": 0.8,
+              "relevance": 0.6,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920792+00:00",
+              "weight": 0.48
+            }
+          },
+          {
+            "id": "REV-95be4aefce",
+            "at": "2026-08-10T22:31:54.926735+00:00",
+            "evidence_id": "EV-B-S6",
+            "previous_confidence": 0.617747874769249,
+            "new_confidence": 0.7246209144181192,
+            "delta": 0.106873,
+            "applied": true,
+            "reason": "Applied EV-B-S6 (greenhouse inventory audit), which supports the proposition. Weighted moderately: reliability 0.75 × relevance 0.65 = 0.49, giving a log-odds shift of +0.488. Confidence 0.618 → 0.725 (+0.107).",
+            "evidence_snapshot": {
+              "id": "EV-B-S6",
+              "description": "Orchids in rooms with no fertiliser exposure also died; all were on the same irrigation line.",
+              "source": "greenhouse inventory audit",
+              "reliability": 0.75,
+              "relevance": 0.65,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920796+00:00",
+              "weight": 0.4875
+            }
+          },
+          {
+            "id": "REV-2a2dfa034c",
+            "at": "2026-08-10T22:31:54.926749+00:00",
+            "evidence_id": "EV-C-S6",
+            "previous_confidence": 0.7246209144181192,
+            "new_confidence": 0.8076791784227771,
+            "delta": 0.083058,
+            "applied": true,
+            "reason": "Applied EV-C-S6 (groundskeeping work order), which supports the proposition. Weighted moderately: reliability 0.85 × relevance 0.55 = 0.47, giving a log-odds shift of +0.468. Confidence 0.725 → 0.808 (+0.083).",
+            "evidence_snapshot": {
+              "id": "EV-C-S6",
+              "description": "Groundskeeping sprayed herbicide upslope of the cistern on 11 March.",
+              "source": "groundskeeping work order",
+              "reliability": 0.85,
+              "relevance": 0.55,
+              "stance": "supports",
+              "recorded_at": "2026-08-10T22:31:54.920806+00:00",
+              "weight": 0.4675
+            }
+          },
+          {
+            "id": "REV-7443031c18",
+            "at": "2026-08-10T22:31:54.926762+00:00",
+            "evidence_id": "EV-D-S6",
+            "previous_confidence": 0.8076791784227771,
+            "new_confidence": 0.7604230019887311,
+            "delta": -0.047256,
+            "applied": true,
+            "reason": "Applied EV-D-S6 (maintenance certificate), which contradicts the proposition. Weighted barely: reliability 0.70 × relevance 0.40 = 0.28, giving a log-odds shift of -0.280. Confidence 0.808 → 0.760 (-0.047).",
+            "evidence_snapshot": {
+              "id": "EV-D-S6",
+              "description": "The cistern filter was replaced on 1 March and certified clean.",
+              "source": "maintenance certificate",
+              "reliability": 0.7,
+              "relevance": 0.4,
+              "stance": "contradicts",
+              "recorded_at": "2026-08-10T22:31:54.920810+00:00",
+              "weight": 0.28
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
