@@ -1,10 +1,31 @@
 # ECHO
 
-A minimal experimental conversational agent with a persistent memory system.
+A minimal experimental conversational agent, extended one capability at a time.
 
 No chatbot UI, no autonomous loop, no vector DB, no RAG, no web search, no
-self-modification, no multi-agent orchestration, **no learning or belief
-updating**. This is a foundation to extend one capability at a time.
+self-modification, no multi-agent orchestration.
+
+## What has been built, in order
+
+Each capability is deliberately narrow, and each report says plainly what the
+capability is *not*.
+
+| # | Capability | Code | Report |
+| --- | --- | --- | --- |
+| 1 | Conversation, LLM call, save/reload | `conversation.py`, `llm.py`, `agent.py`, `storage.py` | this file |
+| 2 | Memory — extraction, not transcript-saving | `memory.py`, `memory_store.py`, `extraction.py`, `context.py` | this file |
+| 1.5 | Evaluation harness for extraction quality | `evaluation/` | [`docs/ECHO_1_5_MEMORY_EVALUATION.md`](docs/ECHO_1_5_MEMORY_EVALUATION.md) |
+| 2 | Belief revision — evidence-weighted, never overwriting | `belief.py`, `belief_store.py` | [`docs/ECHO_2_BELIEF_REVISION.md`](docs/ECHO_2_BELIEF_REVISION.md) |
+| 3 | Prediction — sealed, temporally clean, properly scored | `prediction.py`, `calibration.py`, `prediction_ledger.py` | [`docs/ECHO_3_PREDICTION.md`](docs/ECHO_3_PREDICTION.md) |
+| 4 | Learning from prediction errors — strategy revision | `learning.py`, `learning_ledger.py`, `strategy.py`, `predictors.py` | [`docs/ECHO_4_LEARNING.md`](docs/ECHO_4_LEARNING.md) |
+
+**These are four different things.** Memory stores; belief revision moves a
+number by a fixed rule; prediction seals a probability before an outcome exists;
+learning changes the *method* because measured errors said the method was wrong.
+A value changing is not learning. None of this is AGI, consciousness, or
+autonomous intelligence.
+
+The sections below describe capabilities 1 and 2; the reports cover the rest.
 
 ## Three kinds of state, kept separate
 
@@ -222,10 +243,12 @@ serialization is the same code the CLI uses, the threshold gate is real code, an
 
 ## Deliberately not built yet
 
-No learning and no belief updating, as specified. Memories are never revised,
-merged, contradicted, decayed, or re-scored after creation. `confidence` and
-`importance` are set once at extraction and never move. When two memories
-conflict, both simply sit in the store.
+**In the memory system specifically**, there is still no revision of any kind.
+Memories are never revised, merged, contradicted, decayed, or re-scored after
+creation. `confidence` and `importance` are set once at extraction and never
+move. When two memories conflict, both simply sit in the store. The belief,
+prediction and learning systems added later are separate modules with their own
+records — none of them reaches back into `MemoryStore`.
 
 ## Where this goes next
 

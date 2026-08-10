@@ -59,6 +59,11 @@ class Environment:
     seed: int
     observation_noise: float = 0.0  # chance an observation is reported flipped
     schedule: list[tuple[int, float]] = field(default_factory=list)  # (from_index, P(A))
+    # Outcomes forced to a fixed value at given trials. Used to inject a run of
+    # unusual results into a process whose underlying probability never changes
+    # — the false-alarm case.
+    forced_outcomes: dict[int, bool] = field(default_factory=dict)
+    change_points: tuple[int, ...] = ()  # where the regime really changes; scorer only
 
     def probability_at(self, index: int) -> float:
         """The hidden P(A) at a given trial. Used to generate, never revealed."""
@@ -73,7 +78,8 @@ class Environment:
         rng = random.Random(self.seed)
         out: list[Trial] = []
         for index in range(self.trials):
-            true_outcome = rng.random() < self.probability_at(index)
+            draw = rng.random() < self.probability_at(index)
+            true_outcome = self.forced_outcomes.get(index, draw)
             observed = true_outcome
             if self.observation_noise and rng.random() < self.observation_noise:
                 observed = not observed
@@ -110,6 +116,7 @@ ENVIRONMENTS: list[Environment] = [
         trials=60,
         seed=11235813,
         schedule=[(0, 0.85), (30, 0.20)],
+        change_points=(30,),
     ),
     Environment(
         id="ENV-C-noisy",
@@ -168,3 +175,72 @@ def laplace_predictor(view, alpha: float = LAPLACE_ALPHA) -> tuple[float, str]:
         f"= {probability:.4f}."
     )
     return probability, rationale
+
+
+# ---------------------------------------------------------------------------
+# Environments added for Challenge 4. Kept in a separate list so the three
+# above — and therefore the ECHO 3 report — stay byte-for-byte reproducible.
+# ---------------------------------------------------------------------------
+
+ENV_B_LONG = Environment(
+    id="ENV-B-LONG",
+    name="Environment B (extended) — Changing, with room to recover",
+    description=(
+        "The same regime structure as Environment B, run for longer so that "
+        "post-adaptation performance can actually be measured rather than "
+        "inferred from a handful of trials."
+    ),
+    hidden_process=(
+        "P(OUTCOME_A) = 0.85 for trials 0-29, then 0.20 for trials 30-119."
+    ),
+    trials=120,
+    seed=11235813,
+    schedule=[(0, 0.85), (30, 0.20)],
+    change_points=(30,),
+)
+
+ENV_D_LATE_CHANGE = Environment(
+    id="ENV-D-late-change",
+    name="Environment D — Generalisation: a different change, in a different place",
+    description=(
+        "A process that changes once. Nothing about where or in which direction "
+        "is available to ECHO."
+    ),
+    hidden_process=(
+        "P(OUTCOME_A) = 0.25 for trials 0-61, then 0.85 for trials 62-119. The "
+        "change is 32 trials later than Environment B's and runs the opposite "
+        "way, so a system that memorised 'trial 30' or 'A becomes rarer' cannot "
+        "score well here."
+    ),
+    trials=120,
+    seed=2718281,
+    schedule=[(0, 0.25), (62, 0.85)],
+    change_points=(62,),
+)
+
+ENV_F_FALSE_ALARM = Environment(
+    id="ENV-F-false-alarm",
+    name="Environment F — Unusual outcomes, unchanged process",
+    description=(
+        "A stationary process. Nothing about it changes at any point in the run."
+    ),
+    hidden_process=(
+        "P(OUTCOME_A) = 0.75 for all 120 trials. The underlying probability "
+        "never changes. Trials 40-46 are forced to OUTCOME_B, producing a run of "
+        "seven unusual results that a naive detector should mistake for a regime "
+        "change. Any confirmed detection here is a false alarm."
+    ),
+    trials=120,
+    seed=16180339,
+    schedule=[(0, 0.75)],
+    forced_outcomes={index: False for index in range(40, 47)},
+    change_points=(),
+)
+
+LEARNING_ENVIRONMENTS: list[Environment] = [
+    by_id("ENV-B-changing"),
+    by_id("ENV-C-noisy"),
+    ENV_B_LONG,
+    ENV_D_LATE_CHANGE,
+    ENV_F_FALSE_ALARM,
+]

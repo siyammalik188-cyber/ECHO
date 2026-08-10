@@ -1,0 +1,2463 @@
+{
+  "generated_at": "2026-08-10T22:59:42.111019+00:00",
+  "environments": [
+    {
+      "id": "ENV-B-changing",
+      "change_points": [
+        30
+      ],
+      "baseline": {
+        "count": 60,
+        "brier": 0.2532623481582655,
+        "log_loss": 0.7099877743529548,
+        "log_loss_excluded": 0,
+        "accuracy": 0.5666666666666667,
+        "base_rate": 0.5833333333333334,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.24305555555555566
+        },
+        "expected_calibration_error": 0.16845601081548978,
+        "buckets": [
+          {
+            "range": "0.5–0.6",
+            "count": 9,
+            "mean_predicted": 0.5716,
+            "observed_frequency": 0.5556,
+            "gap": 0.016
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 12,
+            "mean_predicted": 0.6545,
+            "observed_frequency": 0.25,
+            "gap": 0.4045
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 11,
+            "mean_predicted": 0.747,
+            "observed_frequency": 0.5455,
+            "gap": 0.2015
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 27,
+            "mean_predicted": 0.8516,
+            "observed_frequency": 0.7778,
+            "gap": 0.0738
+          },
+          {
+            "range": "0.9–1.0",
+            "count": 1,
+            "mean_predicted": 0.9,
+            "observed_frequency": 0.0,
+            "gap": 0.9
+          }
+        ]
+      },
+      "learning": {
+        "count": 60,
+        "brier": 0.21204268222400685,
+        "log_loss": 0.6269950646842278,
+        "log_loss_excluded": 0,
+        "accuracy": 0.7166666666666667,
+        "base_rate": 0.5833333333333334,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.24305555555555566
+        },
+        "expected_calibration_error": 0.14253489037966335,
+        "buckets": [
+          {
+            "range": "0.1–0.2",
+            "count": 2,
+            "mean_predicted": 0.1667,
+            "observed_frequency": 0.5,
+            "gap": -0.3333
+          },
+          {
+            "range": "0.2–0.3",
+            "count": 9,
+            "mean_predicted": 0.25,
+            "observed_frequency": 0.4444,
+            "gap": -0.1944
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 11,
+            "mean_predicted": 0.3333,
+            "observed_frequency": 0.1818,
+            "gap": 0.1515
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 1,
+            "mean_predicted": 0.4167,
+            "observed_frequency": 0.0,
+            "gap": 0.4167
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 1,
+            "mean_predicted": 0.5,
+            "observed_frequency": 1.0,
+            "gap": -0.5
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 1,
+            "mean_predicted": 0.6667,
+            "observed_frequency": 1.0,
+            "gap": -0.3333
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 7,
+            "mean_predicted": 0.7609,
+            "observed_frequency": 0.7143,
+            "gap": 0.0466
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 27,
+            "mean_predicted": 0.8516,
+            "observed_frequency": 0.7778,
+            "gap": 0.0738
+          },
+          {
+            "range": "0.9–1.0",
+            "count": 1,
+            "mean_predicted": 0.9,
+            "observed_frequency": 0.0,
+            "gap": 0.9
+          }
+        ]
+      },
+      "baseline_post_change": {
+        "count": 30,
+        "brier": 0.3957008515497296,
+        "log_loss": 1.0285447001365455,
+        "log_loss_excluded": 0,
+        "accuracy": 0.26666666666666666,
+        "base_rate": 0.26666666666666666,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.19555555555555557
+        },
+        "expected_calibration_error": 0.41134415976211663,
+        "buckets": [
+          {
+            "range": "0.5–0.6",
+            "count": 8,
+            "mean_predicted": 0.5805,
+            "observed_frequency": 0.5,
+            "gap": 0.0805
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 11,
+            "mean_predicted": 0.6534,
+            "observed_frequency": 0.1818,
+            "gap": 0.4716
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 7,
+            "mean_predicted": 0.7374,
+            "observed_frequency": 0.2857,
+            "gap": 0.4517
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 4,
+            "mean_predicted": 0.8368,
+            "observed_frequency": 0.0,
+            "gap": 0.8368
+          }
+        ]
+      },
+      "learning_post_change": {
+        "count": 30,
+        "brier": 0.3132615196812123,
+        "log_loss": 0.8625592807990914,
+        "log_loss_excluded": 0,
+        "accuracy": 0.5666666666666667,
+        "base_rate": 0.26666666666666666,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.19555555555555557
+        },
+        "expected_calibration_error": 0.3039463633349083,
+        "buckets": [
+          {
+            "range": "0.1–0.2",
+            "count": 2,
+            "mean_predicted": 0.1667,
+            "observed_frequency": 0.5,
+            "gap": -0.3333
+          },
+          {
+            "range": "0.2–0.3",
+            "count": 9,
+            "mean_predicted": 0.25,
+            "observed_frequency": 0.4444,
+            "gap": -0.1944
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 11,
+            "mean_predicted": 0.3333,
+            "observed_frequency": 0.1818,
+            "gap": 0.1515
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 1,
+            "mean_predicted": 0.4167,
+            "observed_frequency": 0.0,
+            "gap": 0.4167
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 3,
+            "mean_predicted": 0.7571,
+            "observed_frequency": 0.3333,
+            "gap": 0.4238
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 4,
+            "mean_predicted": 0.8368,
+            "observed_frequency": 0.0,
+            "gap": 0.8368
+          }
+        ]
+      },
+      "baseline_recovery": null,
+      "learning_recovery": 52,
+      "detections": [
+        {
+          "at_trial": 32,
+          "historical_performance": {
+            "predictions": 23,
+            "mean_brier": 0.105827,
+            "miss_rate": 0.086957
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.305446,
+            "miss_rate": 0.4
+          },
+          "error_rate": 0.4,
+          "p_value": 0.007818084358870575,
+          "confidence": 0.9922,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=7.82e-03 <= 0.01 and effect=0.31 >= 0.25 (first firing, awaiting confirmation)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 33,
+          "historical_performance": {
+            "predictions": 24,
+            "mean_brier": 0.102017,
+            "miss_rate": 0.083333
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.368006,
+            "miss_rate": 0.5
+          },
+          "error_rate": 0.5,
+          "p_value": 0.0007077808763010768,
+          "confidence": 0.9993,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=7.08e-04, significant but only 1 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 34,
+          "historical_performance": {
+            "predictions": 25,
+            "mean_brier": 0.098469,
+            "miss_rate": 0.08
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.427168,
+            "miss_rate": 0.6
+          },
+          "error_rate": 0.6,
+          "p_value": 4.146238349901825e-05,
+          "confidence": 1.0,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=4.15e-05, significant but only 2 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 35,
+          "historical_performance": {
+            "predictions": 26,
+            "mean_brier": 0.095157,
+            "miss_rate": 0.076923
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.483202,
+            "miss_rate": 0.7
+          },
+          "error_rate": 0.7,
+          "p_value": 1.552022988315647e-06,
+          "confidence": 1.0,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=1.55e-06, significant but only 3 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 36,
+          "historical_performance": {
+            "predictions": 27,
+            "mean_brier": 0.121158,
+            "miss_rate": 0.111111
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.410408,
+            "miss_rate": 0.6
+          },
+          "error_rate": 0.6,
+          "p_value": 0.0002651600250323629,
+          "confidence": 0.9997,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=2.65e-04 <= 0.01 and effect=0.49 >= 0.25, sustained for 4 trials (confirmed)",
+          "confirmed": true
+        },
+        {
+          "at_trial": 37,
+          "historical_performance": {
+            "predictions": 28,
+            "mean_brier": 0.11751,
+            "miss_rate": 0.107143
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.425866,
+            "miss_rate": 0.6
+          },
+          "error_rate": 0.6,
+          "p_value": 0.0002163811350702424,
+          "confidence": 0.9998,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=2.16e-04 <= 0.01 and effect=0.49 >= 0.25 (first firing, awaiting confirmation)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 38,
+          "historical_performance": {
+            "predictions": 29,
+            "mean_brier": 0.114071,
+            "miss_rate": 0.103448
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.435199,
+            "miss_rate": 0.6
+          },
+          "error_rate": 0.6,
+          "p_value": 0.00017773581788436583,
+          "confidence": 0.9998,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=1.78e-04, significant but only 1 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 39,
+          "historical_performance": {
+            "predictions": 30,
+            "mean_brier": 0.110824,
+            "miss_rate": 0.1
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.489785,
+            "miss_rate": 0.7
+          },
+          "error_rate": 0.7,
+          "p_value": 9.121600000000003e-06,
+          "confidence": 1.0,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=9.12e-06, significant but only 2 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 40,
+          "historical_performance": {
+            "predictions": 31,
+            "mean_brier": 0.131946,
+            "miss_rate": 0.129032
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.419472,
+            "miss_rate": 0.6
+          },
+          "error_rate": 0.6,
+          "p_value": 0.0006076399528660439,
+          "confidence": 0.9994,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=6.08e-04, significant but only 3 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        }
+      ],
+      "events": [
+        "TRIAL 0 — strategy STRAT-c8fe10f4 ACTIVE: Laplace-smoothed frequency over the entire observation history.",
+        "TRIAL 32 — deterioration flagged (p=7.8e-03), not yet confirmed; no action taken",
+        "TRIAL 33 — deterioration flagged (p=7.1e-04), not yet confirmed; no action taken",
+        "TRIAL 34 — deterioration flagged (p=4.1e-05), not yet confirmed; no action taken",
+        "TRIAL 35 — deterioration flagged (p=1.6e-06), not yet confirmed; no action taken",
+        "TRIAL 36 — deterioration CONFIRMED (60% recent miss rate vs 11% historical, p=2.7e-04)",
+        "TRIAL 36 — hypothesis: REGIME_CHANGE (confidence 0.95); alternatives considered and rejected",
+        "TRIAL 36 — strategy STRAT-f6affc70 proposed (window=10) → TESTING for 8 trials",
+        "TRIAL 37 — deterioration flagged (p=2.2e-04), not yet confirmed; no action taken",
+        "TRIAL 38 — deterioration flagged (p=1.8e-04), not yet confirmed; no action taken",
+        "TRIAL 39 — deterioration flagged (p=9.1e-06), not yet confirmed; no action taken",
+        "TRIAL 40 — deterioration flagged (p=6.1e-04), not yet confirmed; no action taken",
+        "TRIAL 44 — test concluded: STRAT-f6affc70 Brier 0.220 vs incumbent 0.399 → STRAT-f6affc70 ACTIVE, STRAT-c8fe10f4 WEAKENED",
+        "TRIAL 52 — rolling performance back to pre-change form"
+      ],
+      "what_i_learned": [
+        {
+          "at_trial": 36,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=2.65e-04 <= 0.01 and effect=0.49 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9997348399749676,
+          "triggered_by": [
+            "LEXP-5d28fed051",
+            "LEXP-e6274913db",
+            "LEXP-f8e88511e8",
+            "LEXP-d4e5cca5fe",
+            "LEXP-649a602389",
+            "LEXP-a451ae51e9",
+            "LEXP-aa64e43f0b",
+            "LEXP-1fba2e60b3",
+            "LEXP-1d7edeb20a",
+            "LEXP-62726fd6b4"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-02e140ac",
+            "mean_brier": 0.398892,
+            "window": "trials 37-44"
+          },
+          "after": {
+            "strategy": "STRAT-4c351ae9",
+            "mean_brier": 0.219618,
+            "window": "trials 37-44"
+          },
+          "would_reverse_if": "Revert to STRAT-02e140ac if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        },
+        {
+          "at_trial": 36,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=2.65e-04 <= 0.01 and effect=0.49 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9997348399749676,
+          "triggered_by": [
+            "LEXP-7f9217d319",
+            "LEXP-7654cb9f16",
+            "LEXP-30e6d8fbee",
+            "LEXP-cb513b7163",
+            "LEXP-05054db674",
+            "LEXP-fb4c8c5dc7",
+            "LEXP-f1e8ab0b50",
+            "LEXP-b13d969778",
+            "LEXP-2c88b5bf4f",
+            "LEXP-b8c9512752"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-0f8d8d00",
+            "mean_brier": 0.398892,
+            "window": "trials 37-44"
+          },
+          "after": {
+            "strategy": "STRAT-a360d44e",
+            "mean_brier": 0.219618,
+            "window": "trials 37-44"
+          },
+          "would_reverse_if": "Revert to STRAT-0f8d8d00 if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        },
+        {
+          "at_trial": 36,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=2.65e-04 <= 0.01 and effect=0.49 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9997348399749676,
+          "triggered_by": [
+            "LEXP-0f149dd20f",
+            "LEXP-3b431af32c",
+            "LEXP-9b20c79cdd",
+            "LEXP-2342e62184",
+            "LEXP-08981d219e",
+            "LEXP-7b217e7d12",
+            "LEXP-c44c17d5e5",
+            "LEXP-d4de18abe1",
+            "LEXP-6488ab33fb",
+            "LEXP-8a7f2217c6"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-829b64cb",
+            "mean_brier": 0.398892,
+            "window": "trials 37-44"
+          },
+          "after": {
+            "strategy": "STRAT-7d6d06c4",
+            "mean_brier": 0.219618,
+            "window": "trials 37-44"
+          },
+          "would_reverse_if": "Revert to STRAT-829b64cb if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        },
+        {
+          "at_trial": 36,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=2.65e-04 <= 0.01 and effect=0.49 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9997348399749676,
+          "triggered_by": [
+            "LEXP-2a80c39268",
+            "LEXP-06b4a9df3b",
+            "LEXP-bbd9757c47",
+            "LEXP-ecd91a330e",
+            "LEXP-7f54b42db0",
+            "LEXP-22a1d67300",
+            "LEXP-48148c1457",
+            "LEXP-7927f35b6e",
+            "LEXP-54357fc77d",
+            "LEXP-182efc1d62"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-c8fe10f4",
+            "mean_brier": 0.398892,
+            "window": "trials 37-44"
+          },
+          "after": {
+            "strategy": "STRAT-f6affc70",
+            "mean_brier": 0.219618,
+            "window": "trials 37-44"
+          },
+          "would_reverse_if": "Revert to STRAT-c8fe10f4 if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        }
+      ]
+    },
+    {
+      "id": "ENV-C-noisy",
+      "change_points": [],
+      "baseline": {
+        "count": 60,
+        "brier": 0.25773930762625524,
+        "log_loss": 0.710273773895784,
+        "log_loss_excluded": 0,
+        "accuracy": 0.43333333333333335,
+        "base_rate": 0.75,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.1875
+        },
+        "expected_calibration_error": 0.25912315365360783,
+        "buckets": [
+          {
+            "range": "0.2–0.3",
+            "count": 1,
+            "mean_predicted": 0.25,
+            "observed_frequency": 1.0,
+            "gap": -0.75
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 2,
+            "mean_predicted": 0.3333,
+            "observed_frequency": 1.0,
+            "gap": -0.6667
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 18,
+            "mean_predicted": 0.4611,
+            "observed_frequency": 0.7778,
+            "gap": -0.3166
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 39,
+            "mean_predicted": 0.5189,
+            "observed_frequency": 0.7179,
+            "gap": -0.1991
+          }
+        ]
+      },
+      "learning": {
+        "count": 60,
+        "brier": 0.2512531145426029,
+        "log_loss": 0.6962323825983809,
+        "log_loss_excluded": 0,
+        "accuracy": 0.4,
+        "base_rate": 0.75,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.1875
+        },
+        "expected_calibration_error": 0.23115925997324507,
+        "buckets": [
+          {
+            "range": "0.2–0.3",
+            "count": 1,
+            "mean_predicted": 0.25,
+            "observed_frequency": 1.0,
+            "gap": -0.75
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 2,
+            "mean_predicted": 0.3333,
+            "observed_frequency": 1.0,
+            "gap": -0.6667
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 19,
+            "mean_predicted": 0.4588,
+            "observed_frequency": 0.7895,
+            "gap": -0.3307
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 29,
+            "mean_predicted": 0.52,
+            "observed_frequency": 0.6897,
+            "gap": -0.1697
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 4,
+            "mean_predicted": 0.6667,
+            "observed_frequency": 0.75,
+            "gap": -0.0833
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 5,
+            "mean_predicted": 0.75,
+            "observed_frequency": 0.8,
+            "gap": -0.05
+          }
+        ]
+      },
+      "baseline_post_change": {
+        "count": 0,
+        "brier": null,
+        "log_loss": null,
+        "log_loss_excluded": 0,
+        "accuracy": null,
+        "base_rate": null,
+        "reference_brier": {
+          "always_half": null,
+          "always_base_rate": null
+        },
+        "expected_calibration_error": null,
+        "buckets": []
+      },
+      "learning_post_change": {
+        "count": 0,
+        "brier": null,
+        "log_loss": null,
+        "log_loss_excluded": 0,
+        "accuracy": null,
+        "base_rate": null,
+        "reference_brier": {
+          "always_half": null,
+          "always_base_rate": null
+        },
+        "expected_calibration_error": null,
+        "buckets": []
+      },
+      "baseline_recovery": null,
+      "learning_recovery": null,
+      "detections": [
+        {
+          "at_trial": 41,
+          "historical_performance": {
+            "predictions": 32,
+            "mean_brier": 0.263154,
+            "miss_rate": 0.28125
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.266458,
+            "miss_rate": 0.7
+          },
+          "error_rate": 0.7,
+          "p_value": 0.0071948196281077514,
+          "confidence": 0.9928,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=7.19e-03 <= 0.01 and effect=0.42 >= 0.25 (first firing, awaiting confirmation)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 42,
+          "historical_performance": {
+            "predictions": 33,
+            "mean_brier": 0.26189,
+            "miss_rate": 0.272727
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.271637,
+            "miss_rate": 0.8
+          },
+          "error_rate": 0.8,
+          "p_value": 0.0007914902173533798,
+          "confidence": 0.9992,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=7.91e-04, significant but only 1 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 43,
+          "historical_performance": {
+            "predictions": 34,
+            "mean_brier": 0.261127,
+            "miss_rate": 0.264706
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.274169,
+            "miss_rate": 0.9
+          },
+          "error_rate": 0.9,
+          "p_value": 4.8606556563988834e-05,
+          "confidence": 1.0,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=4.86e-05, significant but only 2 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 44,
+          "historical_performance": {
+            "predictions": 35,
+            "mean_brier": 0.260809,
+            "miss_rate": 0.257143
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.274169,
+            "miss_rate": 0.9
+          },
+          "error_rate": 0.9,
+          "p_value": 3.7779527350106154e-05,
+          "confidence": 1.0,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=3.78e-05, significant but only 3 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 45,
+          "historical_performance": {
+            "predictions": 36,
+            "mean_brier": 0.260889,
+            "miss_rate": 0.277778
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.273874,
+            "miss_rate": 0.9
+          },
+          "error_rate": 0.9,
+          "p_value": 7.38485151647454e-05,
+          "confidence": 0.9999,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=7.38e-05 <= 0.01 and effect=0.62 >= 0.25, sustained for 4 trials (confirmed)",
+          "confirmed": true
+        },
+        {
+          "at_trial": 46,
+          "historical_performance": {
+            "predictions": 37,
+            "mean_brier": 0.261325,
+            "miss_rate": 0.297297
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.263535,
+            "miss_rate": 0.8
+          },
+          "error_rate": 0.8,
+          "p_value": 0.0014889514800099405,
+          "confidence": 0.9985,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=1.49e-03 <= 0.01 and effect=0.50 >= 0.25 (first firing, awaiting confirmation)",
+          "confirmed": false
+        }
+      ],
+      "events": [
+        "TRIAL 0 — strategy STRAT-bcba5c98 ACTIVE: Laplace-smoothed frequency over the entire observation history.",
+        "TRIAL 41 — deterioration flagged (p=7.2e-03), not yet confirmed; no action taken",
+        "TRIAL 42 — deterioration flagged (p=7.9e-04), not yet confirmed; no action taken",
+        "TRIAL 43 — deterioration flagged (p=4.9e-05), not yet confirmed; no action taken",
+        "TRIAL 44 — deterioration flagged (p=3.8e-05), not yet confirmed; no action taken",
+        "TRIAL 45 — deterioration CONFIRMED (90% recent miss rate vs 28% historical, p=7.4e-05)",
+        "TRIAL 45 — hypothesis: REGIME_CHANGE (confidence 0.95); alternatives considered and rejected",
+        "TRIAL 45 — strategy STRAT-5bea045b proposed (window=10) → TESTING for 8 trials",
+        "TRIAL 46 — deterioration flagged (p=1.5e-03), not yet confirmed; no action taken",
+        "TRIAL 53 — test concluded: STRAT-5bea045b Brier 0.151 vs incumbent 0.230 → STRAT-5bea045b ACTIVE, STRAT-bcba5c98 WEAKENED"
+      ],
+      "what_i_learned": [
+        {
+          "at_trial": 45,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=7.38e-05 <= 0.01 and effect=0.62 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9999261514848352,
+          "triggered_by": [
+            "LEXP-d13d62e101",
+            "LEXP-fb39134268",
+            "LEXP-99339b8351",
+            "LEXP-60c51c2d75",
+            "LEXP-91792e33b2",
+            "LEXP-e8a5cb9f69",
+            "LEXP-d1896ad796",
+            "LEXP-be418a887d",
+            "LEXP-fa9b87669e",
+            "LEXP-9e15fe2b3e"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-e8e05320",
+            "mean_brier": 0.229704,
+            "window": "trials 46-53"
+          },
+          "after": {
+            "strategy": "STRAT-e00ef771",
+            "mean_brier": 0.151042,
+            "window": "trials 46-53"
+          },
+          "would_reverse_if": "Revert to STRAT-e8e05320 if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        },
+        {
+          "at_trial": 45,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=7.38e-05 <= 0.01 and effect=0.62 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9999261514848352,
+          "triggered_by": [
+            "LEXP-f3b088a62c",
+            "LEXP-71c429bb2a",
+            "LEXP-18ce7177fc",
+            "LEXP-fba9874bb0",
+            "LEXP-43e8ffd23c",
+            "LEXP-f50d4d0151",
+            "LEXP-1c044acc7a",
+            "LEXP-5dd0962331",
+            "LEXP-defcce031e",
+            "LEXP-30f34180f9"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-9274e537",
+            "mean_brier": 0.229704,
+            "window": "trials 46-53"
+          },
+          "after": {
+            "strategy": "STRAT-132b5c4d",
+            "mean_brier": 0.151042,
+            "window": "trials 46-53"
+          },
+          "would_reverse_if": "Revert to STRAT-9274e537 if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        },
+        {
+          "at_trial": 45,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=7.38e-05 <= 0.01 and effect=0.62 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9999261514848352,
+          "triggered_by": [
+            "LEXP-caff96e42a",
+            "LEXP-7c9f2c4a03",
+            "LEXP-11b18ec51b",
+            "LEXP-8546c9afdf",
+            "LEXP-b547c96b1e",
+            "LEXP-e47eb61c8f",
+            "LEXP-33dc7faf47",
+            "LEXP-9b9c86331b",
+            "LEXP-8267ea194f",
+            "LEXP-e7669acdc5"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-d4cbf939",
+            "mean_brier": 0.229704,
+            "window": "trials 46-53"
+          },
+          "after": {
+            "strategy": "STRAT-6ab35a9f",
+            "mean_brier": 0.151042,
+            "window": "trials 46-53"
+          },
+          "would_reverse_if": "Revert to STRAT-d4cbf939 if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        },
+        {
+          "at_trial": 45,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=7.38e-05 <= 0.01 and effect=0.62 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9999261514848352,
+          "triggered_by": [
+            "LEXP-b312f27245",
+            "LEXP-cc92f9435b",
+            "LEXP-0552d5a0aa",
+            "LEXP-e2d4b5fe92",
+            "LEXP-0a042e5f5e",
+            "LEXP-3f0b2177a8",
+            "LEXP-f73ed0a857",
+            "LEXP-67add5f660",
+            "LEXP-dd2a4269c8",
+            "LEXP-c2dcdc75d9"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-bcba5c98",
+            "mean_brier": 0.229704,
+            "window": "trials 46-53"
+          },
+          "after": {
+            "strategy": "STRAT-5bea045b",
+            "mean_brier": 0.151042,
+            "window": "trials 46-53"
+          },
+          "would_reverse_if": "Revert to STRAT-bcba5c98 if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        }
+      ]
+    },
+    {
+      "id": "ENV-B-LONG",
+      "change_points": [
+        30
+      ],
+      "baseline": {
+        "count": 120,
+        "brier": 0.24293819624812368,
+        "log_loss": 0.684022411625598,
+        "log_loss_excluded": 0,
+        "accuracy": 0.6,
+        "base_rate": 0.38333333333333336,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.2363888888888886
+        },
+        "expected_calibration_error": 0.21740149674760267,
+        "buckets": [
+          {
+            "range": "0.3–0.4",
+            "count": 16,
+            "mean_predicted": 0.3878,
+            "observed_frequency": 0.3125,
+            "gap": 0.0753
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 31,
+            "mean_predicted": 0.4457,
+            "observed_frequency": 0.1613,
+            "gap": 0.2844
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 22,
+            "mean_predicted": 0.5501,
+            "observed_frequency": 0.2727,
+            "gap": 0.2774
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 12,
+            "mean_predicted": 0.6545,
+            "observed_frequency": 0.25,
+            "gap": 0.4045
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 11,
+            "mean_predicted": 0.747,
+            "observed_frequency": 0.5455,
+            "gap": 0.2015
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 27,
+            "mean_predicted": 0.8516,
+            "observed_frequency": 0.7778,
+            "gap": 0.0738
+          },
+          {
+            "range": "0.9–1.0",
+            "count": 1,
+            "mean_predicted": 0.9,
+            "observed_frequency": 0.0,
+            "gap": 0.9
+          }
+        ]
+      },
+      "learning": {
+        "count": 120,
+        "brier": 0.18970189666755896,
+        "log_loss": 0.5759472348741315,
+        "log_loss_excluded": 0,
+        "accuracy": 0.7666666666666667,
+        "base_rate": 0.38333333333333336,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.2363888888888886
+        },
+        "expected_calibration_error": 0.09348966741205388,
+        "buckets": [
+          {
+            "range": "0.0–0.1",
+            "count": 2,
+            "mean_predicted": 0.0833,
+            "observed_frequency": 0.5,
+            "gap": -0.4167
+          },
+          {
+            "range": "0.1–0.2",
+            "count": 18,
+            "mean_predicted": 0.1667,
+            "observed_frequency": 0.2222,
+            "gap": -0.0556
+          },
+          {
+            "range": "0.2–0.3",
+            "count": 39,
+            "mean_predicted": 0.25,
+            "observed_frequency": 0.2308,
+            "gap": 0.0192
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 17,
+            "mean_predicted": 0.3333,
+            "observed_frequency": 0.2353,
+            "gap": 0.098
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 7,
+            "mean_predicted": 0.4167,
+            "observed_frequency": 0.0,
+            "gap": 0.4167
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 1,
+            "mean_predicted": 0.5,
+            "observed_frequency": 1.0,
+            "gap": -0.5
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 1,
+            "mean_predicted": 0.6667,
+            "observed_frequency": 1.0,
+            "gap": -0.3333
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 7,
+            "mean_predicted": 0.7609,
+            "observed_frequency": 0.7143,
+            "gap": 0.0466
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 27,
+            "mean_predicted": 0.8516,
+            "observed_frequency": 0.7778,
+            "gap": 0.0738
+          },
+          {
+            "range": "0.9–1.0",
+            "count": 1,
+            "mean_predicted": 0.9,
+            "observed_frequency": 0.0,
+            "gap": 0.9
+          }
+        ]
+      },
+      "baseline_post_change": {
+        "count": 90,
+        "brier": 0.28697631340856444,
+        "log_loss": 0.7815529326443423,
+        "log_loss_excluded": 0,
+        "accuracy": 0.5111111111111111,
+        "base_rate": 0.2111111111111111,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.16654320987654342
+        },
+        "expected_calibration_error": 0.3146793750405159,
+        "buckets": [
+          {
+            "range": "0.3–0.4",
+            "count": 16,
+            "mean_predicted": 0.3878,
+            "observed_frequency": 0.3125,
+            "gap": 0.0753
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 31,
+            "mean_predicted": 0.4457,
+            "observed_frequency": 0.1613,
+            "gap": 0.2844
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 21,
+            "mean_predicted": 0.5525,
+            "observed_frequency": 0.2381,
+            "gap": 0.3144
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 11,
+            "mean_predicted": 0.6534,
+            "observed_frequency": 0.1818,
+            "gap": 0.4716
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 7,
+            "mean_predicted": 0.7374,
+            "observed_frequency": 0.2857,
+            "gap": 0.4517
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 4,
+            "mean_predicted": 0.8368,
+            "observed_frequency": 0.0,
+            "gap": 0.8368
+          }
+        ]
+      },
+      "learning_post_change": {
+        "count": 90,
+        "brier": 0.21599458063447818,
+        "log_loss": 0.6374526969757205,
+        "log_loss_excluded": 0,
+        "accuracy": 0.7333333333333333,
+        "base_rate": 0.2111111111111111,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.16654320987654342
+        },
+        "expected_calibration_error": 0.13094508407459904,
+        "buckets": [
+          {
+            "range": "0.0–0.1",
+            "count": 2,
+            "mean_predicted": 0.0833,
+            "observed_frequency": 0.5,
+            "gap": -0.4167
+          },
+          {
+            "range": "0.1–0.2",
+            "count": 18,
+            "mean_predicted": 0.1667,
+            "observed_frequency": 0.2222,
+            "gap": -0.0556
+          },
+          {
+            "range": "0.2–0.3",
+            "count": 39,
+            "mean_predicted": 0.25,
+            "observed_frequency": 0.2308,
+            "gap": 0.0192
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 17,
+            "mean_predicted": 0.3333,
+            "observed_frequency": 0.2353,
+            "gap": 0.098
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 7,
+            "mean_predicted": 0.4167,
+            "observed_frequency": 0.0,
+            "gap": 0.4167
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 3,
+            "mean_predicted": 0.7571,
+            "observed_frequency": 0.3333,
+            "gap": 0.4238
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 4,
+            "mean_predicted": 0.8368,
+            "observed_frequency": 0.0,
+            "gap": 0.8368
+          }
+        ]
+      },
+      "baseline_recovery": null,
+      "learning_recovery": 52,
+      "detections": [
+        {
+          "at_trial": 32,
+          "historical_performance": {
+            "predictions": 23,
+            "mean_brier": 0.105827,
+            "miss_rate": 0.086957
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.305446,
+            "miss_rate": 0.4
+          },
+          "error_rate": 0.4,
+          "p_value": 0.007818084358870575,
+          "confidence": 0.9922,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=7.82e-03 <= 0.01 and effect=0.31 >= 0.25 (first firing, awaiting confirmation)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 33,
+          "historical_performance": {
+            "predictions": 24,
+            "mean_brier": 0.102017,
+            "miss_rate": 0.083333
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.368006,
+            "miss_rate": 0.5
+          },
+          "error_rate": 0.5,
+          "p_value": 0.0007077808763010768,
+          "confidence": 0.9993,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=7.08e-04, significant but only 1 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 34,
+          "historical_performance": {
+            "predictions": 25,
+            "mean_brier": 0.098469,
+            "miss_rate": 0.08
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.427168,
+            "miss_rate": 0.6
+          },
+          "error_rate": 0.6,
+          "p_value": 4.146238349901825e-05,
+          "confidence": 1.0,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=4.15e-05, significant but only 2 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 35,
+          "historical_performance": {
+            "predictions": 26,
+            "mean_brier": 0.095157,
+            "miss_rate": 0.076923
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.483202,
+            "miss_rate": 0.7
+          },
+          "error_rate": 0.7,
+          "p_value": 1.552022988315647e-06,
+          "confidence": 1.0,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=1.55e-06, significant but only 3 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 36,
+          "historical_performance": {
+            "predictions": 27,
+            "mean_brier": 0.121158,
+            "miss_rate": 0.111111
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.410408,
+            "miss_rate": 0.6
+          },
+          "error_rate": 0.6,
+          "p_value": 0.0002651600250323629,
+          "confidence": 0.9997,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=2.65e-04 <= 0.01 and effect=0.49 >= 0.25, sustained for 4 trials (confirmed)",
+          "confirmed": true
+        },
+        {
+          "at_trial": 37,
+          "historical_performance": {
+            "predictions": 28,
+            "mean_brier": 0.11751,
+            "miss_rate": 0.107143
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.425866,
+            "miss_rate": 0.6
+          },
+          "error_rate": 0.6,
+          "p_value": 0.0002163811350702424,
+          "confidence": 0.9998,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=2.16e-04 <= 0.01 and effect=0.49 >= 0.25 (first firing, awaiting confirmation)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 38,
+          "historical_performance": {
+            "predictions": 29,
+            "mean_brier": 0.114071,
+            "miss_rate": 0.103448
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.435199,
+            "miss_rate": 0.6
+          },
+          "error_rate": 0.6,
+          "p_value": 0.00017773581788436583,
+          "confidence": 0.9998,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=1.78e-04, significant but only 1 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 39,
+          "historical_performance": {
+            "predictions": 30,
+            "mean_brier": 0.110824,
+            "miss_rate": 0.1
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.489785,
+            "miss_rate": 0.7
+          },
+          "error_rate": 0.7,
+          "p_value": 9.121600000000003e-06,
+          "confidence": 1.0,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=9.12e-06, significant but only 2 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 40,
+          "historical_performance": {
+            "predictions": 31,
+            "mean_brier": 0.131946,
+            "miss_rate": 0.129032
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.419472,
+            "miss_rate": 0.6
+          },
+          "error_rate": 0.6,
+          "p_value": 0.0006076399528660439,
+          "confidence": 0.9994,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=6.08e-04, significant but only 3 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        }
+      ],
+      "events": [
+        "TRIAL 0 — strategy STRAT-6a5e1f78 ACTIVE: Laplace-smoothed frequency over the entire observation history.",
+        "TRIAL 32 — deterioration flagged (p=7.8e-03), not yet confirmed; no action taken",
+        "TRIAL 33 — deterioration flagged (p=7.1e-04), not yet confirmed; no action taken",
+        "TRIAL 34 — deterioration flagged (p=4.1e-05), not yet confirmed; no action taken",
+        "TRIAL 35 — deterioration flagged (p=1.6e-06), not yet confirmed; no action taken",
+        "TRIAL 36 — deterioration CONFIRMED (60% recent miss rate vs 11% historical, p=2.7e-04)",
+        "TRIAL 36 — hypothesis: REGIME_CHANGE (confidence 0.95); alternatives considered and rejected",
+        "TRIAL 36 — strategy STRAT-dd612060 proposed (window=10) → TESTING for 8 trials",
+        "TRIAL 37 — deterioration flagged (p=2.2e-04), not yet confirmed; no action taken",
+        "TRIAL 38 — deterioration flagged (p=1.8e-04), not yet confirmed; no action taken",
+        "TRIAL 39 — deterioration flagged (p=9.1e-06), not yet confirmed; no action taken",
+        "TRIAL 40 — deterioration flagged (p=6.1e-04), not yet confirmed; no action taken",
+        "TRIAL 44 — test concluded: STRAT-dd612060 Brier 0.220 vs incumbent 0.399 → STRAT-dd612060 ACTIVE, STRAT-6a5e1f78 WEAKENED",
+        "TRIAL 52 — rolling performance back to pre-change form"
+      ],
+      "what_i_learned": [
+        {
+          "at_trial": 36,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=2.65e-04 <= 0.01 and effect=0.49 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9997348399749676,
+          "triggered_by": [
+            "LEXP-8786f65077",
+            "LEXP-3518d4c4c5",
+            "LEXP-1558875565",
+            "LEXP-a3d8e57acb",
+            "LEXP-9e56fea079",
+            "LEXP-dd5bb0d657",
+            "LEXP-3f85d1faee",
+            "LEXP-c85e10062f",
+            "LEXP-f35c437aa1",
+            "LEXP-99faf91169"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-3862bcc4",
+            "mean_brier": 0.398892,
+            "window": "trials 37-44"
+          },
+          "after": {
+            "strategy": "STRAT-ea8dfc46",
+            "mean_brier": 0.219618,
+            "window": "trials 37-44"
+          },
+          "would_reverse_if": "Revert to STRAT-3862bcc4 if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        },
+        {
+          "at_trial": 36,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=2.65e-04 <= 0.01 and effect=0.49 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9997348399749676,
+          "triggered_by": [
+            "LEXP-ccd1fc41e3",
+            "LEXP-e4e9504b2d",
+            "LEXP-02d0004da0",
+            "LEXP-22159df6ff",
+            "LEXP-88d55251e3",
+            "LEXP-7a50138d27",
+            "LEXP-72ae069a39",
+            "LEXP-b387bbd2d7",
+            "LEXP-fbc838e967",
+            "LEXP-b836af5c09"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-3ec41978",
+            "mean_brier": 0.398892,
+            "window": "trials 37-44"
+          },
+          "after": {
+            "strategy": "STRAT-cf5e988f",
+            "mean_brier": 0.219618,
+            "window": "trials 37-44"
+          },
+          "would_reverse_if": "Revert to STRAT-3ec41978 if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        },
+        {
+          "at_trial": 36,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=2.65e-04 <= 0.01 and effect=0.49 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9997348399749676,
+          "triggered_by": [
+            "LEXP-c4bb4ddc71",
+            "LEXP-5f5baf0a8c",
+            "LEXP-74de616f8f",
+            "LEXP-c0eb8c9cc6",
+            "LEXP-d863cd480a",
+            "LEXP-270ebdb54f",
+            "LEXP-8046941bae",
+            "LEXP-6a79cff94c",
+            "LEXP-97f82048bf",
+            "LEXP-9e712fd934"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-ba5337c9",
+            "mean_brier": 0.398892,
+            "window": "trials 37-44"
+          },
+          "after": {
+            "strategy": "STRAT-e78139f2",
+            "mean_brier": 0.219618,
+            "window": "trials 37-44"
+          },
+          "would_reverse_if": "Revert to STRAT-ba5337c9 if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        },
+        {
+          "at_trial": 36,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=2.65e-04 <= 0.01 and effect=0.49 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9997348399749676,
+          "triggered_by": [
+            "LEXP-e94e94764a",
+            "LEXP-87da0f735d",
+            "LEXP-fc9a445850",
+            "LEXP-d61a5253db",
+            "LEXP-a86909ee99",
+            "LEXP-37d497295f",
+            "LEXP-e896db71c0",
+            "LEXP-a4c1c95296",
+            "LEXP-2a4e9c75ae",
+            "LEXP-bfba2d9b22"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-6a5e1f78",
+            "mean_brier": 0.398892,
+            "window": "trials 37-44"
+          },
+          "after": {
+            "strategy": "STRAT-dd612060",
+            "mean_brier": 0.219618,
+            "window": "trials 37-44"
+          },
+          "would_reverse_if": "Revert to STRAT-6a5e1f78 if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        }
+      ]
+    },
+    {
+      "id": "ENV-D-late-change",
+      "change_points": [
+        62
+      ],
+      "baseline": {
+        "count": 120,
+        "brier": 0.2532086352255077,
+        "log_loss": 0.7024241700388816,
+        "log_loss_excluded": 0,
+        "accuracy": 0.5416666666666666,
+        "base_rate": 0.5666666666666667,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.245555555555556
+        },
+        "expected_calibration_error": 0.20991764145728958,
+        "buckets": [
+          {
+            "range": "0.1–0.2",
+            "count": 3,
+            "mean_predicted": 0.1769,
+            "observed_frequency": 0.3333,
+            "gap": -0.1565
+          },
+          {
+            "range": "0.2–0.3",
+            "count": 56,
+            "mean_predicted": 0.2618,
+            "observed_frequency": 0.3214,
+            "gap": -0.0596
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 16,
+            "mean_predicted": 0.3465,
+            "observed_frequency": 0.75,
+            "gap": -0.4035
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 21,
+            "mean_predicted": 0.4424,
+            "observed_frequency": 0.8571,
+            "gap": -0.4148
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 24,
+            "mean_predicted": 0.5326,
+            "observed_frequency": 0.7917,
+            "gap": -0.259
+          }
+        ]
+      },
+      "learning": {
+        "count": 120,
+        "brier": 0.18899257165844266,
+        "log_loss": 0.5651021737038489,
+        "log_loss_excluded": 0,
+        "accuracy": 0.725,
+        "base_rate": 0.5666666666666667,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.245555555555556
+        },
+        "expected_calibration_error": 0.11288030578605406,
+        "buckets": [
+          {
+            "range": "0.1–0.2",
+            "count": 3,
+            "mean_predicted": 0.1769,
+            "observed_frequency": 0.3333,
+            "gap": -0.1565
+          },
+          {
+            "range": "0.2–0.3",
+            "count": 56,
+            "mean_predicted": 0.2618,
+            "observed_frequency": 0.3214,
+            "gap": -0.0596
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 11,
+            "mean_predicted": 0.333,
+            "observed_frequency": 0.6364,
+            "gap": -0.3034
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 1,
+            "mean_predicted": 0.4,
+            "observed_frequency": 0.0,
+            "gap": 0.4
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 2,
+            "mean_predicted": 0.5,
+            "observed_frequency": 0.0,
+            "gap": 0.5
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 11,
+            "mean_predicted": 0.75,
+            "observed_frequency": 1.0,
+            "gap": -0.25
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 25,
+            "mean_predicted": 0.8333,
+            "observed_frequency": 0.88,
+            "gap": -0.0467
+          },
+          {
+            "range": "0.9–1.0",
+            "count": 11,
+            "mean_predicted": 0.9167,
+            "observed_frequency": 0.8182,
+            "gap": 0.0985
+          }
+        ]
+      },
+      "baseline_post_change": {
+        "count": 58,
+        "brier": 0.30511687077035177,
+        "log_loss": 0.808724468053125,
+        "log_loss_excluded": 0,
+        "accuracy": 0.3620689655172414,
+        "base_rate": 0.896551724137931,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.0927467300832342
+        },
+        "expected_calibration_error": 0.4474660478569601,
+        "buckets": [
+          {
+            "range": "0.2–0.3",
+            "count": 4,
+            "mean_predicted": 0.2822,
+            "observed_frequency": 1.0,
+            "gap": -0.7178
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 12,
+            "mean_predicted": 0.3537,
+            "observed_frequency": 0.9167,
+            "gap": -0.563
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 20,
+            "mean_predicted": 0.4445,
+            "observed_frequency": 0.9,
+            "gap": -0.4555
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 22,
+            "mean_predicted": 0.5356,
+            "observed_frequency": 0.8636,
+            "gap": -0.328
+          }
+        ]
+      },
+      "learning_post_change": {
+        "count": 58,
+        "brier": 0.172256049597114,
+        "log_loss": 0.5246099928771963,
+        "log_loss_excluded": 0,
+        "accuracy": 0.7413793103448276,
+        "base_rate": 0.896551724137931,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.0927467300832342
+        },
+        "expected_calibration_error": 0.1984232843992313,
+        "buckets": [
+          {
+            "range": "0.2–0.3",
+            "count": 4,
+            "mean_predicted": 0.2822,
+            "observed_frequency": 1.0,
+            "gap": -0.7178
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 7,
+            "mean_predicted": 0.3375,
+            "observed_frequency": 0.8571,
+            "gap": -0.5196
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 11,
+            "mean_predicted": 0.75,
+            "observed_frequency": 1.0,
+            "gap": -0.25
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 25,
+            "mean_predicted": 0.8333,
+            "observed_frequency": 0.88,
+            "gap": -0.0467
+          },
+          {
+            "range": "0.9–1.0",
+            "count": 11,
+            "mean_predicted": 0.9167,
+            "observed_frequency": 0.8182,
+            "gap": 0.0985
+          }
+        ]
+      },
+      "baseline_recovery": 103,
+      "learning_recovery": 76,
+      "detections": [
+        {
+          "at_trial": 68,
+          "historical_performance": {
+            "predictions": 59,
+            "mean_brier": 0.21123,
+            "miss_rate": 0.271186
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.367954,
+            "miss_rate": 0.7
+          },
+          "error_rate": 0.7,
+          "p_value": 0.005769879827011682,
+          "confidence": 0.9942,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=5.77e-03 <= 0.01 and effect=0.43 >= 0.25 (first firing, awaiting confirmation)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 69,
+          "historical_performance": {
+            "predictions": 60,
+            "mean_brier": 0.209004,
+            "miss_rate": 0.266667
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.404008,
+            "miss_rate": 0.8
+          },
+          "error_rate": 0.8,
+          "p_value": 0.0006706515953800579,
+          "confidence": 0.9993,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=6.71e-04, significant but only 1 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 70,
+          "historical_performance": {
+            "predictions": 61,
+            "mean_brier": 0.206811,
+            "miss_rate": 0.262295
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.439101,
+            "miss_rate": 0.9
+          },
+          "error_rate": 0.9,
+          "p_value": 4.4891718502315364e-05,
+          "confidence": 1.0,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=4.49e-05, significant but only 2 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 71,
+          "historical_performance": {
+            "predictions": 62,
+            "mean_brier": 0.204649,
+            "miss_rate": 0.258065
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.473272,
+            "miss_rate": 1.0
+          },
+          "error_rate": 1.0,
+          "p_value": 1.3100596622700768e-06,
+          "confidence": 1.0,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=1.31e-06, significant but only 3 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 72,
+          "historical_performance": {
+            "predictions": 63,
+            "mean_brier": 0.209961,
+            "miss_rate": 0.269841
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.432654,
+            "miss_rate": 0.9
+          },
+          "error_rate": 0.9,
+          "p_value": 5.743140058070455e-05,
+          "confidence": 0.9999,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=5.74e-05 <= 0.01 and effect=0.63 >= 0.25, sustained for 4 trials (confirmed)",
+          "confirmed": true
+        },
+        {
+          "at_trial": 73,
+          "historical_performance": {
+            "predictions": 64,
+            "mean_brier": 0.21485,
+            "miss_rate": 0.28125
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.383148,
+            "miss_rate": 0.8
+          },
+          "error_rate": 0.8,
+          "p_value": 0.0009923801249875908,
+          "confidence": 0.999,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=9.92e-04 <= 0.01 and effect=0.52 >= 0.25 (first firing, awaiting confirmation)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 74,
+          "historical_performance": {
+            "predictions": 65,
+            "mean_brier": 0.219346,
+            "miss_rate": 0.292308
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.335214,
+            "miss_rate": 0.7
+          },
+          "error_rate": 0.7,
+          "p_value": 0.009071351098046439,
+          "confidence": 0.9909,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=9.07e-03, significant but only 1 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        }
+      ],
+      "events": [
+        "TRIAL 0 — strategy STRAT-32d13b3a ACTIVE: Laplace-smoothed frequency over the entire observation history.",
+        "TRIAL 68 — deterioration flagged (p=5.8e-03), not yet confirmed; no action taken",
+        "TRIAL 69 — deterioration flagged (p=6.7e-04), not yet confirmed; no action taken",
+        "TRIAL 70 — deterioration flagged (p=4.5e-05), not yet confirmed; no action taken",
+        "TRIAL 71 — deterioration flagged (p=1.3e-06), not yet confirmed; no action taken",
+        "TRIAL 72 — deterioration CONFIRMED (90% recent miss rate vs 27% historical, p=5.7e-05)",
+        "TRIAL 72 — hypothesis: REGIME_CHANGE (confidence 0.95); alternatives considered and rejected",
+        "TRIAL 72 — strategy STRAT-f5561eec proposed (window=10) → TESTING for 8 trials",
+        "TRIAL 73 — deterioration flagged (p=9.9e-04), not yet confirmed; no action taken",
+        "TRIAL 74 — deterioration flagged (p=9.1e-03), not yet confirmed; no action taken",
+        "TRIAL 80 — test concluded: STRAT-f5561eec Brier 0.111 vs incumbent 0.354 → STRAT-f5561eec ACTIVE, STRAT-32d13b3a WEAKENED",
+        "TRIAL 76 — rolling performance back to pre-change form"
+      ],
+      "what_i_learned": [
+        {
+          "at_trial": 72,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=5.74e-05 <= 0.01 and effect=0.63 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9999425685994193,
+          "triggered_by": [
+            "LEXP-ab83b2b8eb",
+            "LEXP-48891eddbd",
+            "LEXP-1b221d899c",
+            "LEXP-16f270faf4",
+            "LEXP-7145a18a23",
+            "LEXP-51cdcabfe9",
+            "LEXP-05deadd933",
+            "LEXP-ffe3bf6049",
+            "LEXP-a5199b23f4",
+            "LEXP-204b306f41"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-4bba09eb",
+            "mean_brier": 0.353506,
+            "window": "trials 73-80"
+          },
+          "after": {
+            "strategy": "STRAT-ca9d6254",
+            "mean_brier": 0.111111,
+            "window": "trials 73-80"
+          },
+          "would_reverse_if": "Revert to STRAT-4bba09eb if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        },
+        {
+          "at_trial": 72,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=5.74e-05 <= 0.01 and effect=0.63 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9999425685994193,
+          "triggered_by": [
+            "LEXP-1c4e56e413",
+            "LEXP-1ecdd5c015",
+            "LEXP-2b391de560",
+            "LEXP-22c519235d",
+            "LEXP-67b684c2b9",
+            "LEXP-9f4ae83a22",
+            "LEXP-1206832441",
+            "LEXP-50c38f3cb5",
+            "LEXP-b3d96942fd",
+            "LEXP-552a2e9c6f"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-6e4c07dc",
+            "mean_brier": 0.353506,
+            "window": "trials 73-80"
+          },
+          "after": {
+            "strategy": "STRAT-7d44d024",
+            "mean_brier": 0.111111,
+            "window": "trials 73-80"
+          },
+          "would_reverse_if": "Revert to STRAT-6e4c07dc if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        },
+        {
+          "at_trial": 72,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=5.74e-05 <= 0.01 and effect=0.63 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9999425685994193,
+          "triggered_by": [
+            "LEXP-ca071809c8",
+            "LEXP-3de9f12117",
+            "LEXP-afba8bf6c5",
+            "LEXP-f94b6d8e53",
+            "LEXP-5f30e9410b",
+            "LEXP-8ac8603566",
+            "LEXP-eb72e18932",
+            "LEXP-542c893b7b",
+            "LEXP-ac95660425",
+            "LEXP-9b3b7ac84b"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-ea668e24",
+            "mean_brier": 0.353506,
+            "window": "trials 73-80"
+          },
+          "after": {
+            "strategy": "STRAT-955bed1c",
+            "mean_brier": 0.111111,
+            "window": "trials 73-80"
+          },
+          "would_reverse_if": "Revert to STRAT-ea668e24 if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        },
+        {
+          "at_trial": 72,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=5.74e-05 <= 0.01 and effect=0.63 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9999425685994193,
+          "triggered_by": [
+            "LEXP-f126b339ce",
+            "LEXP-5e8fcb0980",
+            "LEXP-29fe88c296",
+            "LEXP-d950fdf2b9",
+            "LEXP-0a9aebaa3e",
+            "LEXP-841f921633",
+            "LEXP-c59e604ad0",
+            "LEXP-cc0c19b71f",
+            "LEXP-aca2310ede",
+            "LEXP-67023def9a"
+          ],
+          "did_it_help": "improved",
+          "before": {
+            "strategy": "STRAT-32d13b3a",
+            "mean_brier": 0.353506,
+            "window": "trials 73-80"
+          },
+          "after": {
+            "strategy": "STRAT-f5561eec",
+            "mean_brier": 0.111111,
+            "window": "trials 73-80"
+          },
+          "would_reverse_if": "Revert to STRAT-32d13b3a if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        }
+      ]
+    },
+    {
+      "id": "ENV-F-false-alarm",
+      "change_points": [],
+      "baseline": {
+        "count": 120,
+        "brier": 0.21881184964391337,
+        "log_loss": 0.6297044490871783,
+        "log_loss_excluded": 0,
+        "accuracy": 0.6666666666666666,
+        "base_rate": 0.7,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.20999999999999983
+        },
+        "expected_calibration_error": 0.101391031498422,
+        "buckets": [
+          {
+            "range": "0.2–0.3",
+            "count": 1,
+            "mean_predicted": 0.25,
+            "observed_frequency": 1.0,
+            "gap": -0.75
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 1,
+            "mean_predicted": 0.3333,
+            "observed_frequency": 0.0,
+            "gap": 0.3333
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 6,
+            "mean_predicted": 0.4295,
+            "observed_frequency": 0.6667,
+            "gap": -0.2371
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 34,
+            "mean_predicted": 0.5626,
+            "observed_frequency": 0.6176,
+            "gap": -0.055
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 76,
+            "mean_predicted": 0.6528,
+            "observed_frequency": 0.75,
+            "gap": -0.0972
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 2,
+            "mean_predicted": 0.7012,
+            "observed_frequency": 0.5,
+            "gap": 0.2012
+          }
+        ]
+      },
+      "learning": {
+        "count": 120,
+        "brier": 0.22132720861424524,
+        "log_loss": 0.6354067039992393,
+        "log_loss_excluded": 0,
+        "accuracy": 0.6583333333333333,
+        "base_rate": 0.7,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.20999999999999983
+        },
+        "expected_calibration_error": 0.10652276686318161,
+        "buckets": [
+          {
+            "range": "0.2–0.3",
+            "count": 2,
+            "mean_predicted": 0.25,
+            "observed_frequency": 1.0,
+            "gap": -0.75
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 2,
+            "mean_predicted": 0.3333,
+            "observed_frequency": 0.5,
+            "gap": -0.1667
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 10,
+            "mean_predicted": 0.4244,
+            "observed_frequency": 0.5,
+            "gap": -0.0756
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 28,
+            "mean_predicted": 0.557,
+            "observed_frequency": 0.6429,
+            "gap": -0.0858
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 76,
+            "mean_predicted": 0.6528,
+            "observed_frequency": 0.75,
+            "gap": -0.0972
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 2,
+            "mean_predicted": 0.7012,
+            "observed_frequency": 0.5,
+            "gap": 0.2012
+          }
+        ]
+      },
+      "baseline_post_change": {
+        "count": 0,
+        "brier": null,
+        "log_loss": null,
+        "log_loss_excluded": 0,
+        "accuracy": null,
+        "base_rate": null,
+        "reference_brier": {
+          "always_half": null,
+          "always_base_rate": null
+        },
+        "expected_calibration_error": null,
+        "buckets": []
+      },
+      "learning_post_change": {
+        "count": 0,
+        "brier": null,
+        "log_loss": null,
+        "log_loss_excluded": 0,
+        "accuracy": null,
+        "base_rate": null,
+        "reference_brier": {
+          "always_half": null,
+          "always_base_rate": null
+        },
+        "expected_calibration_error": null,
+        "buckets": []
+      },
+      "baseline_recovery": null,
+      "learning_recovery": null,
+      "detections": [
+        {
+          "at_trial": 46,
+          "historical_performance": {
+            "predictions": 37,
+            "mean_brier": 0.240249,
+            "miss_rate": 0.324324
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.34094,
+            "miss_rate": 0.8
+          },
+          "error_rate": 0.8,
+          "p_value": 0.002796041384602796,
+          "confidence": 0.9972,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=2.80e-03 <= 0.01 and effect=0.48 >= 0.25 (first firing, awaiting confirmation)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 47,
+          "historical_performance": {
+            "predictions": 38,
+            "mean_brier": 0.236851,
+            "miss_rate": 0.315789
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.348196,
+            "miss_rate": 0.8
+          },
+          "error_rate": 0.8,
+          "p_value": 0.0023069222318297645,
+          "confidence": 0.9977,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=2.31e-03, significant but only 1 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 48,
+          "historical_performance": {
+            "predictions": 39,
+            "mean_brier": 0.233486,
+            "miss_rate": 0.307692
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.371274,
+            "miss_rate": 0.9
+          },
+          "error_rate": 0.9,
+          "p_value": 0.00017874360392069612,
+          "confidence": 0.9998,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=1.79e-04, significant but only 2 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 49,
+          "historical_performance": {
+            "predictions": 40,
+            "mean_brier": 0.239309,
+            "miss_rate": 0.325
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.343243,
+            "miss_rate": 0.8
+          },
+          "error_rate": 0.8,
+          "p_value": 0.0028382415413822186,
+          "confidence": 0.9972,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=2.84e-03, significant but only 3 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 50,
+          "historical_performance": {
+            "predictions": 41,
+            "mean_brier": 0.244312,
+            "miss_rate": 0.341463
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.332083,
+            "miss_rate": 0.8
+          },
+          "error_rate": 0.8,
+          "p_value": 0.004043947307009653,
+          "confidence": 0.996,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=4.04e-03 <= 0.01 and effect=0.46 >= 0.25, sustained for 4 trials (confirmed)",
+          "confirmed": true
+        },
+        {
+          "at_trial": 51,
+          "historical_performance": {
+            "predictions": 42,
+            "mean_brier": 0.24859,
+            "miss_rate": 0.357143
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.345932,
+            "miss_rate": 0.8
+          },
+          "error_rate": 0.8,
+          "p_value": 0.00556388472430599,
+          "confidence": 0.9944,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=5.56e-03 <= 0.01 and effect=0.44 >= 0.25 (first firing, awaiting confirmation)",
+          "confirmed": false
+        },
+        {
+          "at_trial": 52,
+          "historical_performance": {
+            "predictions": 43,
+            "mean_brier": 0.252227,
+            "miss_rate": 0.372093
+          },
+          "recent_performance": {
+            "predictions": 10,
+            "mean_brier": 0.34988,
+            "miss_rate": 0.8
+          },
+          "error_rate": 0.8,
+          "p_value": 0.007428925962422302,
+          "confidence": 0.9926,
+          "suspected_regime_change": true,
+          "threshold_crossed": "p=7.43e-03, significant but only 1 trial(s) since the first firing (needs 4)",
+          "confirmed": false
+        }
+      ],
+      "events": [
+        "TRIAL 0 — strategy STRAT-303f3290 ACTIVE: Laplace-smoothed frequency over the entire observation history.",
+        "TRIAL 46 — deterioration flagged (p=2.8e-03), not yet confirmed; no action taken",
+        "TRIAL 47 — deterioration flagged (p=2.3e-03), not yet confirmed; no action taken",
+        "TRIAL 48 — deterioration flagged (p=1.8e-04), not yet confirmed; no action taken",
+        "TRIAL 49 — deterioration flagged (p=2.8e-03), not yet confirmed; no action taken",
+        "TRIAL 50 — deterioration CONFIRMED (80% recent miss rate vs 34% historical, p=4.0e-03)",
+        "TRIAL 50 — hypothesis: REGIME_CHANGE (confidence 0.95); alternatives considered and rejected",
+        "TRIAL 50 — strategy STRAT-fbeafb19 proposed (window=10) → TESTING for 8 trials",
+        "TRIAL 51 — deterioration flagged (p=5.6e-03), not yet confirmed; no action taken",
+        "TRIAL 52 — deterioration flagged (p=7.4e-03), not yet confirmed; no action taken",
+        "TRIAL 58 — test concluded: STRAT-fbeafb19 Brier 0.296 did NOT beat incumbent 0.258 → STRAT-fbeafb19 RETIRED, reverting to STRAT-303f3290"
+      ],
+      "what_i_learned": [
+        {
+          "at_trial": 50,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=4.04e-03 <= 0.01 and effect=0.46 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9959560526929904,
+          "triggered_by": [
+            "LEXP-ee363292df",
+            "LEXP-e304b0315a",
+            "LEXP-5d753f8a47",
+            "LEXP-fe1f041107",
+            "LEXP-73ae39679a",
+            "LEXP-5f69f32255",
+            "LEXP-6f54a6ad0a",
+            "LEXP-6ba778e9b8",
+            "LEXP-a67344df65",
+            "LEXP-a217a51719"
+          ],
+          "did_it_help": "no_improvement",
+          "before": {
+            "strategy": "STRAT-0b875773",
+            "mean_brier": 0.258277,
+            "window": "trials 51-58"
+          },
+          "after": {
+            "strategy": "STRAT-a9a8da66",
+            "mean_brier": 0.296007,
+            "window": "trials 51-58"
+          },
+          "would_reverse_if": "Revert to STRAT-0b875773 if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        },
+        {
+          "at_trial": 50,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=4.04e-03 <= 0.01 and effect=0.46 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9959560526929904,
+          "triggered_by": [
+            "LEXP-d560f07338",
+            "LEXP-5d22fdef03",
+            "LEXP-6470222640",
+            "LEXP-1e48377b16",
+            "LEXP-a8a803d72b",
+            "LEXP-e1096fe033",
+            "LEXP-674805e812",
+            "LEXP-64712a1497",
+            "LEXP-75fab27249",
+            "LEXP-657274dde7"
+          ],
+          "did_it_help": "no_improvement",
+          "before": {
+            "strategy": "STRAT-aa6ef4aa",
+            "mean_brier": 0.258277,
+            "window": "trials 51-58"
+          },
+          "after": {
+            "strategy": "STRAT-0bd6e633",
+            "mean_brier": 0.296007,
+            "window": "trials 51-58"
+          },
+          "would_reverse_if": "Revert to STRAT-aa6ef4aa if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        },
+        {
+          "at_trial": 50,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=4.04e-03 <= 0.01 and effect=0.46 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9959560526929904,
+          "triggered_by": [
+            "LEXP-6ddd97abea",
+            "LEXP-de746668de",
+            "LEXP-e34fefb28d",
+            "LEXP-76f394d082",
+            "LEXP-732dccf1bf",
+            "LEXP-6f96a46e4e",
+            "LEXP-2573485793",
+            "LEXP-ad65f49895",
+            "LEXP-cb83946418",
+            "LEXP-d59c9d2953"
+          ],
+          "did_it_help": "no_improvement",
+          "before": {
+            "strategy": "STRAT-dc8ad20c",
+            "mean_brier": 0.258277,
+            "window": "trials 51-58"
+          },
+          "after": {
+            "strategy": "STRAT-b3ea5c7f",
+            "mean_brier": 0.296007,
+            "window": "trials 51-58"
+          },
+          "would_reverse_if": "Revert to STRAT-dc8ad20c if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        },
+        {
+          "at_trial": 50,
+          "changed_from": "Laplace-smoothed frequency over the entire observation history. (v1)",
+          "changed_to": "Laplace-smoothed frequency over the most recent 10 observations, discarding older evidence. (v2)",
+          "why": "Sustained, statistically significant deterioration against historical performance (p=4.04e-03 <= 0.01 and effect=0.46 >= 0.25, sustained for 4 trials (confirmed)). The active strategy assumes a stationary process; that assumption is what the evidence contradicts.",
+          "confidence": 0.9959560526929904,
+          "triggered_by": [
+            "LEXP-a77d5d3056",
+            "LEXP-cc21f8137d",
+            "LEXP-764553e988",
+            "LEXP-806b4e467e",
+            "LEXP-15f625bacf",
+            "LEXP-d9bfc9d1b1",
+            "LEXP-6eae653ec1",
+            "LEXP-948a396b54",
+            "LEXP-0e6f3a490a",
+            "LEXP-123495e95c"
+          ],
+          "did_it_help": "no_improvement",
+          "before": {
+            "strategy": "STRAT-303f3290",
+            "mean_brier": 0.258277,
+            "window": "trials 51-58"
+          },
+          "after": {
+            "strategy": "STRAT-fbeafb19",
+            "mean_brier": 0.296007,
+            "window": "trials 51-58"
+          },
+          "would_reverse_if": "Revert to STRAT-303f3290 if the successor's mean Brier over the 8-trial test window is not at least 0.02 better than the incumbent's over the same trials, or if it later loses that margin over any subsequent 10-trial window."
+        }
+      ]
+    }
+  ],
+  "persistence": {
+    "experiences": true,
+    "revisions": true,
+    "strategies": true,
+    "verdicts": true,
+    "reversal_conditions": true
+  }
+}
