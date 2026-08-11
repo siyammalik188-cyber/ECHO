@@ -276,11 +276,14 @@ class CandidateSource(Protocol):
 
 
 def unary_terms(
-    *, max_lag: int = ex.MAX_LAG, max_window: int = ex.MAX_WINDOW
+    *,
+    max_lag: int = ex.MAX_LAG,
+    max_window: int = ex.MAX_WINDOW,
+    variable_names: Sequence[str] = ex.VARIABLE_NAMES,
 ) -> list[Expr]:
     """Every single-variable term the language can express, in a fixed order."""
     terms: list[Expr] = []
-    for variable in ex.VARIABLE_NAMES:
+    for variable in variable_names:
         terms.append(ex.Feature(variable))
         for steps in range(1, max_lag + 1):
             terms.append(ex.Lag(variable, steps))
@@ -314,7 +317,11 @@ class EnumerationSource:
     def propose(
         self, observations: ObservationSet, split: ChronologicalSplit
     ) -> Iterable[Expr]:
-        terms = unary_terms(max_lag=self.max_lag, max_window=self.max_window)
+        terms = unary_terms(
+            max_lag=self.max_lag,
+            max_window=self.max_window,
+            variable_names=observations.variable_names,
+        )
         yield from terms
         for i, left in enumerate(terms):
             for j, right in enumerate(terms):

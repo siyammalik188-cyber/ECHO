@@ -19,12 +19,15 @@ capability is *not*.
 | 3 | Prediction — sealed, temporally clean, properly scored | `prediction.py`, `calibration.py`, `prediction_ledger.py` | [`docs/ECHO_3_PREDICTION.md`](docs/ECHO_3_PREDICTION.md) |
 | 4 | Learning from prediction errors — strategy revision | `learning.py`, `learning_ledger.py`, `strategy.py`, `predictors.py` | [`docs/ECHO_4_LEARNING.md`](docs/ECHO_4_LEARNING.md) |
 | 5 | Discovery — bounded hypothesis search over a closed language | `expressions.py`, `hypothesis.py`, `observations.py`, `discovery.py`, `discovery_ledger.py` | [`docs/ECHO_5_DISCOVERY.md`](docs/ECHO_5_DISCOVERY.md) |
+| 6 | Transfer — reusing a discovered structure in a different world | `pattern.py`, `transfer.py`, `transfer_ledger.py` | [`docs/ECHO_6_TRANSFER.md`](docs/ECHO_6_TRANSFER.md) |
 
-**These are five different things.** Memory stores; belief revision moves a
+**These are six different things.** Memory stores; belief revision moves a
 number by a fixed rule; prediction seals a probability before an outcome exists;
 learning changes the *method* because measured errors said the method was wrong;
-discovery finds a relationship nobody encoded. A value changing is not learning,
-and predicting something is not understanding it. None of this is AGI,
+discovery finds a relationship nobody encoded; transfer reuses the *shape* of
+one discovery in a world that shares no variables with the first. A value
+changing is not learning, predicting something is not understanding it, and
+reusing a structure is not knowing what it means. None of this is AGI,
 consciousness, or autonomous intelligence.
 
 The sections below describe capabilities 1 and 2; the reports cover the rest.

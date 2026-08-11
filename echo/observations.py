@@ -153,14 +153,27 @@ class ChronologicalSplit:
         val_a_stop: int,
         val_b_stop: int,
         warmup: int = WARMUP_FLOOR,
+        train_rows: int | None = None,
     ) -> None:
         bounds = [warmup, train_stop, val_a_stop, val_b_stop, rows]
         if bounds != sorted(bounds) or len(set(bounds)) != len(bounds):
             raise ValueError(f"block boundaries must strictly increase, got {bounds}")
         self.rows = rows
         self.warmup = warmup
+        # A training budget shortens TRAIN from its *end*, leaving the three
+        # later blocks untouched. That is what makes sample efficiency
+        # measurable: every budget is judged on identical validation and
+        # holdout rows, so the only thing that varies is how much history the
+        # search had. A gap opens between TRAIN and VAL_A at small budgets,
+        # which is harmless — the blocks stay in time order either way.
+        train_end = train_stop
+        if train_rows is not None:
+            if train_rows < 1:
+                raise ValueError(f"train_rows must be positive, got {train_rows}")
+            train_end = min(train_stop, warmup + train_rows)
+        self.train_budget = train_rows
         self._blocks = {
-            TRAIN: Block(TRAIN, warmup, train_stop),
+            TRAIN: Block(TRAIN, warmup, train_end),
             VAL_A: Block(VAL_A, train_stop, val_a_stop),
             VAL_B: Block(VAL_B, val_a_stop, val_b_stop),
             TEST: Block(TEST, val_b_stop, rows),

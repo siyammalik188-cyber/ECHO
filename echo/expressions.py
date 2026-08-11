@@ -38,9 +38,14 @@ the violation.
 from __future__ import annotations
 
 import math
+import re
 from dataclasses import dataclass
 from typing import Any, ClassVar, Mapping, Sequence
 
+#: The default schema, used by the ECHO 5 worlds and by anything that needs
+#: a schema without being handed one. Worlds may use other names entirely —
+#: transfer depends on it, since a target world shares no names with its
+#: source. Membership is checked by `check_schema`, not at construction.
 VARIABLE_NAMES: tuple[str, ...] = ("X1", "X2", "X3", "X4", "X5", "X6")
 
 # --------------------------------------------------------------------- limits
@@ -142,12 +147,34 @@ def _column(columns: Mapping[str, Sequence[float]], name: str) -> Sequence[float
         raise ExpressionError(f"no observed variable named {name!r}") from None
 
 
+#: A variable name is a plain identifier and nothing else. The name is only
+#: ever used as a dictionary key against an observation set's columns, so this
+#: is not the security boundary — that is the whitelist of operators. What it
+#: does buy is that a serialised expression cannot carry a payload dressed up
+#: as a variable name, and that malformed names fail loudly at construction.
+_VALID_NAME = re.compile(r"^[A-Za-z][A-Za-z0-9_]{0,31}$")
+
+
 def _check_variable(name: str) -> str:
-    if name not in VARIABLE_NAMES:
-        raise ExpressionError(
-            f"{name!r} is not an observed variable (allowed: {', '.join(VARIABLE_NAMES)})"
-        )
+    if not isinstance(name, str) or not _VALID_NAME.match(name):
+        raise ExpressionError(f"{name!r} is not a valid variable name")
     return name
+
+
+def check_schema(expr: "Expr", allowed: Sequence[str]) -> "Expr":
+    """Assert every variable in `expr` exists in a particular world.
+
+    Kept separate from `validate` because which variables exist is a fact about
+    an observation set, not about the language. A world named `X1…X6` and a
+    world named `Z1…Z6` are both expressible; only one of them has an `X2`.
+    """
+    unknown = [name for name in expr.variables() if name not in allowed]
+    if unknown:
+        raise ExpressionError(
+            f"{', '.join(unknown)} not present in this world "
+            f"(has: {', '.join(allowed)})"
+        )
+    return expr
 
 
 @dataclass(frozen=True)
