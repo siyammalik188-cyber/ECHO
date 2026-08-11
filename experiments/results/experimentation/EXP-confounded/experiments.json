@@ -1,0 +1,583 @@
+{
+  "schema_version": 1,
+  "experiments": [
+    {
+      "experiment_id": "EXP-dd27cd84c732",
+      "step": 0,
+      "option_id": "DO-V3",
+      "intervention": {
+        "assignments": [
+          [
+            "V3",
+            1
+          ]
+        ],
+        "label": "INTERVENE(V3=1)"
+      },
+      "policy": "information_gain",
+      "appraisal": {
+        "option_id": "DO-V3",
+        "intervention": "INTERVENE(V3=1)",
+        "prior_entropy_bits": 1.584962500721156,
+        "expected_posterior_entropy_bits": 0.7699367826903134,
+        "expected_information_gain_bits": 0.8150257180308427,
+        "cost": 6.0,
+        "risk": 0.2,
+        "time": 3.0,
+        "samples": 8,
+        "utility": 0.4950257180308426,
+        "information_per_cost": 0.1358376196718071,
+        "exact": true,
+        "outcomes_considered": 165
+      },
+      "alternatives": [
+        {
+          "option_id": "OBS",
+          "intervention": "OBSERVE()",
+          "prior_entropy_bits": 1.584962500721156,
+          "expected_posterior_entropy_bits": 1.5849625007211554,
+          "expected_information_gain_bits": 6.661338147750939e-16,
+          "cost": 1.0,
+          "risk": 0.0,
+          "time": 1.0,
+          "samples": 8,
+          "utility": -0.04999999999999934,
+          "information_per_cost": 6.661338147750939e-16,
+          "exact": true,
+          "outcomes_considered": 165
+        },
+        {
+          "option_id": "DO-V1",
+          "intervention": "INTERVENE(V1=1)",
+          "prior_entropy_bits": 1.584962500721156,
+          "expected_posterior_entropy_bits": 1.0811226992091418,
+          "expected_information_gain_bits": 0.5038398015120142,
+          "cost": 2.0,
+          "risk": 0.1,
+          "time": 2.0,
+          "samples": 8,
+          "utility": 0.39383980151201425,
+          "information_per_cost": 0.2519199007560071,
+          "exact": true,
+          "outcomes_considered": 9
+        },
+        {
+          "option_id": "DO-V2",
+          "intervention": "INTERVENE(V2=1)",
+          "prior_entropy_bits": 1.584962500721156,
+          "expected_posterior_entropy_bits": 1.0811226992091418,
+          "expected_information_gain_bits": 0.5038398015120142,
+          "cost": 12.0,
+          "risk": 0.5,
+          "time": 6.0,
+          "samples": 8,
+          "utility": -0.14616019848798584,
+          "information_per_cost": 0.04198665012600119,
+          "exact": true,
+          "outcomes_considered": 9
+        },
+        {
+          "option_id": "DO-V1V2",
+          "intervention": "INTERVENE(V1=1, V2=1)",
+          "prior_entropy_bits": 1.584962500721156,
+          "expected_posterior_entropy_bits": 1.584962500721156,
+          "expected_information_gain_bits": 0.0,
+          "cost": 9.0,
+          "risk": 0.6,
+          "time": 5.0,
+          "samples": 8,
+          "utility": -0.51,
+          "information_per_cost": 0.0,
+          "exact": true,
+          "outcomes_considered": 1
+        }
+      ],
+      "outcome_counts": [
+        [
+          [
+            1,
+            0
+          ],
+          2
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          6
+        ]
+      ],
+      "posterior_before": [
+        [
+          "H1-direct",
+          0.3333333333333333
+        ],
+        [
+          "H2-confounded",
+          0.3333333333333333
+        ],
+        [
+          "H3-reversed",
+          0.3333333333333333
+        ]
+      ],
+      "posterior_after": [
+        [
+          "H2-confounded",
+          0.9682767453464405
+        ],
+        [
+          "H1-direct",
+          0.015861627326779714
+        ],
+        [
+          "H3-reversed",
+          0.015861627326779707
+        ]
+      ],
+      "entropy_before": 1.584962500721156,
+      "entropy_after": 0.23468486460227822,
+      "information_gained": 1.3502776361188777,
+      "cost": 6.0,
+      "created_at": 0,
+      "conclusive": true,
+      "note": "contradicted the leader"
+    },
+    {
+      "experiment_id": "EXP-13cc031ec912",
+      "step": 1,
+      "option_id": "OBS",
+      "intervention": {
+        "assignments": [],
+        "label": "OBSERVE()"
+      },
+      "policy": "information_gain",
+      "appraisal": {
+        "option_id": "OBS",
+        "intervention": "OBSERVE()",
+        "prior_entropy_bits": 0.23468486460227822,
+        "expected_posterior_entropy_bits": 0.234684864602278,
+        "expected_information_gain_bits": 2.220446049250313e-16,
+        "cost": 1.0,
+        "risk": 0.0,
+        "time": 1.0,
+        "samples": 8,
+        "utility": -0.04999999999999978,
+        "information_per_cost": 2.220446049250313e-16,
+        "exact": true,
+        "outcomes_considered": 165
+      },
+      "alternatives": [
+        {
+          "option_id": "DO-V1",
+          "intervention": "INTERVENE(V1=1)",
+          "prior_entropy_bits": 0.23468486460227822,
+          "expected_posterior_entropy_bits": 0.18855509748228796,
+          "expected_information_gain_bits": 0.046129767119990256,
+          "cost": 2.0,
+          "risk": 0.1,
+          "time": 2.0,
+          "samples": 8,
+          "utility": -0.06387023288000976,
+          "information_per_cost": 0.023064883559995128,
+          "exact": true,
+          "outcomes_considered": 9
+        },
+        {
+          "option_id": "DO-V2",
+          "intervention": "INTERVENE(V2=1)",
+          "prior_entropy_bits": 0.23468486460227822,
+          "expected_posterior_entropy_bits": 0.18855509748228796,
+          "expected_information_gain_bits": 0.046129767119990256,
+          "cost": 12.0,
+          "risk": 0.5,
+          "time": 6.0,
+          "samples": 8,
+          "utility": -0.6038702328800098,
+          "information_per_cost": 0.003844147259999188,
+          "exact": true,
+          "outcomes_considered": 9
+        },
+        {
+          "option_id": "DO-V3",
+          "intervention": "INTERVENE(V3=1)",
+          "prior_entropy_bits": 0.23468486460227822,
+          "expected_posterior_entropy_bits": 0.05319595468413151,
+          "expected_information_gain_bits": 0.1814889099181467,
+          "cost": 6.0,
+          "risk": 0.2,
+          "time": 3.0,
+          "samples": 8,
+          "utility": -0.13851109008185336,
+          "information_per_cost": 0.03024815165302445,
+          "exact": true,
+          "outcomes_considered": 165
+        },
+        {
+          "option_id": "DO-V1V2",
+          "intervention": "INTERVENE(V1=1, V2=1)",
+          "prior_entropy_bits": 0.23468486460227822,
+          "expected_posterior_entropy_bits": 0.23468486460227822,
+          "expected_information_gain_bits": 0.0,
+          "cost": 9.0,
+          "risk": 0.6,
+          "time": 5.0,
+          "samples": 8,
+          "utility": -0.51,
+          "information_per_cost": 0.0,
+          "exact": true,
+          "outcomes_considered": 1
+        }
+      ],
+      "outcome_counts": [
+        [
+          [
+            0,
+            0
+          ],
+          4
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          2
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          2
+        ]
+      ],
+      "posterior_before": [
+        [
+          "H2-confounded",
+          0.9682767453464405
+        ],
+        [
+          "H1-direct",
+          0.015861627326779714
+        ],
+        [
+          "H3-reversed",
+          0.015861627326779707
+        ]
+      ],
+      "posterior_after": [
+        [
+          "H2-confounded",
+          0.9682767453464406
+        ],
+        [
+          "H1-direct",
+          0.0158616273267797
+        ],
+        [
+          "H3-reversed",
+          0.0158616273267797
+        ]
+      ],
+      "entropy_before": 0.23468486460227822,
+      "entropy_after": 0.23468486460227794,
+      "information_gained": 2.7755575615628914e-16,
+      "cost": 1.0,
+      "created_at": 1,
+      "conclusive": false,
+      "note": ""
+    },
+    {
+      "experiment_id": "EXP-7b36d2c43816",
+      "step": 2,
+      "option_id": "OBS",
+      "intervention": {
+        "assignments": [],
+        "label": "OBSERVE()"
+      },
+      "policy": "information_gain",
+      "appraisal": {
+        "option_id": "OBS",
+        "intervention": "OBSERVE()",
+        "prior_entropy_bits": 0.23468486460227794,
+        "expected_posterior_entropy_bits": 0.23468486460227783,
+        "expected_information_gain_bits": 1.1102230246251565e-16,
+        "cost": 1.0,
+        "risk": 0.0,
+        "time": 1.0,
+        "samples": 8,
+        "utility": -0.04999999999999989,
+        "information_per_cost": 1.1102230246251565e-16,
+        "exact": true,
+        "outcomes_considered": 165
+      },
+      "alternatives": [
+        {
+          "option_id": "DO-V1",
+          "intervention": "INTERVENE(V1=1)",
+          "prior_entropy_bits": 0.23468486460227794,
+          "expected_posterior_entropy_bits": 0.1885550974822879,
+          "expected_information_gain_bits": 0.046129767119990034,
+          "cost": 2.0,
+          "risk": 0.1,
+          "time": 2.0,
+          "samples": 8,
+          "utility": -0.06387023288000998,
+          "information_per_cost": 0.023064883559995017,
+          "exact": true,
+          "outcomes_considered": 9
+        },
+        {
+          "option_id": "DO-V2",
+          "intervention": "INTERVENE(V2=1)",
+          "prior_entropy_bits": 0.23468486460227794,
+          "expected_posterior_entropy_bits": 0.1885550974822879,
+          "expected_information_gain_bits": 0.046129767119990034,
+          "cost": 12.0,
+          "risk": 0.5,
+          "time": 6.0,
+          "samples": 8,
+          "utility": -0.6038702328800101,
+          "information_per_cost": 0.0038441472599991693,
+          "exact": true,
+          "outcomes_considered": 9
+        },
+        {
+          "option_id": "DO-V3",
+          "intervention": "INTERVENE(V3=1)",
+          "prior_entropy_bits": 0.23468486460227794,
+          "expected_posterior_entropy_bits": 0.0531959546841315,
+          "expected_information_gain_bits": 0.18148890991814645,
+          "cost": 6.0,
+          "risk": 0.2,
+          "time": 3.0,
+          "samples": 8,
+          "utility": -0.13851109008185358,
+          "information_per_cost": 0.03024815165302441,
+          "exact": true,
+          "outcomes_considered": 165
+        },
+        {
+          "option_id": "DO-V1V2",
+          "intervention": "INTERVENE(V1=1, V2=1)",
+          "prior_entropy_bits": 0.23468486460227794,
+          "expected_posterior_entropy_bits": 0.2346848646022778,
+          "expected_information_gain_bits": 1.3877787807814457e-16,
+          "cost": 9.0,
+          "risk": 0.6,
+          "time": 5.0,
+          "samples": 8,
+          "utility": -0.5099999999999998,
+          "information_per_cost": 1.5419764230904953e-17,
+          "exact": true,
+          "outcomes_considered": 1
+        }
+      ],
+      "outcome_counts": [
+        [
+          [
+            0,
+            0
+          ],
+          2
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          2
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          4
+        ]
+      ],
+      "posterior_before": [
+        [
+          "H2-confounded",
+          0.9682767453464406
+        ],
+        [
+          "H1-direct",
+          0.0158616273267797
+        ],
+        [
+          "H3-reversed",
+          0.0158616273267797
+        ]
+      ],
+      "posterior_after": [
+        [
+          "H2-confounded",
+          0.9682767453464406
+        ],
+        [
+          "H3-reversed",
+          0.015861627326779693
+        ],
+        [
+          "H1-direct",
+          0.01586162732677969
+        ]
+      ],
+      "entropy_before": 0.23468486460227794,
+      "entropy_after": 0.2346848646022779,
+      "information_gained": 5.551115123125783e-17,
+      "cost": 1.0,
+      "created_at": 2,
+      "conclusive": false,
+      "note": ""
+    },
+    {
+      "experiment_id": "EXP-936cf1a37ad3",
+      "step": 3,
+      "option_id": "OBS",
+      "intervention": {
+        "assignments": [],
+        "label": "OBSERVE()"
+      },
+      "policy": "information_gain",
+      "appraisal": {
+        "option_id": "OBS",
+        "intervention": "OBSERVE()",
+        "prior_entropy_bits": 0.2346848646022779,
+        "expected_posterior_entropy_bits": 0.23468486460227778,
+        "expected_information_gain_bits": 1.1102230246251565e-16,
+        "cost": 1.0,
+        "risk": 0.0,
+        "time": 1.0,
+        "samples": 8,
+        "utility": -0.04999999999999989,
+        "information_per_cost": 1.1102230246251565e-16,
+        "exact": true,
+        "outcomes_considered": 165
+      },
+      "alternatives": [
+        {
+          "option_id": "DO-V1",
+          "intervention": "INTERVENE(V1=1)",
+          "prior_entropy_bits": 0.2346848646022779,
+          "expected_posterior_entropy_bits": 0.18855509748228774,
+          "expected_information_gain_bits": 0.046129767119990145,
+          "cost": 2.0,
+          "risk": 0.1,
+          "time": 2.0,
+          "samples": 8,
+          "utility": -0.06387023288000987,
+          "information_per_cost": 0.023064883559995072,
+          "exact": true,
+          "outcomes_considered": 9
+        },
+        {
+          "option_id": "DO-V2",
+          "intervention": "INTERVENE(V2=1)",
+          "prior_entropy_bits": 0.2346848646022779,
+          "expected_posterior_entropy_bits": 0.18855509748228771,
+          "expected_information_gain_bits": 0.04612976711999017,
+          "cost": 12.0,
+          "risk": 0.5,
+          "time": 6.0,
+          "samples": 8,
+          "utility": -0.60387023288001,
+          "information_per_cost": 0.003844147259999181,
+          "exact": true,
+          "outcomes_considered": 9
+        },
+        {
+          "option_id": "DO-V3",
+          "intervention": "INTERVENE(V3=1)",
+          "prior_entropy_bits": 0.2346848646022779,
+          "expected_posterior_entropy_bits": 0.05319595468413146,
+          "expected_information_gain_bits": 0.18148890991814642,
+          "cost": 6.0,
+          "risk": 0.2,
+          "time": 3.0,
+          "samples": 8,
+          "utility": -0.13851109008185364,
+          "information_per_cost": 0.030248151653024403,
+          "exact": true,
+          "outcomes_considered": 165
+        },
+        {
+          "option_id": "DO-V1V2",
+          "intervention": "INTERVENE(V1=1, V2=1)",
+          "prior_entropy_bits": 0.2346848646022779,
+          "expected_posterior_entropy_bits": 0.2346848646022777,
+          "expected_information_gain_bits": 1.942890293094024e-16,
+          "cost": 9.0,
+          "risk": 0.6,
+          "time": 5.0,
+          "samples": 8,
+          "utility": -0.5099999999999998,
+          "information_per_cost": 2.1587669923266933e-17,
+          "exact": true,
+          "outcomes_considered": 1
+        }
+      ],
+      "outcome_counts": [
+        [
+          [
+            0,
+            0
+          ],
+          3
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          1
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          4
+        ]
+      ],
+      "posterior_before": [
+        [
+          "H2-confounded",
+          0.9682767453464406
+        ],
+        [
+          "H3-reversed",
+          0.015861627326779693
+        ],
+        [
+          "H1-direct",
+          0.01586162732677969
+        ]
+      ],
+      "posterior_after": [
+        [
+          "H2-confounded",
+          0.9682767453464406
+        ],
+        [
+          "H3-reversed",
+          0.015861627326779683
+        ],
+        [
+          "H1-direct",
+          0.01586162732677968
+        ]
+      ],
+      "entropy_before": 0.2346848646022779,
+      "entropy_after": 0.23468486460227778,
+      "information_gained": 1.1102230246251565e-16,
+      "cost": 1.0,
+      "created_at": 3,
+      "conclusive": false,
+      "note": ""
+    }
+  ]
+}
