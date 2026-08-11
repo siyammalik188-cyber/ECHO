@@ -18,12 +18,14 @@ capability is *not*.
 | 2 | Belief revision — evidence-weighted, never overwriting | `belief.py`, `belief_store.py` | [`docs/ECHO_2_BELIEF_REVISION.md`](docs/ECHO_2_BELIEF_REVISION.md) |
 | 3 | Prediction — sealed, temporally clean, properly scored | `prediction.py`, `calibration.py`, `prediction_ledger.py` | [`docs/ECHO_3_PREDICTION.md`](docs/ECHO_3_PREDICTION.md) |
 | 4 | Learning from prediction errors — strategy revision | `learning.py`, `learning_ledger.py`, `strategy.py`, `predictors.py` | [`docs/ECHO_4_LEARNING.md`](docs/ECHO_4_LEARNING.md) |
+| 5 | Discovery — bounded hypothesis search over a closed language | `expressions.py`, `hypothesis.py`, `observations.py`, `discovery.py`, `discovery_ledger.py` | [`docs/ECHO_5_DISCOVERY.md`](docs/ECHO_5_DISCOVERY.md) |
 
-**These are four different things.** Memory stores; belief revision moves a
+**These are five different things.** Memory stores; belief revision moves a
 number by a fixed rule; prediction seals a probability before an outcome exists;
-learning changes the *method* because measured errors said the method was wrong.
-A value changing is not learning. None of this is AGI, consciousness, or
-autonomous intelligence.
+learning changes the *method* because measured errors said the method was wrong;
+discovery finds a relationship nobody encoded. A value changing is not learning,
+and predicting something is not understanding it. None of this is AGI,
+consciousness, or autonomous intelligence.
 
 The sections below describe capabilities 1 and 2; the reports cover the rest.
 
