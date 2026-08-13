@@ -20,15 +20,28 @@ capability is *not*.
 | 4 | Learning from prediction errors — strategy revision | `learning.py`, `learning_ledger.py`, `strategy.py`, `predictors.py` | [`docs/ECHO_4_LEARNING.md`](docs/ECHO_4_LEARNING.md) |
 | 5 | Discovery — bounded hypothesis search over a closed language | `expressions.py`, `hypothesis.py`, `observations.py`, `discovery.py`, `discovery_ledger.py` | [`docs/ECHO_5_DISCOVERY.md`](docs/ECHO_5_DISCOVERY.md) |
 | 6 | Transfer — reusing a discovered structure in a different world | `pattern.py`, `transfer.py`, `transfer_ledger.py` | [`docs/ECHO_6_TRANSFER.md`](docs/ECHO_6_TRANSFER.md) |
+| 7 | Experimentation — designing an intervention when watching cannot settle it | `causal.py`, `experiment.py` | [`docs/ECHO_7_EXPERIMENTATION.md`](docs/ECHO_7_EXPERIMENTATION.md) |
+| 8 | Causal abstraction — seeing vs doing, and counterfactuals | `causal.py`, `counterfactual.py` | [`docs/ECHO_8_CAUSAL.md`](docs/ECHO_8_CAUSAL.md) |
+| 9 | Metacognition — a measured record of its own reliability | `metacognition.py` | [`docs/ECHO_9_METACOGNITION.md`](docs/ECHO_9_METACOGNITION.md) |
+| 10 | Social learning — weighing testimony by earned reliability | `social.py` | [`docs/ECHO_10_SOCIAL_LEARNING.md`](docs/ECHO_10_SOCIAL_LEARNING.md) |
+| 11 | Integration — all of it as one loop, with provenance | `integration.py` | [`docs/ECHO_11_INTEGRATION.md`](docs/ECHO_11_INTEGRATION.md) |
+| — | Consolidated summary and capability table | — | [`docs/ECHO_7_11_SUMMARY.md`](docs/ECHO_7_11_SUMMARY.md) |
 
-**These are six different things.** Memory stores; belief revision moves a
-number by a fixed rule; prediction seals a probability before an outcome exists;
-learning changes the *method* because measured errors said the method was wrong;
-discovery finds a relationship nobody encoded; transfer reuses the *shape* of
-one discovery in a world that shares no variables with the first. A value
-changing is not learning, predicting something is not understanding it, and
-reusing a structure is not knowing what it means. None of this is AGI,
-consciousness, or autonomous intelligence.
+**These are different things and the reports keep them apart.** Memory stores;
+belief revision moves a number by a fixed rule; prediction seals a probability
+before an outcome exists; learning changes the *method* because measured errors
+said so; discovery finds a relationship nobody encoded; transfer reuses the
+*shape* of one discovery elsewhere; experimentation acts when watching cannot
+settle a question; causal inference distinguishes seeing from doing;
+metacognition scores ECHO's own track record; social learning weighs testimony
+by earned reliability; integration runs all of it in one cycle.
+
+A value changing is not learning. Predicting something is not understanding it.
+Reusing a structure is not knowing what it means. A scoreboard of past accuracy
+is not self-awareness, and a fixed sequence of stages is not autonomy. This is
+an experimental adaptive reasoning architecture; nothing in it establishes
+consciousness, sentience, self-awareness, or general intelligence, and no
+measurement in any report was designed to.
 
 The sections below describe capabilities 1 and 2; the reports cover the rest.
 
