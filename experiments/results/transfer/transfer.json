@@ -1,0 +1,1049 @@
+{
+  "schema_version": 1,
+  "patterns": [
+    {
+      "pattern_id": "PAT-68249b854449",
+      "template": {
+        "op": "PRODUCT",
+        "children": [
+          {
+            "op": "CHANGE",
+            "slot": "A"
+          },
+          {
+            "op": "LAG",
+            "slot": "B",
+            "parameter": 3.0
+          }
+        ]
+      },
+      "template_text": "PRODUCT(CHANGE(A), LAG(B, 3))",
+      "description": "the step-to-step change in a series multiplied by a series delayed by 3 step(s)",
+      "slots": [
+        "A",
+        "B"
+      ],
+      "complexity": 3,
+      "created_at": 1,
+      "origin": "abstracted from a discovery in a previous world",
+      "status": "discovered",
+      "status_reason": "abstracted from a discovery",
+      "confidence": 0.25,
+      "version": 1,
+      "successes": 0,
+      "failures": 0,
+      "evidence": [],
+      "parent_pattern_id": null
+    },
+    {
+      "pattern_id": "PAT-68249b854449",
+      "template": {
+        "op": "PRODUCT",
+        "children": [
+          {
+            "op": "CHANGE",
+            "slot": "A"
+          },
+          {
+            "op": "LAG",
+            "slot": "B",
+            "parameter": 3.0
+          }
+        ]
+      },
+      "template_text": "PRODUCT(CHANGE(A), LAG(B, 3))",
+      "description": "the step-to-step change in a series multiplied by a series delayed by 3 step(s)",
+      "slots": [
+        "A",
+        "B"
+      ],
+      "complexity": 3,
+      "created_at": 1,
+      "origin": "abstracted from a discovery in a previous world",
+      "status": "testing",
+      "status_reason": "first tried in TGT-A",
+      "confidence": 0.6666666666666666,
+      "version": 3,
+      "successes": 1,
+      "failures": 0,
+      "evidence": [
+        "TGT-A: SUCCESSFUL — beat the frozen base rate on VAL_B by 0.0623 Brier (t = 4.47), clearing the pre-registered floor of 0.0100 at t ≥ 2.5"
+      ],
+      "parent_pattern_id": null
+    },
+    {
+      "pattern_id": "PAT-68249b854449",
+      "template": {
+        "op": "PRODUCT",
+        "children": [
+          {
+            "op": "CHANGE",
+            "slot": "A"
+          },
+          {
+            "op": "LAG",
+            "slot": "B",
+            "parameter": 3.0
+          }
+        ]
+      },
+      "template_text": "PRODUCT(CHANGE(A), LAG(B, 3))",
+      "description": "the step-to-step change in a series multiplied by a series delayed by 3 step(s)",
+      "slots": [
+        "A",
+        "B"
+      ],
+      "complexity": 3,
+      "created_at": 1,
+      "origin": "abstracted from a discovery in a previous world",
+      "status": "transferable",
+      "status_reason": "carried in 2 independent worlds",
+      "confidence": 0.75,
+      "version": 5,
+      "successes": 2,
+      "failures": 0,
+      "evidence": [
+        "TGT-A: SUCCESSFUL — beat the frozen base rate on VAL_B by 0.0623 Brier (t = 4.47), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "TGT-B: SUCCESSFUL — beat the frozen base rate on VAL_B by 0.0593 Brier (t = 5.90), clearing the pre-registered floor of 0.0100 at t ≥ 2.5"
+      ],
+      "parent_pattern_id": null
+    },
+    {
+      "pattern_id": "PAT-68249b854449",
+      "template": {
+        "op": "PRODUCT",
+        "children": [
+          {
+            "op": "CHANGE",
+            "slot": "A"
+          },
+          {
+            "op": "LAG",
+            "slot": "B",
+            "parameter": 3.0
+          }
+        ]
+      },
+      "template_text": "PRODUCT(CHANGE(A), LAG(B, 3))",
+      "description": "the step-to-step change in a series multiplied by a series delayed by 3 step(s)",
+      "slots": [
+        "A",
+        "B"
+      ],
+      "complexity": 3,
+      "created_at": 1,
+      "origin": "abstracted from a discovery in a previous world",
+      "status": "transferable",
+      "status_reason": "carried in 2 independent worlds",
+      "confidence": 0.8,
+      "version": 6,
+      "successes": 3,
+      "failures": 0,
+      "evidence": [
+        "TGT-A: SUCCESSFUL — beat the frozen base rate on VAL_B by 0.0623 Brier (t = 4.47), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "TGT-B: SUCCESSFUL — beat the frozen base rate on VAL_B by 0.0593 Brier (t = 5.90), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "TGT-C: SUCCESSFUL — beat the frozen base rate on VAL_B by 0.0673 Brier (t = 4.47), clearing the pre-registered floor of 0.0100 at t ≥ 2.5"
+      ],
+      "parent_pattern_id": null
+    },
+    {
+      "pattern_id": "PAT-68249b854449",
+      "template": {
+        "op": "PRODUCT",
+        "children": [
+          {
+            "op": "CHANGE",
+            "slot": "A"
+          },
+          {
+            "op": "LAG",
+            "slot": "B",
+            "parameter": 3.0
+          }
+        ]
+      },
+      "template_text": "PRODUCT(CHANGE(A), LAG(B, 3))",
+      "description": "the step-to-step change in a series multiplied by a series delayed by 3 step(s)",
+      "slots": [
+        "A",
+        "B"
+      ],
+      "complexity": 3,
+      "created_at": 1,
+      "origin": "abstracted from a discovery in a previous world",
+      "status": "weakened",
+      "status_reason": "TGT-P did not carry: PARTIAL",
+      "confidence": 0.6666666666666666,
+      "version": 8,
+      "successes": 3,
+      "failures": 1,
+      "evidence": [
+        "TGT-A: SUCCESSFUL — beat the frozen base rate on VAL_B by 0.0623 Brier (t = 4.47), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "TGT-B: SUCCESSFUL — beat the frozen base rate on VAL_B by 0.0593 Brier (t = 5.90), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "TGT-C: SUCCESSFUL — beat the frozen base rate on VAL_B by 0.0673 Brier (t = 4.47), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "TGT-P: PARTIAL — the whole shape did not carry, but one component of it did: beat the frozen base rate on VAL_B by 0.1298 Brier (t = 8.36), clearing the pre-registered floor of 0.0100 at t ≥ 2.5"
+      ],
+      "parent_pattern_id": null
+    },
+    {
+      "pattern_id": "PAT-68249b854449",
+      "template": {
+        "op": "PRODUCT",
+        "children": [
+          {
+            "op": "CHANGE",
+            "slot": "A"
+          },
+          {
+            "op": "LAG",
+            "slot": "B",
+            "parameter": 3.0
+          }
+        ]
+      },
+      "template_text": "PRODUCT(CHANGE(A), LAG(B, 3))",
+      "description": "the step-to-step change in a series multiplied by a series delayed by 3 step(s)",
+      "slots": [
+        "A",
+        "B"
+      ],
+      "complexity": 3,
+      "created_at": 1,
+      "origin": "abstracted from a discovery in a previous world",
+      "status": "weakened",
+      "status_reason": "TGT-P did not carry: PARTIAL",
+      "confidence": 0.5714285714285714,
+      "version": 9,
+      "successes": 3,
+      "failures": 2,
+      "evidence": [
+        "TGT-A: SUCCESSFUL — beat the frozen base rate on VAL_B by 0.0623 Brier (t = 4.47), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "TGT-B: SUCCESSFUL — beat the frozen base rate on VAL_B by 0.0593 Brier (t = 5.90), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "TGT-C: SUCCESSFUL — beat the frozen base rate on VAL_B by 0.0673 Brier (t = 4.47), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "TGT-P: PARTIAL — the whole shape did not carry, but one component of it did: beat the frozen base rate on VAL_B by 0.1298 Brier (t = 8.36), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "TGT-N: REJECTED — failed on VAL_B: edge +0.0004 is below the required 0.0100; and t = 0.29 is below the required 2.5"
+      ],
+      "parent_pattern_id": null
+    },
+    {
+      "pattern_id": "PAT-68249b854449",
+      "template": {
+        "op": "PRODUCT",
+        "children": [
+          {
+            "op": "CHANGE",
+            "slot": "A"
+          },
+          {
+            "op": "LAG",
+            "slot": "B",
+            "parameter": 3.0
+          }
+        ]
+      },
+      "template_text": "PRODUCT(CHANGE(A), LAG(B, 3))",
+      "description": "the step-to-step change in a series multiplied by a series delayed by 3 step(s)",
+      "slots": [
+        "A",
+        "B"
+      ],
+      "complexity": 3,
+      "created_at": 1,
+      "origin": "abstracted from a discovery in a previous world",
+      "status": "weakened",
+      "status_reason": "TGT-P did not carry: PARTIAL",
+      "confidence": 0.5,
+      "version": 10,
+      "successes": 3,
+      "failures": 3,
+      "evidence": [
+        "TGT-A: SUCCESSFUL — beat the frozen base rate on VAL_B by 0.0623 Brier (t = 4.47), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "TGT-B: SUCCESSFUL — beat the frozen base rate on VAL_B by 0.0593 Brier (t = 5.90), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "TGT-C: SUCCESSFUL — beat the frozen base rate on VAL_B by 0.0673 Brier (t = 4.47), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "TGT-P: PARTIAL — the whole shape did not carry, but one component of it did: beat the frozen base rate on VAL_B by 0.1298 Brier (t = 8.36), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "TGT-N: REJECTED — failed on VAL_B: edge +0.0004 is below the required 0.0100; and t = 0.29 is below the required 2.5",
+        "TGT-F: REJECTED — failed on VAL_B: edge -0.0015 is below the required 0.0100; and t = -0.72 is below the required 2.5"
+      ],
+      "parent_pattern_id": null
+    }
+  ],
+  "transfers": [
+    {
+      "transfer_id": "TRF-3bf7cd12083b",
+      "source_pattern_id": "PAT-68249b854449",
+      "target_environment_id": "TGT-A",
+      "pattern_version": 1,
+      "target_evidence": {
+        "full_groundings": 108,
+        "component_groundings": 24,
+        "confirmation": {
+          "block": "VAL_B",
+          "rows": 160,
+          "candidate_brier": 0.17378714465324968,
+          "baseline_brier": 0.23605324482734233,
+          "edge": 0.06226610017409303,
+          "t_statistic": 4.465512282835677,
+          "min_edge": 0.01,
+          "min_t": 2.5,
+          "passed": true
+        },
+        "cold_start_val_b_brier": 0.17378714465324968
+      },
+      "transfer_confidence": 0.25,
+      "result": "SUCCESSFUL",
+      "performance_before_transfer": {
+        "count": 160,
+        "brier": 0.2173820263399477,
+        "log_loss": 0.6264528063198227,
+        "log_loss_excluded": 0,
+        "accuracy": 0.68125,
+        "base_rate": 0.68125,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.21714843750000057
+        },
+        "expected_calibration_error": 0.015283613445380761,
+        "buckets": [
+          {
+            "range": "0.6–0.7",
+            "count": 160,
+            "mean_predicted": 0.666,
+            "observed_frequency": 0.6813,
+            "gap": -0.0153
+          }
+        ]
+      },
+      "performance_after_transfer": {
+        "count": 160,
+        "brier": 0.13623705617633125,
+        "log_loss": 0.4255060145560291,
+        "log_loss_excluded": 0,
+        "accuracy": 0.78125,
+        "base_rate": 0.68125,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.21714843750000057
+        },
+        "expected_calibration_error": 0.08370280835129507,
+        "buckets": [
+          {
+            "range": "0.0–0.1",
+            "count": 4,
+            "mean_predicted": 0.0431,
+            "observed_frequency": 0.0,
+            "gap": 0.0431
+          },
+          {
+            "range": "0.1–0.2",
+            "count": 7,
+            "mean_predicted": 0.1526,
+            "observed_frequency": 0.0,
+            "gap": 0.1526
+          },
+          {
+            "range": "0.2–0.3",
+            "count": 5,
+            "mean_predicted": 0.2824,
+            "observed_frequency": 0.0,
+            "gap": 0.2824
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 4,
+            "mean_predicted": 0.3592,
+            "observed_frequency": 0.25,
+            "gap": 0.1092
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 10,
+            "mean_predicted": 0.4599,
+            "observed_frequency": 0.6,
+            "gap": -0.1401
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 15,
+            "mean_predicted": 0.5503,
+            "observed_frequency": 0.4,
+            "gap": 0.1503
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 19,
+            "mean_predicted": 0.6582,
+            "observed_frequency": 0.5789,
+            "gap": 0.0792
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 46,
+            "mean_predicted": 0.7577,
+            "observed_frequency": 0.8261,
+            "gap": -0.0684
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 26,
+            "mean_predicted": 0.8492,
+            "observed_frequency": 0.8846,
+            "gap": -0.0354
+          },
+          {
+            "range": "0.9–1.0",
+            "count": 24,
+            "mean_predicted": 0.9552,
+            "observed_frequency": 1.0,
+            "gap": -0.0448
+          }
+        ],
+        "block": "TEST"
+      },
+      "created_at": 1,
+      "explanation": {
+        "source_pattern": "Relationship involving the step-to-step change in a series multiplied by a series delayed by 3 step(s).",
+        "target_observation": "An equivalent structural relationship appears predictive here.",
+        "decision": "Test the transferred pattern in TGT-A.",
+        "result": "Performance improved; adopted `PRODUCT(CHANGE(Z5), LAG(Z1, 3))`.",
+        "evidence": "beat the frozen base rate on VAL_B by 0.0623 Brier (t = 4.47), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "disclaimer": "This describes a predictive relationship and nothing more. ECHO has no account of why the relationship holds, no model of what these series are, and makes no causal claim."
+      },
+      "grounded_candidates": 132,
+      "hypotheses_tested": 132,
+      "adopted_expression": "PRODUCT(CHANGE(Z5), LAG(Z1, 3))",
+      "adopted_is_component": false,
+      "notes": []
+    },
+    {
+      "transfer_id": "TRF-56db59ca15da",
+      "source_pattern_id": "PAT-68249b854449",
+      "target_environment_id": "TGT-B",
+      "pattern_version": 3,
+      "target_evidence": {
+        "full_groundings": 108,
+        "component_groundings": 24,
+        "confirmation": {
+          "block": "VAL_B",
+          "rows": 160,
+          "candidate_brier": 0.18749218010131072,
+          "baseline_brier": 0.24683858837652678,
+          "edge": 0.05934640827521641,
+          "t_statistic": 5.895065284389365,
+          "min_edge": 0.01,
+          "min_t": 2.5,
+          "passed": true
+        },
+        "cold_start_val_b_brier": 0.18749218010131072
+      },
+      "transfer_confidence": 0.6666666666666666,
+      "result": "SUCCESSFUL",
+      "performance_before_transfer": {
+        "count": 160,
+        "brier": 0.24479026904879575,
+        "log_loss": 0.6826979531866848,
+        "log_loss_excluded": 0,
+        "accuracy": 0.575,
+        "base_rate": 0.425,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.24437499999999962
+        },
+        "expected_calibration_error": 0.02037815126050424,
+        "buckets": [
+          {
+            "range": "0.4–0.5",
+            "count": 160,
+            "mean_predicted": 0.4454,
+            "observed_frequency": 0.425,
+            "gap": 0.0204
+          }
+        ]
+      },
+      "performance_after_transfer": {
+        "count": 160,
+        "brier": 0.19801707841656258,
+        "log_loss": 0.5861128178922718,
+        "log_loss_excluded": 0,
+        "accuracy": 0.7,
+        "base_rate": 0.425,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.24437499999999962
+        },
+        "expected_calibration_error": 0.0761972648351689,
+        "buckets": [
+          {
+            "range": "0.0–0.1",
+            "count": 3,
+            "mean_predicted": 0.0446,
+            "observed_frequency": 0.3333,
+            "gap": -0.2887
+          },
+          {
+            "range": "0.1–0.2",
+            "count": 11,
+            "mean_predicted": 0.1527,
+            "observed_frequency": 0.0909,
+            "gap": 0.0618
+          },
+          {
+            "range": "0.2–0.3",
+            "count": 14,
+            "mean_predicted": 0.2516,
+            "observed_frequency": 0.0,
+            "gap": 0.2516
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 29,
+            "mean_predicted": 0.356,
+            "observed_frequency": 0.3793,
+            "gap": -0.0233
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 51,
+            "mean_predicted": 0.4422,
+            "observed_frequency": 0.3725,
+            "gap": 0.0696
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 23,
+            "mean_predicted": 0.5386,
+            "observed_frequency": 0.5217,
+            "gap": 0.0168
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 11,
+            "mean_predicted": 0.6478,
+            "observed_frequency": 0.7273,
+            "gap": -0.0795
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 10,
+            "mean_predicted": 0.7627,
+            "observed_frequency": 0.9,
+            "gap": -0.1373
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 8,
+            "mean_predicted": 0.8422,
+            "observed_frequency": 0.875,
+            "gap": -0.0328
+          }
+        ],
+        "block": "TEST"
+      },
+      "created_at": 2,
+      "explanation": {
+        "source_pattern": "Relationship involving the step-to-step change in a series multiplied by a series delayed by 3 step(s).",
+        "target_observation": "An equivalent structural relationship appears predictive here.",
+        "decision": "Test the transferred pattern in TGT-B.",
+        "result": "Performance improved; adopted `PRODUCT(CHANGE(Z2), LAG(Z6, 2))`.",
+        "evidence": "beat the frozen base rate on VAL_B by 0.0593 Brier (t = 5.90), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "disclaimer": "This describes a predictive relationship and nothing more. ECHO has no account of why the relationship holds, no model of what these series are, and makes no causal claim."
+      },
+      "grounded_candidates": 132,
+      "hypotheses_tested": 132,
+      "adopted_expression": "PRODUCT(CHANGE(Z2), LAG(Z6, 2))",
+      "adopted_is_component": false,
+      "notes": []
+    },
+    {
+      "transfer_id": "TRF-68cae418b9bd",
+      "source_pattern_id": "PAT-68249b854449",
+      "target_environment_id": "TGT-C",
+      "pattern_version": 5,
+      "target_evidence": {
+        "full_groundings": 108,
+        "component_groundings": 24,
+        "confirmation": {
+          "block": "VAL_B",
+          "rows": 160,
+          "candidate_brier": 0.18233427870810864,
+          "baseline_brier": 0.2496535378857426,
+          "edge": 0.06731925917763393,
+          "t_statistic": 4.473233479043758,
+          "min_edge": 0.01,
+          "min_t": 2.5,
+          "passed": true
+        },
+        "cold_start_val_b_brier": 0.18233427870810864
+      },
+      "transfer_confidence": 0.75,
+      "result": "SUCCESSFUL",
+      "performance_before_transfer": {
+        "count": 160,
+        "brier": 0.2507039580538098,
+        "log_loss": 0.6945561861542743,
+        "log_loss_excluded": 0,
+        "accuracy": 0.49375,
+        "base_rate": 0.50625,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.2499609374999998
+        },
+        "expected_calibration_error": 0.027258403361344996,
+        "buckets": [
+          {
+            "range": "0.4–0.5",
+            "count": 160,
+            "mean_predicted": 0.479,
+            "observed_frequency": 0.5062,
+            "gap": -0.0273
+          }
+        ]
+      },
+      "performance_after_transfer": {
+        "count": 160,
+        "brier": 0.15836245478439986,
+        "log_loss": 0.4709899965208081,
+        "log_loss_excluded": 0,
+        "accuracy": 0.73125,
+        "base_rate": 0.50625,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.2499609374999998
+        },
+        "expected_calibration_error": 0.08459956994266293,
+        "buckets": [
+          {
+            "range": "0.0–0.1",
+            "count": 20,
+            "mean_predicted": 0.031,
+            "observed_frequency": 0.0,
+            "gap": 0.031
+          },
+          {
+            "range": "0.1–0.2",
+            "count": 8,
+            "mean_predicted": 0.1413,
+            "observed_frequency": 0.25,
+            "gap": -0.1087
+          },
+          {
+            "range": "0.2–0.3",
+            "count": 11,
+            "mean_predicted": 0.2578,
+            "observed_frequency": 0.1818,
+            "gap": 0.076
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 18,
+            "mean_predicted": 0.3558,
+            "observed_frequency": 0.3333,
+            "gap": 0.0225
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 33,
+            "mean_predicted": 0.4606,
+            "observed_frequency": 0.5152,
+            "gap": -0.0545
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 15,
+            "mean_predicted": 0.5491,
+            "observed_frequency": 0.3333,
+            "gap": 0.2158
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 17,
+            "mean_predicted": 0.6502,
+            "observed_frequency": 0.8235,
+            "gap": -0.1733
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 15,
+            "mean_predicted": 0.7464,
+            "observed_frequency": 0.8667,
+            "gap": -0.1202
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 9,
+            "mean_predicted": 0.8503,
+            "observed_frequency": 0.8889,
+            "gap": -0.0386
+          },
+          {
+            "range": "0.9–1.0",
+            "count": 14,
+            "mean_predicted": 0.9521,
+            "observed_frequency": 1.0,
+            "gap": -0.0479
+          }
+        ],
+        "block": "TEST"
+      },
+      "created_at": 3,
+      "explanation": {
+        "source_pattern": "Relationship involving the step-to-step change in a series multiplied by a series delayed by 3 step(s).",
+        "target_observation": "An equivalent structural relationship appears predictive here.",
+        "decision": "Test the transferred pattern in TGT-C.",
+        "result": "Performance improved; adopted `PRODUCT(CHANGE(Z3), LAG(Z5, 3))`.",
+        "evidence": "beat the frozen base rate on VAL_B by 0.0673 Brier (t = 4.47), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "disclaimer": "This describes a predictive relationship and nothing more. ECHO has no account of why the relationship holds, no model of what these series are, and makes no causal claim."
+      },
+      "grounded_candidates": 132,
+      "hypotheses_tested": 132,
+      "adopted_expression": "PRODUCT(CHANGE(Z3), LAG(Z5, 3))",
+      "adopted_is_component": false,
+      "notes": []
+    },
+    {
+      "transfer_id": "TRF-9321a7cc7ab2",
+      "source_pattern_id": "PAT-68249b854449",
+      "target_environment_id": "TGT-P",
+      "pattern_version": 6,
+      "target_evidence": {
+        "full_groundings": 108,
+        "component_groundings": 24,
+        "confirmation": {
+          "block": "VAL_B",
+          "rows": 160,
+          "candidate_brier": 0.11828074107162767,
+          "baseline_brier": 0.2481145399336207,
+          "edge": 0.1298337988619928,
+          "t_statistic": 8.362539192627846,
+          "min_edge": 0.01,
+          "min_t": 2.5,
+          "passed": true
+        },
+        "cold_start_val_b_brier": 0.11828074107162767
+      },
+      "transfer_confidence": 0.8,
+      "result": "PARTIAL",
+      "performance_before_transfer": {
+        "count": 160,
+        "brier": 0.2506355483369821,
+        "log_loss": 0.6944198956641541,
+        "log_loss_excluded": 0,
+        "accuracy": 0.5,
+        "base_rate": 0.5,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.25
+        },
+        "expected_calibration_error": 0.025210084033615576,
+        "buckets": [
+          {
+            "range": "0.5–0.6",
+            "count": 160,
+            "mean_predicted": 0.5252,
+            "observed_frequency": 0.5,
+            "gap": 0.0252
+          }
+        ]
+      },
+      "performance_after_transfer": {
+        "count": 160,
+        "brier": 0.15699594156988997,
+        "log_loss": 0.4634024169635989,
+        "log_loss_excluded": 0,
+        "accuracy": 0.75,
+        "base_rate": 0.5,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.25
+        },
+        "expected_calibration_error": 0.10995953033062841,
+        "buckets": [
+          {
+            "range": "0.0–0.1",
+            "count": 19,
+            "mean_predicted": 0.048,
+            "observed_frequency": 0.0,
+            "gap": 0.048
+          },
+          {
+            "range": "0.1–0.2",
+            "count": 18,
+            "mean_predicted": 0.1449,
+            "observed_frequency": 0.1667,
+            "gap": -0.0218
+          },
+          {
+            "range": "0.2–0.3",
+            "count": 13,
+            "mean_predicted": 0.2405,
+            "observed_frequency": 0.5385,
+            "gap": -0.298
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 16,
+            "mean_predicted": 0.3449,
+            "observed_frequency": 0.1875,
+            "gap": 0.1574
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 8,
+            "mean_predicted": 0.4373,
+            "observed_frequency": 0.5,
+            "gap": -0.0627
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 11,
+            "mean_predicted": 0.5393,
+            "observed_frequency": 0.1818,
+            "gap": 0.3575
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 13,
+            "mean_predicted": 0.6428,
+            "observed_frequency": 0.6923,
+            "gap": -0.0495
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 14,
+            "mean_predicted": 0.7589,
+            "observed_frequency": 0.7143,
+            "gap": 0.0446
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 20,
+            "mean_predicted": 0.8441,
+            "observed_frequency": 0.7,
+            "gap": 0.1441
+          },
+          {
+            "range": "0.9–1.0",
+            "count": 28,
+            "mean_predicted": 0.9531,
+            "observed_frequency": 1.0,
+            "gap": -0.0469
+          }
+        ],
+        "block": "TEST"
+      },
+      "created_at": 4,
+      "explanation": {
+        "source_pattern": "Relationship involving the step-to-step change in a series multiplied by a series delayed by 3 step(s).",
+        "target_observation": "The whole shape is not predictive here, but part of it is.",
+        "decision": "Test the transferred pattern in TGT-P.",
+        "result": "Partly carried; adopted the component `CHANGE(Z4)` and weakened the rest.",
+        "evidence": "the whole shape did not carry, but one component of it did: beat the frozen base rate on VAL_B by 0.1298 Brier (t = 8.36), clearing the pre-registered floor of 0.0100 at t ≥ 2.5",
+        "disclaimer": "This describes a predictive relationship and nothing more. ECHO has no account of why the relationship holds, no model of what these series are, and makes no causal claim."
+      },
+      "grounded_candidates": 132,
+      "hypotheses_tested": 132,
+      "adopted_expression": "CHANGE(Z4)",
+      "adopted_is_component": true,
+      "notes": []
+    },
+    {
+      "transfer_id": "TRF-f71bce96b6da",
+      "source_pattern_id": "PAT-68249b854449",
+      "target_environment_id": "TGT-N",
+      "pattern_version": 8,
+      "target_evidence": {
+        "full_groundings": 108,
+        "component_groundings": 24,
+        "confirmation": {
+          "block": "VAL_B",
+          "rows": 160,
+          "candidate_brier": 0.25098348036975177,
+          "baseline_brier": 0.2513452439799454,
+          "edge": 0.0003617636101932409,
+          "t_statistic": 0.29430778860754747,
+          "min_edge": 0.01,
+          "min_t": 2.5,
+          "passed": false
+        },
+        "cold_start_val_b_brier": 0.12987260609560633
+      },
+      "transfer_confidence": 0.6666666666666666,
+      "result": "REJECTED",
+      "performance_before_transfer": {
+        "count": 160,
+        "brier": 0.2601687733917101,
+        "log_loss": 0.7139099127412507,
+        "log_loss_excluded": 0,
+        "accuracy": 0.5,
+        "base_rate": 0.5,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.25
+        },
+        "expected_calibration_error": 0.10084033613445346,
+        "buckets": [
+          {
+            "range": "0.3–0.4",
+            "count": 160,
+            "mean_predicted": 0.3992,
+            "observed_frequency": 0.5,
+            "gap": -0.1008
+          }
+        ]
+      },
+      "performance_after_transfer": {
+        "count": 160,
+        "brier": 0.15117931433627319,
+        "log_loss": 0.4560790814136978,
+        "log_loss_excluded": 0,
+        "accuracy": 0.775,
+        "base_rate": 0.5,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.25
+        },
+        "expected_calibration_error": 0.07764199722520543,
+        "buckets": [
+          {
+            "range": "0.1–0.2",
+            "count": 52,
+            "mean_predicted": 0.1591,
+            "observed_frequency": 0.1923,
+            "gap": -0.0332
+          },
+          {
+            "range": "0.2–0.3",
+            "count": 20,
+            "mean_predicted": 0.2356,
+            "observed_frequency": 0.2,
+            "gap": 0.0356
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 18,
+            "mean_predicted": 0.341,
+            "observed_frequency": 0.5556,
+            "gap": -0.2146
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 12,
+            "mean_predicted": 0.4535,
+            "observed_frequency": 0.4167,
+            "gap": 0.0368
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 5,
+            "mean_predicted": 0.5397,
+            "observed_frequency": 0.2,
+            "gap": 0.3397
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 5,
+            "mean_predicted": 0.6314,
+            "observed_frequency": 1.0,
+            "gap": -0.3686
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 10,
+            "mean_predicted": 0.7457,
+            "observed_frequency": 0.8,
+            "gap": -0.0543
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 12,
+            "mean_predicted": 0.8425,
+            "observed_frequency": 0.9167,
+            "gap": -0.0742
+          },
+          {
+            "range": "0.9–1.0",
+            "count": 26,
+            "mean_predicted": 0.9729,
+            "observed_frequency": 1.0,
+            "gap": -0.0271
+          }
+        ],
+        "block": "TEST"
+      },
+      "created_at": 5,
+      "explanation": {
+        "source_pattern": "Relationship involving the step-to-step change in a series multiplied by a series delayed by 3 step(s).",
+        "target_observation": "No grounding of the shape predicts the outcome here.",
+        "decision": "Test the transferred pattern in TGT-N.",
+        "result": "Did not improve; the transferred knowledge was set aside.",
+        "evidence": "failed on VAL_B: edge +0.0004 is below the required 0.0100; and t = 0.29 is below the required 2.5",
+        "disclaimer": "This describes a predictive relationship and nothing more. ECHO has no account of why the relationship holds, no model of what these series are, and makes no causal claim."
+      },
+      "grounded_candidates": 132,
+      "hypotheses_tested": 14244,
+      "adopted_expression": null,
+      "adopted_is_component": false,
+      "notes": []
+    },
+    {
+      "transfer_id": "TRF-1ae9561eb2ad",
+      "source_pattern_id": "PAT-68249b854449",
+      "target_environment_id": "TGT-F",
+      "pattern_version": 9,
+      "target_evidence": {
+        "full_groundings": 108,
+        "component_groundings": 24,
+        "confirmation": {
+          "block": "VAL_B",
+          "rows": 160,
+          "candidate_brier": 0.2067438681786637,
+          "baseline_brier": 0.20527196172586687,
+          "edge": -0.0014719064527967916,
+          "t_statistic": -0.7166456887316914,
+          "min_edge": 0.01,
+          "min_t": 2.5,
+          "passed": false
+        },
+        "cold_start_val_b_brier": 0.21651141379590366
+      },
+      "transfer_confidence": 0.5714285714285714,
+      "result": "REJECTED",
+      "performance_before_transfer": {
+        "count": 160,
+        "brier": 0.21401670962502664,
+        "log_loss": 0.619929412975544,
+        "log_loss_excluded": 0,
+        "accuracy": 0.69375,
+        "base_rate": 0.69375,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.21246093750000047
+        },
+        "expected_calibration_error": 0.03944327731092112,
+        "buckets": [
+          {
+            "range": "0.7–0.8",
+            "count": 160,
+            "mean_predicted": 0.7332,
+            "observed_frequency": 0.6937,
+            "gap": 0.0394
+          }
+        ]
+      },
+      "performance_after_transfer": null,
+      "created_at": 6,
+      "explanation": {
+        "source_pattern": "Relationship involving the step-to-step change in a series multiplied by a series delayed by 3 step(s).",
+        "target_observation": "No grounding of the shape predicts the outcome here.",
+        "decision": "Test the transferred pattern in TGT-F.",
+        "result": "Did not improve; the transferred knowledge was set aside.",
+        "evidence": "failed on VAL_B: edge -0.0015 is below the required 0.0100; and t = -0.72 is below the required 2.5",
+        "disclaimer": "This describes a predictive relationship and nothing more. ECHO has no account of why the relationship holds, no model of what these series are, and makes no causal claim."
+      },
+      "grounded_candidates": 132,
+      "hypotheses_tested": 14244,
+      "adopted_expression": null,
+      "adopted_is_component": false,
+      "notes": []
+    }
+  ]
+}

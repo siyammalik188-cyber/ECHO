@@ -1,0 +1,2047 @@
+{
+  "generated_at": "2026-08-10T22:42:37.130129+00:00",
+  "environments": [
+    {
+      "id": "ENV-A-stable",
+      "hidden_process": "P(OUTCOME_A) = 0.70, constant for all 60 trials.",
+      "scores": {
+        "count": 60,
+        "brier": 0.20861774147836565,
+        "log_loss": 0.6124986005401223,
+        "log_loss_excluded": 0,
+        "accuracy": 0.7166666666666667,
+        "base_rate": 0.7333333333333333,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.19555555555555576
+        },
+        "expected_calibration_error": 0.09517338766353488,
+        "buckets": [
+          {
+            "range": "0.5–0.6",
+            "count": 1,
+            "mean_predicted": 0.5,
+            "observed_frequency": 1.0,
+            "gap": -0.5
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 31,
+            "mean_predicted": 0.6608,
+            "observed_frequency": 0.7742,
+            "gap": -0.1133
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 24,
+            "mean_predicted": 0.7253,
+            "observed_frequency": 0.7083,
+            "gap": 0.0169
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 4,
+            "mean_predicted": 0.8226,
+            "observed_frequency": 0.5,
+            "gap": 0.3226
+          }
+        ]
+      },
+      "history": [
+        {
+          "prediction_id": "PRED-c1bad7e2f2",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5,
+          "prediction_time": 0,
+          "information_count": 0,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5
+        },
+        {
+          "prediction_id": "PRED-581474607e",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6666666666666666,
+          "prediction_time": 1,
+          "information_count": 1,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.33333333333333337
+        },
+        {
+          "prediction_id": "PRED-5d136b1b9e",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.75,
+          "prediction_time": 2,
+          "information_count": 2,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.25
+        },
+        {
+          "prediction_id": "PRED-4fd1d228ca",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8,
+          "prediction_time": 3,
+          "information_count": 3,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.19999999999999996
+        },
+        {
+          "prediction_id": "PRED-35bfadde4a",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8333333333333334,
+          "prediction_time": 4,
+          "information_count": 4,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.16666666666666663
+        },
+        {
+          "prediction_id": "PRED-a392eeeda2",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8571428571428571,
+          "prediction_time": 5,
+          "information_count": 5,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.8571428571428571
+        },
+        {
+          "prediction_id": "PRED-d9bb7882c8",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.75,
+          "prediction_time": 6,
+          "information_count": 6,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.25
+        },
+        {
+          "prediction_id": "PRED-a980ddff40",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7777777777777778,
+          "prediction_time": 7,
+          "information_count": 7,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.2222222222222222
+        },
+        {
+          "prediction_id": "PRED-1d2f7040ec",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8,
+          "prediction_time": 8,
+          "information_count": 8,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.8
+        },
+        {
+          "prediction_id": "PRED-923898074a",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7272727272727273,
+          "prediction_time": 9,
+          "information_count": 9,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.7272727272727273
+        },
+        {
+          "prediction_id": "PRED-8250108cab",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6666666666666666,
+          "prediction_time": 10,
+          "information_count": 10,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.33333333333333337
+        },
+        {
+          "prediction_id": "PRED-4ec9cf5e6a",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6923076923076923,
+          "prediction_time": 11,
+          "information_count": 11,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.3076923076923077
+        },
+        {
+          "prediction_id": "PRED-432185a8ce",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7142857142857143,
+          "prediction_time": 12,
+          "information_count": 12,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.7142857142857143
+        },
+        {
+          "prediction_id": "PRED-eabeb46ae9",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6666666666666666,
+          "prediction_time": 13,
+          "information_count": 13,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.33333333333333337
+        },
+        {
+          "prediction_id": "PRED-981abb6bd0",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6875,
+          "prediction_time": 14,
+          "information_count": 14,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.3125
+        },
+        {
+          "prediction_id": "PRED-e6d21f51c4",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7058823529411765,
+          "prediction_time": 15,
+          "information_count": 15,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.7058823529411765
+        },
+        {
+          "prediction_id": "PRED-58306eb118",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6666666666666666,
+          "prediction_time": 16,
+          "information_count": 16,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.33333333333333337
+        },
+        {
+          "prediction_id": "PRED-a41afa712f",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6842105263157895,
+          "prediction_time": 17,
+          "information_count": 17,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.3157894736842105
+        },
+        {
+          "prediction_id": "PRED-23909e0acb",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7,
+          "prediction_time": 18,
+          "information_count": 18,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.30000000000000004
+        },
+        {
+          "prediction_id": "PRED-2e80a7b372",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7142857142857143,
+          "prediction_time": 19,
+          "information_count": 19,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.2857142857142857
+        },
+        {
+          "prediction_id": "PRED-95f0802c6f",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7272727272727273,
+          "prediction_time": 20,
+          "information_count": 20,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.7272727272727273
+        },
+        {
+          "prediction_id": "PRED-e627127f6a",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6956521739130435,
+          "prediction_time": 21,
+          "information_count": 21,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.6956521739130435
+        },
+        {
+          "prediction_id": "PRED-5364141f5d",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6666666666666666,
+          "prediction_time": 22,
+          "information_count": 22,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.33333333333333337
+        },
+        {
+          "prediction_id": "PRED-05f791806a",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.68,
+          "prediction_time": 23,
+          "information_count": 23,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.31999999999999995
+        },
+        {
+          "prediction_id": "PRED-72789dfb70",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6923076923076923,
+          "prediction_time": 24,
+          "information_count": 24,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.6923076923076923
+        },
+        {
+          "prediction_id": "PRED-ed149e2df6",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6666666666666666,
+          "prediction_time": 25,
+          "information_count": 25,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.6666666666666666
+        },
+        {
+          "prediction_id": "PRED-beda0433b8",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6428571428571429,
+          "prediction_time": 26,
+          "information_count": 26,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.3571428571428571
+        },
+        {
+          "prediction_id": "PRED-99a404c62a",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6551724137931034,
+          "prediction_time": 27,
+          "information_count": 27,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.6551724137931034
+        },
+        {
+          "prediction_id": "PRED-53990ee965",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6333333333333333,
+          "prediction_time": 28,
+          "information_count": 28,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.6333333333333333
+        },
+        {
+          "prediction_id": "PRED-9ec59d4fdb",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6129032258064516,
+          "prediction_time": 29,
+          "information_count": 29,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.3870967741935484
+        },
+        {
+          "prediction_id": "PRED-7b4319378a",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.625,
+          "prediction_time": 30,
+          "information_count": 30,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.375
+        },
+        {
+          "prediction_id": "PRED-5fa0420b75",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6363636363636364,
+          "prediction_time": 31,
+          "information_count": 31,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.6363636363636364
+        },
+        {
+          "prediction_id": "PRED-33e20cff6d",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6176470588235294,
+          "prediction_time": 32,
+          "information_count": 32,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.38235294117647056
+        },
+        {
+          "prediction_id": "PRED-8f581eb4ac",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6285714285714286,
+          "prediction_time": 33,
+          "information_count": 33,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.37142857142857144
+        },
+        {
+          "prediction_id": "PRED-aaee2f0106",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6388888888888888,
+          "prediction_time": 34,
+          "information_count": 34,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.36111111111111116
+        },
+        {
+          "prediction_id": "PRED-f0051e1091",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6486486486486487,
+          "prediction_time": 35,
+          "information_count": 35,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.3513513513513513
+        },
+        {
+          "prediction_id": "PRED-d76dbf0d6d",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6578947368421053,
+          "prediction_time": 36,
+          "information_count": 36,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.6578947368421053
+        },
+        {
+          "prediction_id": "PRED-953d6d409e",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6410256410256411,
+          "prediction_time": 37,
+          "information_count": 37,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.3589743589743589
+        },
+        {
+          "prediction_id": "PRED-201dbfaf3b",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.65,
+          "prediction_time": 38,
+          "information_count": 38,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.35
+        },
+        {
+          "prediction_id": "PRED-12c86bad95",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6585365853658537,
+          "prediction_time": 39,
+          "information_count": 39,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.3414634146341463
+        },
+        {
+          "prediction_id": "PRED-9c5a992589",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6666666666666666,
+          "prediction_time": 40,
+          "information_count": 40,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.33333333333333337
+        },
+        {
+          "prediction_id": "PRED-b7782c00b2",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6744186046511628,
+          "prediction_time": 41,
+          "information_count": 41,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.32558139534883723
+        },
+        {
+          "prediction_id": "PRED-0f76490481",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6818181818181818,
+          "prediction_time": 42,
+          "information_count": 42,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.31818181818181823
+        },
+        {
+          "prediction_id": "PRED-14e2217a16",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6888888888888889,
+          "prediction_time": 43,
+          "information_count": 43,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.3111111111111111
+        },
+        {
+          "prediction_id": "PRED-05f18de24f",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6956521739130435,
+          "prediction_time": 44,
+          "information_count": 44,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.30434782608695654
+        },
+        {
+          "prediction_id": "PRED-6708f4d459",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7021276595744681,
+          "prediction_time": 45,
+          "information_count": 45,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.2978723404255319
+        },
+        {
+          "prediction_id": "PRED-bfee3cc761",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7083333333333334,
+          "prediction_time": 46,
+          "information_count": 46,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.29166666666666663
+        },
+        {
+          "prediction_id": "PRED-3776ba271c",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7142857142857143,
+          "prediction_time": 47,
+          "information_count": 47,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.2857142857142857
+        },
+        {
+          "prediction_id": "PRED-f61c395d5c",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.72,
+          "prediction_time": 48,
+          "information_count": 48,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.72
+        },
+        {
+          "prediction_id": "PRED-316739f544",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7058823529411765,
+          "prediction_time": 49,
+          "information_count": 49,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.2941176470588235
+        },
+        {
+          "prediction_id": "PRED-9d1fc4637a",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7115384615384616,
+          "prediction_time": 50,
+          "information_count": 50,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.28846153846153844
+        },
+        {
+          "prediction_id": "PRED-3d4b987919",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7169811320754716,
+          "prediction_time": 51,
+          "information_count": 51,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.28301886792452835
+        },
+        {
+          "prediction_id": "PRED-93d9599069",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7222222222222222,
+          "prediction_time": 52,
+          "information_count": 52,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.2777777777777778
+        },
+        {
+          "prediction_id": "PRED-f8b1872124",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7272727272727273,
+          "prediction_time": 53,
+          "information_count": 53,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.2727272727272727
+        },
+        {
+          "prediction_id": "PRED-f68a32c451",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7321428571428571,
+          "prediction_time": 54,
+          "information_count": 54,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.2678571428571429
+        },
+        {
+          "prediction_id": "PRED-f3ce1c582a",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7368421052631579,
+          "prediction_time": 55,
+          "information_count": 55,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.26315789473684215
+        },
+        {
+          "prediction_id": "PRED-ace8b9163b",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7413793103448276,
+          "prediction_time": 56,
+          "information_count": 56,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.2586206896551724
+        },
+        {
+          "prediction_id": "PRED-0afc275325",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7457627118644068,
+          "prediction_time": 57,
+          "information_count": 57,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.7457627118644068
+        },
+        {
+          "prediction_id": "PRED-a8154a5743",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7333333333333333,
+          "prediction_time": 58,
+          "information_count": 58,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.7333333333333333
+        },
+        {
+          "prediction_id": "PRED-09f452711f",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7213114754098361,
+          "prediction_time": 59,
+          "information_count": 59,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.2786885245901639
+        }
+      ]
+    },
+    {
+      "id": "ENV-B-changing",
+      "hidden_process": "P(OUTCOME_A) = 0.85 for trials 0–29, then drops to 0.20 for trials 30–59. The change is abrupt and unannounced.",
+      "scores": {
+        "count": 60,
+        "brier": 0.2532623481582655,
+        "log_loss": 0.7099877743529548,
+        "log_loss_excluded": 0,
+        "accuracy": 0.5666666666666667,
+        "base_rate": 0.5833333333333334,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.24305555555555566
+        },
+        "expected_calibration_error": 0.16845601081548978,
+        "buckets": [
+          {
+            "range": "0.5–0.6",
+            "count": 9,
+            "mean_predicted": 0.5716,
+            "observed_frequency": 0.5556,
+            "gap": 0.016
+          },
+          {
+            "range": "0.6–0.7",
+            "count": 12,
+            "mean_predicted": 0.6545,
+            "observed_frequency": 0.25,
+            "gap": 0.4045
+          },
+          {
+            "range": "0.7–0.8",
+            "count": 11,
+            "mean_predicted": 0.747,
+            "observed_frequency": 0.5455,
+            "gap": 0.2015
+          },
+          {
+            "range": "0.8–0.9",
+            "count": 27,
+            "mean_predicted": 0.8516,
+            "observed_frequency": 0.7778,
+            "gap": 0.0738
+          },
+          {
+            "range": "0.9–1.0",
+            "count": 1,
+            "mean_predicted": 0.9,
+            "observed_frequency": 0.0,
+            "gap": 0.9
+          }
+        ]
+      },
+      "history": [
+        {
+          "prediction_id": "PRED-e792552d41",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5,
+          "prediction_time": 0,
+          "information_count": 0,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5
+        },
+        {
+          "prediction_id": "PRED-83fb2cabca",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6666666666666666,
+          "prediction_time": 1,
+          "information_count": 1,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.33333333333333337
+        },
+        {
+          "prediction_id": "PRED-56d810da19",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.75,
+          "prediction_time": 2,
+          "information_count": 2,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.25
+        },
+        {
+          "prediction_id": "PRED-bb3b297427",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8,
+          "prediction_time": 3,
+          "information_count": 3,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.19999999999999996
+        },
+        {
+          "prediction_id": "PRED-841ed93a07",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8333333333333334,
+          "prediction_time": 4,
+          "information_count": 4,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.16666666666666663
+        },
+        {
+          "prediction_id": "PRED-ec9ea0fae2",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8571428571428571,
+          "prediction_time": 5,
+          "information_count": 5,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.1428571428571429
+        },
+        {
+          "prediction_id": "PRED-964f83a0a2",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.875,
+          "prediction_time": 6,
+          "information_count": 6,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.125
+        },
+        {
+          "prediction_id": "PRED-07c61bfac7",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8888888888888888,
+          "prediction_time": 7,
+          "information_count": 7,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.11111111111111116
+        },
+        {
+          "prediction_id": "PRED-e4a1fb02a3",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.9,
+          "prediction_time": 8,
+          "information_count": 8,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.9
+        },
+        {
+          "prediction_id": "PRED-bc0f401ff8",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8181818181818182,
+          "prediction_time": 9,
+          "information_count": 9,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.8181818181818182
+        },
+        {
+          "prediction_id": "PRED-a341790089",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.75,
+          "prediction_time": 10,
+          "information_count": 10,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.25
+        },
+        {
+          "prediction_id": "PRED-939e4c7072",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7692307692307693,
+          "prediction_time": 11,
+          "information_count": 11,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.23076923076923073
+        },
+        {
+          "prediction_id": "PRED-19bbb73d85",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7857142857142857,
+          "prediction_time": 12,
+          "information_count": 12,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.2142857142857143
+        },
+        {
+          "prediction_id": "PRED-9f18793f69",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8,
+          "prediction_time": 13,
+          "information_count": 13,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.19999999999999996
+        },
+        {
+          "prediction_id": "PRED-8867b27227",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8125,
+          "prediction_time": 14,
+          "information_count": 14,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.1875
+        },
+        {
+          "prediction_id": "PRED-26c0f0f156",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8235294117647058,
+          "prediction_time": 15,
+          "information_count": 15,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.17647058823529416
+        },
+        {
+          "prediction_id": "PRED-cad215b045",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8333333333333334,
+          "prediction_time": 16,
+          "information_count": 16,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.16666666666666663
+        },
+        {
+          "prediction_id": "PRED-407f93c972",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8421052631578947,
+          "prediction_time": 17,
+          "information_count": 17,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.1578947368421053
+        },
+        {
+          "prediction_id": "PRED-95c2bd7fe7",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.85,
+          "prediction_time": 18,
+          "information_count": 18,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.15000000000000002
+        },
+        {
+          "prediction_id": "PRED-a412f76cc5",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8571428571428571,
+          "prediction_time": 19,
+          "information_count": 19,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.1428571428571429
+        },
+        {
+          "prediction_id": "PRED-f394aa1f17",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8636363636363636,
+          "prediction_time": 20,
+          "information_count": 20,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.13636363636363635
+        },
+        {
+          "prediction_id": "PRED-f0b78796b4",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8695652173913043,
+          "prediction_time": 21,
+          "information_count": 21,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.13043478260869568
+        },
+        {
+          "prediction_id": "PRED-72fc0daa5a",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.875,
+          "prediction_time": 22,
+          "information_count": 22,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.125
+        },
+        {
+          "prediction_id": "PRED-48672892b9",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.88,
+          "prediction_time": 23,
+          "information_count": 23,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.12
+        },
+        {
+          "prediction_id": "PRED-b650dd966f",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8846153846153846,
+          "prediction_time": 24,
+          "information_count": 24,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.11538461538461542
+        },
+        {
+          "prediction_id": "PRED-c6d94a44a4",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8888888888888888,
+          "prediction_time": 25,
+          "information_count": 25,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.11111111111111116
+        },
+        {
+          "prediction_id": "PRED-5701f9e1aa",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8928571428571429,
+          "prediction_time": 26,
+          "information_count": 26,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.8928571428571429
+        },
+        {
+          "prediction_id": "PRED-c6881c4d20",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8620689655172413,
+          "prediction_time": 27,
+          "information_count": 27,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.13793103448275867
+        },
+        {
+          "prediction_id": "PRED-a8e62e8d83",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8666666666666667,
+          "prediction_time": 28,
+          "information_count": 28,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.1333333333333333
+        },
+        {
+          "prediction_id": "PRED-4e4552849c",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8709677419354839,
+          "prediction_time": 29,
+          "information_count": 29,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.12903225806451613
+        },
+        {
+          "prediction_id": "PRED-101d3ca5cf",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.875,
+          "prediction_time": 30,
+          "information_count": 30,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.875
+        },
+        {
+          "prediction_id": "PRED-ddb0d421d0",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8484848484848485,
+          "prediction_time": 31,
+          "information_count": 31,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.8484848484848485
+        },
+        {
+          "prediction_id": "PRED-89a3edc695",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8235294117647058,
+          "prediction_time": 32,
+          "information_count": 32,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.8235294117647058
+        },
+        {
+          "prediction_id": "PRED-453bda72d1",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.8,
+          "prediction_time": 33,
+          "information_count": 33,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.8
+        },
+        {
+          "prediction_id": "PRED-2285b2bd46",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7777777777777778,
+          "prediction_time": 34,
+          "information_count": 34,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.7777777777777778
+        },
+        {
+          "prediction_id": "PRED-3655ef6c3a",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7567567567567568,
+          "prediction_time": 35,
+          "information_count": 35,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.7567567567567568
+        },
+        {
+          "prediction_id": "PRED-2e74107c97",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7368421052631579,
+          "prediction_time": 36,
+          "information_count": 36,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.26315789473684215
+        },
+        {
+          "prediction_id": "PRED-366c6d6670",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7435897435897436,
+          "prediction_time": 37,
+          "information_count": 37,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.7435897435897436
+        },
+        {
+          "prediction_id": "PRED-541822d043",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.725,
+          "prediction_time": 38,
+          "information_count": 38,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.725
+        },
+        {
+          "prediction_id": "PRED-ff032a166a",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7073170731707317,
+          "prediction_time": 39,
+          "information_count": 39,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.29268292682926833
+        },
+        {
+          "prediction_id": "PRED-20c984e100",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.7142857142857143,
+          "prediction_time": 40,
+          "information_count": 40,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.7142857142857143
+        },
+        {
+          "prediction_id": "PRED-938a2282a1",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6976744186046512,
+          "prediction_time": 41,
+          "information_count": 41,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.6976744186046512
+        },
+        {
+          "prediction_id": "PRED-3afc59b44e",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6818181818181818,
+          "prediction_time": 42,
+          "information_count": 42,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.31818181818181823
+        },
+        {
+          "prediction_id": "PRED-2562fa33fd",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6888888888888889,
+          "prediction_time": 43,
+          "information_count": 43,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.6888888888888889
+        },
+        {
+          "prediction_id": "PRED-fda8f84a8f",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6739130434782609,
+          "prediction_time": 44,
+          "information_count": 44,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.6739130434782609
+        },
+        {
+          "prediction_id": "PRED-4f31837a2d",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6595744680851063,
+          "prediction_time": 45,
+          "information_count": 45,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.6595744680851063
+        },
+        {
+          "prediction_id": "PRED-abff0db35d",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6458333333333334,
+          "prediction_time": 46,
+          "information_count": 46,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.35416666666666663
+        },
+        {
+          "prediction_id": "PRED-1e49ec9177",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6530612244897959,
+          "prediction_time": 47,
+          "information_count": 47,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.6530612244897959
+        },
+        {
+          "prediction_id": "PRED-73bce12bb5",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.64,
+          "prediction_time": 48,
+          "information_count": 48,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.64
+        },
+        {
+          "prediction_id": "PRED-74f8b0a00f",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6274509803921569,
+          "prediction_time": 49,
+          "information_count": 49,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.6274509803921569
+        },
+        {
+          "prediction_id": "PRED-fea67cc8b1",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6153846153846154,
+          "prediction_time": 50,
+          "information_count": 50,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.6153846153846154
+        },
+        {
+          "prediction_id": "PRED-c3d8515a35",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.6037735849056604,
+          "prediction_time": 51,
+          "information_count": 51,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.6037735849056604
+        },
+        {
+          "prediction_id": "PRED-8a1e91b097",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5925925925925926,
+          "prediction_time": 52,
+          "information_count": 52,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.5925925925925926
+        },
+        {
+          "prediction_id": "PRED-85e379cbac",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5818181818181818,
+          "prediction_time": 53,
+          "information_count": 53,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.5818181818181818
+        },
+        {
+          "prediction_id": "PRED-46a156c12b",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5714285714285714,
+          "prediction_time": 54,
+          "information_count": 54,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.4285714285714286
+        },
+        {
+          "prediction_id": "PRED-6be78e3ace",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5789473684210527,
+          "prediction_time": 55,
+          "information_count": 55,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.42105263157894735
+        },
+        {
+          "prediction_id": "PRED-b83824e829",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5862068965517241,
+          "prediction_time": 56,
+          "information_count": 56,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.5862068965517241
+        },
+        {
+          "prediction_id": "PRED-0d927b8e52",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.576271186440678,
+          "prediction_time": 57,
+          "information_count": 57,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.423728813559322
+        },
+        {
+          "prediction_id": "PRED-dab8ea3d2a",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5833333333333334,
+          "prediction_time": 58,
+          "information_count": 58,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.5833333333333334
+        },
+        {
+          "prediction_id": "PRED-516f50850e",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5737704918032787,
+          "prediction_time": 59,
+          "information_count": 59,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.42622950819672134
+        }
+      ]
+    },
+    {
+      "id": "ENV-C-noisy",
+      "hidden_process": "P(OUTCOME_A) = 0.65, constant. Each observation shown to ECHO has a 30% chance of being reported as the opposite of what happened. Predictions are scored against the truth, not the report.",
+      "scores": {
+        "count": 60,
+        "brier": 0.25773930762625524,
+        "log_loss": 0.710273773895784,
+        "log_loss_excluded": 0,
+        "accuracy": 0.43333333333333335,
+        "base_rate": 0.75,
+        "reference_brier": {
+          "always_half": 0.25,
+          "always_base_rate": 0.1875
+        },
+        "expected_calibration_error": 0.25912315365360783,
+        "buckets": [
+          {
+            "range": "0.2–0.3",
+            "count": 1,
+            "mean_predicted": 0.25,
+            "observed_frequency": 1.0,
+            "gap": -0.75
+          },
+          {
+            "range": "0.3–0.4",
+            "count": 2,
+            "mean_predicted": 0.3333,
+            "observed_frequency": 1.0,
+            "gap": -0.6667
+          },
+          {
+            "range": "0.4–0.5",
+            "count": 18,
+            "mean_predicted": 0.4611,
+            "observed_frequency": 0.7778,
+            "gap": -0.3166
+          },
+          {
+            "range": "0.5–0.6",
+            "count": 39,
+            "mean_predicted": 0.5189,
+            "observed_frequency": 0.7179,
+            "gap": -0.1991
+          }
+        ]
+      },
+      "history": [
+        {
+          "prediction_id": "PRED-c79fed07d4",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5,
+          "prediction_time": 0,
+          "information_count": 0,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.5
+        },
+        {
+          "prediction_id": "PRED-4df1f3aa43",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.3333333333333333,
+          "prediction_time": 1,
+          "information_count": 1,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.6666666666666667
+        },
+        {
+          "prediction_id": "PRED-efe7a77ce9",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.25,
+          "prediction_time": 2,
+          "information_count": 2,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.75
+        },
+        {
+          "prediction_id": "PRED-9678685942",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.4,
+          "prediction_time": 3,
+          "information_count": 3,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.4
+        },
+        {
+          "prediction_id": "PRED-05551bb7eb",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.3333333333333333,
+          "prediction_time": 4,
+          "information_count": 4,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.6666666666666667
+        },
+        {
+          "prediction_id": "PRED-92607dbacf",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.42857142857142855,
+          "prediction_time": 5,
+          "information_count": 5,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.42857142857142855
+        },
+        {
+          "prediction_id": "PRED-1e2dd12aea",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5,
+          "prediction_time": 6,
+          "information_count": 6,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.5
+        },
+        {
+          "prediction_id": "PRED-16412df5ad",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5555555555555556,
+          "prediction_time": 7,
+          "information_count": 7,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.4444444444444444
+        },
+        {
+          "prediction_id": "PRED-5fdad9805e",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5,
+          "prediction_time": 8,
+          "information_count": 8,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.5
+        },
+        {
+          "prediction_id": "PRED-c0f3678eba",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.45454545454545453,
+          "prediction_time": 9,
+          "information_count": 9,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5454545454545454
+        },
+        {
+          "prediction_id": "PRED-1a6672e36c",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5,
+          "prediction_time": 10,
+          "information_count": 10,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5
+        },
+        {
+          "prediction_id": "PRED-9ac5c2ba00",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5384615384615384,
+          "prediction_time": 11,
+          "information_count": 11,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.46153846153846156
+        },
+        {
+          "prediction_id": "PRED-a728befc0c",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5,
+          "prediction_time": 12,
+          "information_count": 12,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5
+        },
+        {
+          "prediction_id": "PRED-69507a437f",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5333333333333333,
+          "prediction_time": 13,
+          "information_count": 13,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.4666666666666667
+        },
+        {
+          "prediction_id": "PRED-30b5822b0b",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5,
+          "prediction_time": 14,
+          "information_count": 14,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5
+        },
+        {
+          "prediction_id": "PRED-d47250fd0e",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.47058823529411764,
+          "prediction_time": 15,
+          "information_count": 15,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.47058823529411764
+        },
+        {
+          "prediction_id": "PRED-9e2394996a",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.4444444444444444,
+          "prediction_time": 16,
+          "information_count": 16,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.4444444444444444
+        },
+        {
+          "prediction_id": "PRED-405eac8624",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.42105263157894735,
+          "prediction_time": 17,
+          "information_count": 17,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5789473684210527
+        },
+        {
+          "prediction_id": "PRED-de5c99e1e4",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.45,
+          "prediction_time": 18,
+          "information_count": 18,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.55
+        },
+        {
+          "prediction_id": "PRED-6971f50780",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.47619047619047616,
+          "prediction_time": 19,
+          "information_count": 19,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5238095238095238
+        },
+        {
+          "prediction_id": "PRED-bba1c4f5a6",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5,
+          "prediction_time": 20,
+          "information_count": 20,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.5
+        },
+        {
+          "prediction_id": "PRED-1b6c8d481f",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5217391304347826,
+          "prediction_time": 21,
+          "information_count": 21,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.4782608695652174
+        },
+        {
+          "prediction_id": "PRED-d83a1c4bb3",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5,
+          "prediction_time": 22,
+          "information_count": 22,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5
+        },
+        {
+          "prediction_id": "PRED-caaa0e53c2",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.52,
+          "prediction_time": 23,
+          "information_count": 23,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.48
+        },
+        {
+          "prediction_id": "PRED-23e96c0b66",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5384615384615384,
+          "prediction_time": 24,
+          "information_count": 24,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.46153846153846156
+        },
+        {
+          "prediction_id": "PRED-f3447f2d69",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5185185185185185,
+          "prediction_time": 25,
+          "information_count": 25,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.5185185185185185
+        },
+        {
+          "prediction_id": "PRED-4a59ccade5",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5,
+          "prediction_time": 26,
+          "information_count": 26,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5
+        },
+        {
+          "prediction_id": "PRED-89643d174a",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5172413793103449,
+          "prediction_time": 27,
+          "information_count": 27,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.48275862068965514
+        },
+        {
+          "prediction_id": "PRED-b28e24a17b",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5333333333333333,
+          "prediction_time": 28,
+          "information_count": 28,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.5333333333333333
+        },
+        {
+          "prediction_id": "PRED-2b7de32c76",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5161290322580645,
+          "prediction_time": 29,
+          "information_count": 29,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.4838709677419355
+        },
+        {
+          "prediction_id": "PRED-154d03dc7f",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.53125,
+          "prediction_time": 30,
+          "information_count": 30,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.46875
+        },
+        {
+          "prediction_id": "PRED-5452f3793d",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5454545454545454,
+          "prediction_time": 31,
+          "information_count": 31,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.4545454545454546
+        },
+        {
+          "prediction_id": "PRED-89e7e5b334",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5294117647058824,
+          "prediction_time": 32,
+          "information_count": 32,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.47058823529411764
+        },
+        {
+          "prediction_id": "PRED-2a5d91359c",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5142857142857142,
+          "prediction_time": 33,
+          "information_count": 33,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.48571428571428577
+        },
+        {
+          "prediction_id": "PRED-ce55bf86bb",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5,
+          "prediction_time": 34,
+          "information_count": 34,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.5
+        },
+        {
+          "prediction_id": "PRED-cc76f324cf",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.4864864864864865,
+          "prediction_time": 35,
+          "information_count": 35,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5135135135135135
+        },
+        {
+          "prediction_id": "PRED-88b0be6c29",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.47368421052631576,
+          "prediction_time": 36,
+          "information_count": 36,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5263157894736843
+        },
+        {
+          "prediction_id": "PRED-efd654ab3c",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.46153846153846156,
+          "prediction_time": 37,
+          "information_count": 37,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5384615384615384
+        },
+        {
+          "prediction_id": "PRED-68ba33e0a2",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.45,
+          "prediction_time": 38,
+          "information_count": 38,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.55
+        },
+        {
+          "prediction_id": "PRED-e341f7f909",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.4634146341463415,
+          "prediction_time": 39,
+          "information_count": 39,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5365853658536586
+        },
+        {
+          "prediction_id": "PRED-c768289403",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.47619047619047616,
+          "prediction_time": 40,
+          "information_count": 40,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5238095238095238
+        },
+        {
+          "prediction_id": "PRED-b8fd4767c1",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.4883720930232558,
+          "prediction_time": 41,
+          "information_count": 41,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5116279069767442
+        },
+        {
+          "prediction_id": "PRED-e697a374b5",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.4772727272727273,
+          "prediction_time": 42,
+          "information_count": 42,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5227272727272727
+        },
+        {
+          "prediction_id": "PRED-5da4c6bbfc",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.4888888888888889,
+          "prediction_time": 43,
+          "information_count": 43,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5111111111111111
+        },
+        {
+          "prediction_id": "PRED-5dcd6cbe86",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5,
+          "prediction_time": 44,
+          "information_count": 44,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.5
+        },
+        {
+          "prediction_id": "PRED-e275e932f6",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.48936170212765956,
+          "prediction_time": 45,
+          "information_count": 45,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5106382978723405
+        },
+        {
+          "prediction_id": "PRED-128004f34e",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5,
+          "prediction_time": 46,
+          "information_count": 46,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.5
+        },
+        {
+          "prediction_id": "PRED-6aa23eac5b",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5102040816326531,
+          "prediction_time": 47,
+          "information_count": 47,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.4897959183673469
+        },
+        {
+          "prediction_id": "PRED-582347204c",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.52,
+          "prediction_time": 48,
+          "information_count": 48,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.52
+        },
+        {
+          "prediction_id": "PRED-83d1734cdb",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5294117647058824,
+          "prediction_time": 49,
+          "information_count": 49,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.47058823529411764
+        },
+        {
+          "prediction_id": "PRED-26fe1c6799",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5384615384615384,
+          "prediction_time": 50,
+          "information_count": 50,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.46153846153846156
+        },
+        {
+          "prediction_id": "PRED-8a70005b96",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5471698113207547,
+          "prediction_time": 51,
+          "information_count": 51,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.4528301886792453
+        },
+        {
+          "prediction_id": "PRED-2fee18d3e1",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5370370370370371,
+          "prediction_time": 52,
+          "information_count": 52,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.4629629629629629
+        },
+        {
+          "prediction_id": "PRED-5a298440b7",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5272727272727272,
+          "prediction_time": 53,
+          "information_count": 53,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.4727272727272728
+        },
+        {
+          "prediction_id": "PRED-216b30aaeb",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5357142857142857,
+          "prediction_time": 54,
+          "information_count": 54,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.5357142857142857
+        },
+        {
+          "prediction_id": "PRED-54a4bd6134",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5263157894736842,
+          "prediction_time": 55,
+          "information_count": 55,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.4736842105263158
+        },
+        {
+          "prediction_id": "PRED-9bb04b1588",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5172413793103449,
+          "prediction_time": 56,
+          "information_count": 56,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_B",
+          "prediction_error": 0.5172413793103449
+        },
+        {
+          "prediction_id": "PRED-deb5474872",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5084745762711864,
+          "prediction_time": 57,
+          "information_count": 57,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.4915254237288136
+        },
+        {
+          "prediction_id": "PRED-7e67a78e85",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5166666666666667,
+          "prediction_time": 58,
+          "information_count": 58,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.4833333333333333
+        },
+        {
+          "prediction_id": "PRED-0731ceb704",
+          "proposition": "The next outcome will be OUTCOME_A.",
+          "predicted_probability": 0.5081967213114754,
+          "prediction_time": 59,
+          "information_count": 59,
+          "status": "evaluated",
+          "actual_outcome": "OUTCOME_A",
+          "prediction_error": 0.4918032786885246
+        }
+      ]
+    }
+  ],
+  "temporal_leakage_probes": [
+    {
+      "probe": "cite_the_outcome_being_predicted",
+      "description": "Predict at t=5 while citing the observation stamped t=5 — the outcome itself.",
+      "rejected": true,
+      "error": "prediction rejected — information from at or after the prediction time: OBS-1f9a86e0d1 (t=5, prediction at t=5)"
+    },
+    {
+      "probe": "cite_far_future_information",
+      "description": "Predict at t=1 while citing an observation from t=99.",
+      "rejected": true,
+      "error": "prediction rejected — information from at or after the prediction time: OBS-941edc93e6 (t=99, prediction at t=1)"
+    },
+    {
+      "probe": "smuggle_future_through_evidence_ids",
+      "description": "Keep `information_available` clean but hide the future in `evidence_ids_used`.",
+      "rejected": true,
+      "error": "prediction rejected — information from at or after the prediction time: OBS-941edc93e6 (t=99, prediction at t=1)"
+    },
+    {
+      "probe": "cite_an_unknown_observation",
+      "description": "Cite an id the timeline has never heard of — it cannot be shown to predate anything.",
+      "rejected": true,
+      "error": "prediction rejected — unknown observation ids: OBS-invented"
+    },
+    {
+      "probe": "view_cannot_reach_past_its_horizon",
+      "description": "Ask a t=5 view for observations stamped t=5 and t=99.",
+      "rejected": true,
+      "error": "view exposed only observations strictly before t=5"
+    },
+    {
+      "probe": "legitimate_prediction_still_accepted",
+      "description": "Guard against a system that rejects everything and calls it safety.",
+      "rejected": true,
+      "error": "a prediction citing only the past was accepted"
+    }
+  ],
+  "critical_sequence": {
+    "history": [
+      {
+        "prediction_id": "PRED-7d09995073",
+        "proposition": "The next outcome will be OUTCOME_A.",
+        "predicted_probability": 0.8,
+        "prediction_time": 0,
+        "information_count": 0,
+        "status": "evaluated",
+        "actual_outcome": "OUTCOME_B",
+        "prediction_error": 0.8
+      },
+      {
+        "prediction_id": "PRED-f61ffef99d",
+        "proposition": "The next outcome will be OUTCOME_A.",
+        "predicted_probability": 0.65,
+        "prediction_time": 1,
+        "information_count": 1,
+        "status": "evaluated",
+        "actual_outcome": "OUTCOME_B",
+        "prediction_error": 0.65
+      },
+      {
+        "prediction_id": "PRED-8f88a86d34",
+        "proposition": "The next outcome will be OUTCOME_A.",
+        "predicted_probability": 0.4,
+        "prediction_time": 2,
+        "information_count": 2,
+        "status": "pending",
+        "actual_outcome": null,
+        "prediction_error": null
+      }
+    ],
+    "probabilities_in_order": [
+      0.8,
+      0.65,
+      0.4
+    ],
+    "unchanged": true,
+    "path": "/workspace/echo/experiments/results/prediction/critical/predictions.json"
+  },
+  "persistence": {
+    "predictions_available": true,
+    "probabilities_identical": true,
+    "information_available": true,
+    "outcomes_available": true,
+    "experiences_available": true,
+    "predictions_checked": 180,
+    "experiences_checked": 180
+  }
+}

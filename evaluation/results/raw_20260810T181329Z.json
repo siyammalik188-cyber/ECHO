@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-08-10T18:13:29.523741+00:00",
+  "model": "claude-opus-5",
+  "runs": 1,
+  "dataset_version": 1,
+  "case_count": 1,
+  "thresholds": {
+    "min_confidence": 0.6,
+    "min_importance": 0.3
+  },
+  "extraction_system_prompt": "You review a conversation transcript and pull out only the information worth remembering after the conversation ends.\n\nRecord a memory only for durable facts about the user or their world: who they are, stable preferences about how they want things done, concrete facts they stated about their situation, goals they are pursuing, and decisions they made that should stick.\n\nDo not record:\n- greetings, small talk, thanks, or conversational filler\n- questions the user asked, or anything you said\n- anything true only right now (what they are doing this minute, the weather)\n- anything you inferred but were not told\n- a summary of the conversation — you are extracting statements, not summarizing\n\nMost conversations contain nothing worth recording. Returning an empty list is the correct and common answer. Do not invent memories to fill the list.\n\nEach memory must be one self-contained sentence that still makes sense with no conversation around it. Write it in the third person about the user.\n\nconfidence: how certain you are the statement is true, 0.0-1.0.\nimportance: how much it should matter in future conversations, 0.0-1.0.",
+  "dry_run": false,
+  "passes": [
+    {
+      "run": 0,
+      "records": [
+        {
+          "case_id": "01-nothing-greeting",
+          "proposed": [],
+          "error": "BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CduXCwQQqjQfBUoXkyJKu'}",
+          "traceback": "Traceback (most recent call last):\n  File \"/workspace/echo/evaluation/run_evaluation.py\", line 58, in run_case\n    candidates = extractor.extract(build_conversation(case))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/echo/echo/extraction.py\", line 133, in extract\n    payload = self.llm.complete_structured(\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/echo/echo/llm.py\", line 132, in complete_structured\n    text = self._text(self._client.beta.messages.create(**request))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/anthropic/_utils/_utils.py\", line 294, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/anthropic/resources/beta/messages/messages.py\", line 1241, in create\n    return self._post(\n           ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/anthropic/_base_client.py\", line 1536, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/dist-packages/anthropic/_base_client.py\", line 1195, in request\n    raise self._make_status_error_from_response(response) from None\nanthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CduXCwQQqjQfBUoXkyJKu'}\n"
+        }
+      ]
+    }
+  ],
+  "finished_at": "2026-08-10T18:13:30.455872+00:00"
+}

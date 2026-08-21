@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "experiments": [
+    {
+      "experiment_id": "EXP-818e6b03503a",
+      "step": 0,
+      "option_id": "DO-V2",
+      "intervention": {
+        "assignments": [
+          [
+            "V2",
+            1
+          ]
+        ],
+        "label": "INTERVENE(V2=1)"
+      },
+      "policy": "information_gain",
+      "appraisal": {
+        "option_id": "DO-V2",
+        "intervention": "INTERVENE(V2=1)",
+        "prior_entropy_bits": 1.58496250086891,
+        "expected_posterior_entropy_bits": 1.1655087826508435,
+        "expected_information_gain_bits": 0.41945371821806665,
+        "cost": 3.0,
+        "risk": 0.1,
+        "time": 2.0,
+        "samples": 3,
+        "utility": 0.2594537182180666,
+        "information_per_cost": 0.13981790607268887,
+        "exact": true,
+        "outcomes_considered": 20
+      },
+      "alternatives": [
+        {
+          "option_id": "DO-V1",
+          "intervention": "INTERVENE(V1=1)",
+          "prior_entropy_bits": 1.58496250086891,
+          "expected_posterior_entropy_bits": 1.3416824540702008,
+          "expected_information_gain_bits": 0.2432800467987093,
+          "cost": 3.0,
+          "risk": 0.1,
+          "time": 2.0,
+          "samples": 3,
+          "utility": 0.08328004679870926,
+          "information_per_cost": 0.0810933489329031,
+          "exact": true,
+          "outcomes_considered": 20
+        },
+        {
+          "option_id": "DO-V3",
+          "intervention": "INTERVENE(V3=1)",
+          "prior_entropy_bits": 1.58496250086891,
+          "expected_posterior_entropy_bits": 1.4086968576934038,
+          "expected_information_gain_bits": 0.1762656431755063,
+          "cost": 3.0,
+          "risk": 0.1,
+          "time": 2.0,
+          "samples": 3,
+          "utility": 0.01626564317550628,
+          "information_per_cost": 0.05875521439183543,
+          "exact": true,
+          "outcomes_considered": 20
+        }
+      ],
+      "outcome_counts": [
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          2
+        ],
+        [
+          [
+            1,
+            1,
+            1
+          ],
+          1
+        ]
+      ],
+      "posterior_before": [
+        [
+          "M2-fork",
+          0.3333333333320293
+        ],
+        [
+          "M1-chain",
+          0.33333333333202847
+        ],
+        [
+          "M3-reverse-chain",
+          0.33333333333202847
+        ],
+        [
+          "M4-collider",
+          3.91376476868538e-12
+        ]
+      ],
+      "posterior_after": [
+        [
+          "M1-chain",
+          0.8400865682935691
+        ],
+        [
+          "M2-fork",
+          0.1285332449489164
+        ],
+        [
+          "M3-reverse-chain",
+          0.03138018675510646
+        ],
+        [
+          "M4-collider",
+          2.408130771713412e-12
+        ]
+      ],
+      "entropy_before": 1.58496250086891,
+      "entropy_after": 0.7483331327137386,
+      "information_gained": 0.8366293681551715,
+      "cost": 3.0,
+      "created_at": 0,
+      "conclusive": true,
+      "note": "contradicted the leader"
+    }
+  ]
+}

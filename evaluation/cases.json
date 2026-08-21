@@ -1,0 +1,307 @@
+{
+  "dataset_version": 1,
+  "description": "Manually labelled evaluation set for ECHO memory extraction. Every expectation in this file was written and committed BEFORE any model was run against it. Do not edit expectations in response to model output; add new cases instead.",
+  "matching_rules": {
+    "must_include": "A list of groups. A proposed memory matches an expectation only if, for EVERY group, at least one of the group's alternatives appears as a substring of the normalised memory text (lowercased, punctuation stripped, whitespace collapsed).",
+    "expected": "Memories the extractor SHOULD produce. One unmatched expectation = one false negative.",
+    "forbidden": "Memories the extractor MUST NOT produce. A match here is a false positive, and is reported separately as a labelled failure.",
+    "tolerated": "Memories that are neither required nor wrong given ECHO's deliberate lack of belief updating. Excluded from primary precision; counted as false positives in the strict precision figure.",
+    "anything_else": "Any proposed memory matching none of the above is an unlabelled false positive."
+  },
+  "cases": [
+    {
+      "id": "01-nothing-greeting",
+      "requirement": "1. nothing should be remembered",
+      "title": "Pure small talk",
+      "conversation": [
+        {"role": "user", "content": "hey"},
+        {"role": "assistant", "content": "Hello! How can I help?"},
+        {"role": "user", "content": "just saying hi, nothing much going on"},
+        {"role": "assistant", "content": "Happy to chat whenever you need something."},
+        {"role": "user", "content": "cool, thanks"}
+      ],
+      "expected": [],
+      "forbidden": [
+        {"label": "any memory at all from small talk", "must_include": [[""]]}
+      ],
+      "tolerated": [],
+      "notes": "The empty-string alternative matches every memory, so ANY extraction here is a labelled false positive. This is the cleanest test of the prompt's claim that returning an empty list is correct and common."
+    },
+    {
+      "id": "02-nothing-question",
+      "requirement": "1. nothing should be remembered",
+      "title": "User asks a general question and reveals nothing about themselves",
+      "conversation": [
+        {"role": "user", "content": "What's the difference between a list and a tuple in Python?"},
+        {"role": "assistant", "content": "Lists are mutable; tuples are immutable and hashable."},
+        {"role": "user", "content": "Got it, that makes sense."}
+      ],
+      "expected": [],
+      "forbidden": [
+        {"label": "treating the question topic as a durable interest", "must_include": [["python", "tuple", "list"]]},
+        {"label": "recording the assistant's explanation as a memory", "must_include": [["immutable", "mutable", "hashable"]]}
+      ],
+      "tolerated": [],
+      "notes": "Asking about a topic is not the same as having a durable interest in it. The prompt explicitly says not to record questions the user asked or anything the assistant said."
+    },
+    {
+      "id": "03-fact-location",
+      "requirement": "2. a stable personal fact should be remembered",
+      "title": "User states where they live",
+      "conversation": [
+        {"role": "user", "content": "I've lived in Dhaka my whole life, so I'm used to the heat."},
+        {"role": "assistant", "content": "That's a lifetime of acclimatisation!"}
+      ],
+      "expected": [
+        {
+          "label": "user lives in Dhaka",
+          "memory_type": ["identity", "fact"],
+          "must_include": [["dhaka"], ["live", "lives", "lived", "living", "resides", "resident", "based", "from"]],
+          "confidence": [0.8, 1.0],
+          "importance": [0.4, 1.0]
+        }
+      ],
+      "forbidden": [],
+      "tolerated": [
+        {"label": "a separate memory about heat tolerance", "must_include": [["heat", "hot", "acclimat"]]}
+      ],
+      "notes": "Accepts either identity or fact as the type; the boundary between them is genuinely fuzzy and penalising the choice would measure taxonomy, not judgement."
+    },
+    {
+      "id": "04-fact-allergy",
+      "requirement": "2. a stable personal fact should be remembered",
+      "title": "Safety-relevant durable fact",
+      "conversation": [
+        {"role": "user", "content": "Can you suggest a snack? I'm allergic to peanuts, badly — EpiPen level."},
+        {"role": "assistant", "content": "Understood. How about rice crackers with hummus?"}
+      ],
+      "expected": [
+        {
+          "label": "user has a severe peanut allergy",
+          "memory_type": ["fact", "identity"],
+          "must_include": [["peanut"], ["allerg"]],
+          "confidence": [0.85, 1.0],
+          "importance": [0.7, 1.0]
+        }
+      ],
+      "forbidden": [
+        {"label": "recording the snack the assistant suggested", "must_include": [["rice cracker", "hummus"]]}
+      ],
+      "tolerated": [],
+      "notes": "High importance is pre-registered here specifically: a severe allergy that is forgotten is the most costly kind of miss. If the model scores this below 0.7 importance, that is a calibration failure worth reporting."
+    },
+    {
+      "id": "05-preference-style",
+      "requirement": "3. a preference should be remembered",
+      "title": "Stated preference about how the assistant should respond",
+      "conversation": [
+        {"role": "user", "content": "Please keep answers short. I really dislike bullet-point lists — just write me a sentence or two of prose."},
+        {"role": "assistant", "content": "Will do."}
+      ],
+      "expected": [
+        {
+          "label": "user prefers short prose answers, not bullet lists",
+          "memory_type": ["preference"],
+          "must_include": [["short", "brief", "concise", "prose", "bullet"]],
+          "confidence": [0.85, 1.0],
+          "importance": [0.5, 1.0]
+        }
+      ],
+      "forbidden": [],
+      "tolerated": [
+        {"label": "splitting the preference into two separate memories", "must_include": [["bullet", "list", "prose", "short", "brief", "concise"]]}
+      ],
+      "notes": "One memory or two is a reasonable judgement call, so a second overlapping memory is tolerated rather than penalised."
+    },
+    {
+      "id": "06-goal",
+      "requirement": "4. a goal should be remembered",
+      "title": "User states something they are working toward",
+      "conversation": [
+        {"role": "user", "content": "I'm trying to get my side project launched before my paternity leave ends in March. That's the whole reason I'm doing this."},
+        {"role": "assistant", "content": "That's a clear deadline to work back from."}
+      ],
+      "expected": [
+        {
+          "label": "user aims to launch their side project before March",
+          "memory_type": ["goal"],
+          "must_include": [["launch", "ship", "release", "finish", "complete"], ["side project", "project"]],
+          "confidence": [0.8, 1.0],
+          "importance": [0.6, 1.0]
+        }
+      ],
+      "forbidden": [],
+      "tolerated": [
+        {"label": "a separate memory about paternity leave ending in March", "must_include": [["paternity", "leave", "march"]]}
+      ],
+      "notes": "The deadline may reasonably be folded into the goal memory or split out as its own fact."
+    },
+    {
+      "id": "07-decision",
+      "requirement": "5. a decision should be remembered",
+      "title": "A settled technical decision",
+      "conversation": [
+        {"role": "user", "content": "We went back and forth on it, but we've decided: Postgres, not MongoDB. That's locked in now."},
+        {"role": "assistant", "content": "Noted — Postgres it is."}
+      ],
+      "expected": [
+        {
+          "label": "user's team chose Postgres over MongoDB",
+          "memory_type": ["decision"],
+          "must_include": [["postgres"], ["decid", "chose", "choose", "chosen", "going with", "picked", "selected", "settled", "locked"]],
+          "confidence": [0.85, 1.0],
+          "importance": [0.5, 1.0]
+        }
+      ],
+      "forbidden": [],
+      "tolerated": [],
+      "notes": "Explicit decision language plus 'locked in' makes this about as unambiguous as a decision gets. A miss here would be a serious recall failure."
+    },
+    {
+      "id": "08-temporary",
+      "requirement": "6. a temporary statement should NOT be remembered",
+      "title": "True right now, worthless tomorrow",
+      "conversation": [
+        {"role": "user", "content": "Sorry if I'm slow to reply, I'm on a train right now and the signal keeps dropping."},
+        {"role": "assistant", "content": "No problem, take your time."},
+        {"role": "user", "content": "ok back now, we just went through a tunnel"}
+      ],
+      "expected": [],
+      "forbidden": [
+        {"label": "recording that the user is on a train", "must_include": [["train", "tunnel", "signal", "commut"]]}
+      ],
+      "tolerated": [],
+      "notes": "The prompt names this case directly ('anything true only right now'). Extracting it would mean the exclusion list is not being applied."
+    },
+    {
+      "id": "09-joke",
+      "requirement": "7. a joke should NOT be remembered",
+      "title": "Obvious humour stated in the grammatical form of a fact",
+      "conversation": [
+        {"role": "user", "content": "Fair warning: I'm actually three raccoons in a trench coat operating a keyboard, so go easy on me."},
+        {"role": "assistant", "content": "Impressive typing for six paws."},
+        {"role": "user", "content": "haha, anyway — what were we saying about the deploy?"}
+      ],
+      "expected": [],
+      "forbidden": [
+        {"label": "recording the raccoon joke as an identity fact", "must_include": [["raccoon", "trench coat", "paw"]]}
+      ],
+      "tolerated": [],
+      "notes": "This is the hardest of the negative cases: it is syntactically a first-person self-description ('I'm actually X'), which is exactly the shape of a real identity memory. Getting this wrong is a plausible and interesting failure."
+    },
+    {
+      "id": "10-uncertain",
+      "requirement": "8. uncertain information should carry appropriate confidence",
+      "title": "Hedged, unresolved plan",
+      "conversation": [
+        {"role": "user", "content": "I might be relocating to Berlin next year? Nothing's decided, my partner and I are still arguing about it. Could easily not happen."},
+        {"role": "assistant", "content": "Sounds genuinely up in the air."}
+      ],
+      "expected": [
+        {
+          "label": "user is possibly relocating to Berlin, undecided",
+          "memory_type": ["fact", "goal", "identity"],
+          "must_include": [["berlin"], ["might", "may", "possib", "consider", "undecided", "not decided", "uncertain", "unsure", "potential"]],
+          "confidence": [0.15, 0.7],
+          "importance": [0.2, 0.8]
+        }
+      ],
+      "forbidden": [
+        {"label": "recording the move as settled fact", "must_include": [["berlin"], ["will move", "is moving", "relocating to berlin next year", "has decided"]]}
+      ],
+      "tolerated": [],
+      "notes": "Two pre-registered ways to fail: omit the hedge from the content (recorded as settled), or record the hedge but assign high confidence. Confidence is capped at 0.7 on purpose — anything above that is a calibration failure, not a matching failure. Note this band sits partly below ECHO's MIN_CONFIDENCE of 0.6, so a well-calibrated extraction may correctly be filtered out by consolidate(); the runner reports pre-gate and post-gate results separately."
+    },
+    {
+      "id": "11-contradiction",
+      "requirement": "9. contradictory information appears",
+      "title": "User corrects an earlier statement within the same conversation",
+      "conversation": [
+        {"role": "user", "content": "I do all my editing in vim, always have."},
+        {"role": "assistant", "content": "A classic choice."},
+        {"role": "user", "content": "Actually, scratch that — I switched to VS Code about two months ago and I'm not going back. Forget the vim thing."},
+        {"role": "assistant", "content": "Understood, VS Code it is."}
+      ],
+      "expected": [
+        {
+          "label": "user now uses VS Code",
+          "memory_type": ["preference", "fact", "decision"],
+          "must_include": [["vs code", "vscode", "visual studio code"]],
+          "confidence": [0.8, 1.0],
+          "importance": [0.3, 1.0]
+        }
+      ],
+      "forbidden": [
+        {"label": "recording vim as the user's current editor", "must_include": [["vim"], ["uses vim", "editor is vim", "prefers vim", "edits in vim", "all editing in vim"]]}
+      ],
+      "tolerated": [
+        {"label": "a historical memory noting the user previously used vim", "must_include": [["vim"]]}
+      ],
+      "notes": "PRE-REGISTERED EXPECTATION: ECHO has no belief updating by design, so the extractor is the only thing that can notice the correction. Capturing the current state (VS Code) is required. Recording vim as CURRENT is a false positive. Recording vim as PAST is tolerated — penalising it would be measuring a capability we deliberately did not build. Both precision figures are reported so this choice is visible."
+    },
+    {
+      "id": "12-explicit-remember",
+      "requirement": "10. the user explicitly asks ECHO to remember something",
+      "title": "Direct instruction to remember",
+      "conversation": [
+        {"role": "user", "content": "Remember this for next time: my client reference is ACME-4471. I always have to dig it out and it drives me mad."},
+        {"role": "assistant", "content": "Noted."}
+      ],
+      "expected": [
+        {
+          "label": "user's client reference is ACME-4471",
+          "memory_type": ["fact", "identity"],
+          "must_include": [["acme4471", "acme 4471", "acme-4471"]],
+          "confidence": [0.85, 1.0],
+          "importance": [0.6, 1.0]
+        }
+      ],
+      "forbidden": [],
+      "tolerated": [],
+      "notes": "An explicit request is the strongest possible signal. A miss here is the single worst outcome in the set, because the user will believe the request was honoured. Importance is pre-registered at 0.6+ on the grounds that the user asked. Note the matcher strips punctuation, so 'ACME-4471' normalises to 'acme4471'."
+    },
+    {
+      "id": "13-mixed-signal",
+      "requirement": "2 + 6 combined (durable fact buried in chatter)",
+      "title": "One durable fact surrounded by noise",
+      "conversation": [
+        {"role": "user", "content": "morning! coffee hasn't kicked in yet. anyway I'm a paediatric nurse, so the shift patterns are brutal this week. what's the weather looking like?"},
+        {"role": "assistant", "content": "I can't check live weather, but I hope the shift eases up."},
+        {"role": "user", "content": "ha, no chance. ok back to it"}
+      ],
+      "expected": [
+        {
+          "label": "user is a paediatric nurse",
+          "memory_type": ["identity", "fact"],
+          "must_include": [["nurse"]],
+          "confidence": [0.8, 1.0],
+          "importance": [0.4, 1.0]
+        }
+      ],
+      "forbidden": [
+        {"label": "recording this week's shift pattern or the coffee remark", "must_include": [["coffee", "this week", "brutal week", "weather"]]}
+      ],
+      "tolerated": [
+        {"label": "a general memory that the user works demanding shifts", "must_include": [["shift"]]}
+      ],
+      "notes": "Tests selectivity rather than detection: the durable fact and the disposable chatter are in the same sentence."
+    },
+    {
+      "id": "14-assistant-attribution",
+      "requirement": "1 + 6 (source discipline)",
+      "title": "Durable-sounding information stated by the assistant, not the user",
+      "conversation": [
+        {"role": "user", "content": "What's a good starting point for learning Rust?"},
+        {"role": "assistant", "content": "The Rust Book is the standard entry point. I'd suggest pairing it with rustlings for exercises. I generally recommend finishing chapter 4 on ownership before writing anything real."},
+        {"role": "user", "content": "ok"}
+      ],
+      "expected": [],
+      "forbidden": [
+        {"label": "recording the assistant's own advice as a memory about the user", "must_include": [["rust book", "rustlings", "ownership", "chapter 4"]]},
+        {"label": "inferring the user is learning Rust from a single question", "must_include": [["learning rust", "is learning", "wants to learn"]]}
+      ],
+      "tolerated": [],
+      "notes": "The prompt says not to record anything the assistant said, and not to record inferences. A single question is not evidence of a durable goal. This is a strict case and a failure here is informative rather than damning."
+    }
+  ]
+}

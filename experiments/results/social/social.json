@@ -1,0 +1,2641 @@
+{
+  "schema_version": 1,
+  "claims": [
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-1",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X7 occurred"
+      ],
+      "raw": "I likely hypothesis-1 is not the right one because observation X7 occurred",
+      "created_at": 0
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-1",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Z2 occurred"
+      ],
+      "raw": "I confident hypothesis-1 is more likely because observation Z2 occurred",
+      "created_at": 0
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-1",
+      "asserts": true,
+      "confidence": 0.65,
+      "evidence": [
+        "observation Z9 occurred"
+      ],
+      "raw": "I think hypothesis-1 is more likely because observation Z9 occurred",
+      "created_at": 0
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-1",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Y1 occurred"
+      ],
+      "raw": "hypothesis-1 looks correct to me; I am confident because observation Y1 occurred",
+      "created_at": 0
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-2",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z9 occurred"
+      ],
+      "raw": "I likely hypothesis-2 is not the right one because observation Z9 occurred",
+      "created_at": 1
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-2",
+      "asserts": false,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Y1 occurred"
+      ],
+      "raw": "I would rule out hypothesis-2; I am confident because observation Y1 occurred",
+      "created_at": 1
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-2",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z6 occurred"
+      ],
+      "raw": "hypothesis-2 is unlikely, and I am think of that because observation Z6 occurred",
+      "created_at": 1
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-2",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Y3 occurred"
+      ],
+      "raw": "I am confident that hypothesis-2 holds, because observation Y3 occurred",
+      "created_at": 1
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-3",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation W7 occurred"
+      ],
+      "raw": "I am likely that hypothesis-3 holds, because observation W7 occurred",
+      "created_at": 2
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-3",
+      "asserts": false,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Y9 occurred"
+      ],
+      "raw": "I would rule out hypothesis-3; I am confident because observation Y9 occurred",
+      "created_at": 2
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-3",
+      "asserts": true,
+      "confidence": 0.55,
+      "evidence": [
+        "observation X3 occurred"
+      ],
+      "raw": "I suspect hypothesis-3 is more likely because observation X3 occurred",
+      "created_at": 2
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-3",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Z2 occurred"
+      ],
+      "raw": "I confident hypothesis-3 is more likely because observation Z2 occurred",
+      "created_at": 2
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-4",
+      "asserts": false,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Z2 occurred"
+      ],
+      "raw": "I confident hypothesis-4 is not the right one because observation Z2 occurred",
+      "created_at": 3
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-4",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation W8 occurred"
+      ],
+      "raw": "I am sure that hypothesis-4 holds, because observation W8 occurred",
+      "created_at": 3
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-4",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z8 occurred"
+      ],
+      "raw": "I likely hypothesis-4 is not the right one because observation Z8 occurred",
+      "created_at": 3
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-4",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation W9 occurred"
+      ],
+      "raw": "I confident hypothesis-4 is more likely because observation W9 occurred",
+      "created_at": 3
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-5",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z3 occurred"
+      ],
+      "raw": "I likely hypothesis-5 is not the right one because observation Z3 occurred",
+      "created_at": 4
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-5",
+      "asserts": false,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Z8 occurred"
+      ],
+      "raw": "I confident hypothesis-5 is not the right one because observation Z8 occurred",
+      "created_at": 4
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-5",
+      "asserts": false,
+      "confidence": 0.65,
+      "evidence": [
+        "observation Y4 occurred"
+      ],
+      "raw": "I would rule out hypothesis-5; I am think because observation Y4 occurred",
+      "created_at": 4
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-5",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z1 occurred"
+      ],
+      "raw": "I am likely that hypothesis-5 holds, because observation Z1 occurred",
+      "created_at": 4
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-6",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z7 occurred"
+      ],
+      "raw": "I likely hypothesis-6 is not the right one because observation Z7 occurred",
+      "created_at": 5
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-6",
+      "asserts": false,
+      "confidence": 0.85,
+      "evidence": [
+        "observation X7 occurred"
+      ],
+      "raw": "I would rule out hypothesis-6; I am confident because observation X7 occurred",
+      "created_at": 5
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-6",
+      "asserts": false,
+      "confidence": 0.65,
+      "evidence": [
+        "observation X9 occurred"
+      ],
+      "raw": "I think hypothesis-6 is not the right one because observation X9 occurred",
+      "created_at": 5
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-6",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation W4 occurred"
+      ],
+      "raw": "I confident hypothesis-6 is more likely because observation W4 occurred",
+      "created_at": 5
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-7",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y6 occurred"
+      ],
+      "raw": "hypothesis-7 looks correct to me; I am likely because observation Y6 occurred",
+      "created_at": 6
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-7",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Y6 occurred"
+      ],
+      "raw": "hypothesis-7 looks correct to me; I am confident because observation Y6 occurred",
+      "created_at": 6
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-7",
+      "asserts": true,
+      "confidence": 0.65,
+      "evidence": [
+        "observation Y7 occurred"
+      ],
+      "raw": "I am think that hypothesis-7 holds, because observation Y7 occurred",
+      "created_at": 6
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-7",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z2 occurred"
+      ],
+      "raw": "I would rule out hypothesis-7; I am likely because observation Z2 occurred",
+      "created_at": 6
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-8",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X3 occurred"
+      ],
+      "raw": "I would rule out hypothesis-8; I am likely because observation X3 occurred",
+      "created_at": 7
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-8",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y6 occurred"
+      ],
+      "raw": "hypothesis-8 is unlikely, and I am sure of that because observation Y6 occurred",
+      "created_at": 7
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-8",
+      "asserts": true,
+      "confidence": 0.65,
+      "evidence": [
+        "observation Z6 occurred"
+      ],
+      "raw": "I am think that hypothesis-8 holds, because observation Z6 occurred",
+      "created_at": 7
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-8",
+      "asserts": false,
+      "confidence": 0.9,
+      "evidence": [
+        "observation X5 occurred"
+      ],
+      "raw": "I sure hypothesis-8 is not the right one because observation X5 occurred",
+      "created_at": 7
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-9",
+      "asserts": false,
+      "confidence": 0.65,
+      "evidence": [
+        "observation W5 occurred"
+      ],
+      "raw": "I would rule out hypothesis-9; I am think because observation W5 occurred",
+      "created_at": 8
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-9",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation W6 occurred"
+      ],
+      "raw": "hypothesis-9 looks correct to me; I am confident because observation W6 occurred",
+      "created_at": 8
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-9",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation W7 occurred"
+      ],
+      "raw": "hypothesis-9 is unlikely, and I am think of that because observation W7 occurred",
+      "created_at": 8
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-9",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Z8 occurred"
+      ],
+      "raw": "I am confident that hypothesis-9 holds, because observation Z8 occurred",
+      "created_at": 8
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-10",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y6 occurred"
+      ],
+      "raw": "I likely hypothesis-10 is not the right one because observation Y6 occurred",
+      "created_at": 9
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-10",
+      "asserts": false,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Z7 occurred"
+      ],
+      "raw": "I confident hypothesis-10 is not the right one because observation Z7 occurred",
+      "created_at": 9
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-10",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y7 occurred"
+      ],
+      "raw": "hypothesis-10 is unlikely, and I am think of that because observation Y7 occurred",
+      "created_at": 9
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-10",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Y5 occurred"
+      ],
+      "raw": "I am confident that hypothesis-10 holds, because observation Y5 occurred",
+      "created_at": 9
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-11",
+      "asserts": true,
+      "confidence": 0.65,
+      "evidence": [
+        "observation X1 occurred"
+      ],
+      "raw": "I think hypothesis-11 is more likely because observation X1 occurred",
+      "created_at": 10
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-11",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Y7 occurred"
+      ],
+      "raw": "hypothesis-11 looks correct to me; I am confident because observation Y7 occurred",
+      "created_at": 10
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-11",
+      "asserts": true,
+      "confidence": 0.65,
+      "evidence": [
+        "observation Y6 occurred"
+      ],
+      "raw": "I think hypothesis-11 is more likely because observation Y6 occurred",
+      "created_at": 10
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-11",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X9 occurred"
+      ],
+      "raw": "hypothesis-11 is unlikely, and I am confident of that because observation X9 occurred",
+      "created_at": 10
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-12",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y4 occurred"
+      ],
+      "raw": "hypothesis-12 looks correct to me; I am likely because observation Y4 occurred",
+      "created_at": 11
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-12",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation X3 occurred"
+      ],
+      "raw": "I am sure that hypothesis-12 holds, because observation X3 occurred",
+      "created_at": 11
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-12",
+      "asserts": true,
+      "confidence": 0.65,
+      "evidence": [
+        "observation X5 occurred"
+      ],
+      "raw": "I am think that hypothesis-12 holds, because observation X5 occurred",
+      "created_at": 11
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-12",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y9 occurred"
+      ],
+      "raw": "hypothesis-12 is unlikely, and I am sure of that because observation Y9 occurred",
+      "created_at": 11
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-13",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation W6 occurred"
+      ],
+      "raw": "hypothesis-13 is unlikely, and I am likely of that because observation W6 occurred",
+      "created_at": 12
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-13",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation W4 occurred"
+      ],
+      "raw": "hypothesis-13 looks correct to me; I am sure because observation W4 occurred",
+      "created_at": 12
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-13",
+      "asserts": true,
+      "confidence": 0.65,
+      "evidence": [
+        "observation Y6 occurred"
+      ],
+      "raw": "I am think that hypothesis-13 holds, because observation Y6 occurred",
+      "created_at": 12
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-13",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X6 occurred"
+      ],
+      "raw": "hypothesis-13 is unlikely, and I am confident of that because observation X6 occurred",
+      "created_at": 12
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-14",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y4 occurred"
+      ],
+      "raw": "I likely hypothesis-14 is not the right one because observation Y4 occurred",
+      "created_at": 13
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-14",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z4 occurred"
+      ],
+      "raw": "hypothesis-14 is unlikely, and I am sure of that because observation Z4 occurred",
+      "created_at": 13
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-14",
+      "asserts": true,
+      "confidence": 0.65,
+      "evidence": [
+        "observation W7 occurred"
+      ],
+      "raw": "hypothesis-14 looks correct to me; I am think because observation W7 occurred",
+      "created_at": 13
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-14",
+      "asserts": false,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Z4 occurred"
+      ],
+      "raw": "I would rule out hypothesis-14; I am confident because observation Z4 occurred",
+      "created_at": 13
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-15",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y9 occurred"
+      ],
+      "raw": "hypothesis-15 looks correct to me; I am likely because observation Y9 occurred",
+      "created_at": 14
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-15",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation Y9 occurred"
+      ],
+      "raw": "hypothesis-15 looks correct to me; I am sure because observation Y9 occurred",
+      "created_at": 14
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-15",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X3 occurred"
+      ],
+      "raw": "hypothesis-15 is unlikely, and I am likely of that because observation X3 occurred",
+      "created_at": 14
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-15",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Z9 occurred"
+      ],
+      "raw": "hypothesis-15 looks correct to me; I am confident because observation Z9 occurred",
+      "created_at": 14
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-16",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X3 occurred"
+      ],
+      "raw": "I would rule out hypothesis-16; I am likely because observation X3 occurred",
+      "created_at": 15
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-16",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X4 occurred"
+      ],
+      "raw": "I likely hypothesis-16 is more likely because observation X4 occurred",
+      "created_at": 15
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-16",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y9 occurred"
+      ],
+      "raw": "I would rule out hypothesis-16; I am likely because observation Y9 occurred",
+      "created_at": 15
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-16",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z6 occurred"
+      ],
+      "raw": "I am likely that hypothesis-16 holds, because observation Z6 occurred",
+      "created_at": 15
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-17",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X8 occurred"
+      ],
+      "raw": "I likely hypothesis-17 is not the right one because observation X8 occurred",
+      "created_at": 16
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-17",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation Y1 occurred"
+      ],
+      "raw": "hypothesis-17 looks correct to me; I am sure because observation Y1 occurred",
+      "created_at": 16
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-17",
+      "asserts": false,
+      "confidence": 0.65,
+      "evidence": [
+        "observation Z3 occurred"
+      ],
+      "raw": "I think hypothesis-17 is not the right one because observation Z3 occurred",
+      "created_at": 16
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-17",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation Y3 occurred"
+      ],
+      "raw": "I am sure that hypothesis-17 holds, because observation Y3 occurred",
+      "created_at": 16
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-18",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z9 occurred"
+      ],
+      "raw": "I likely hypothesis-18 is more likely because observation Z9 occurred",
+      "created_at": 17
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-18",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation W3 occurred"
+      ],
+      "raw": "I sure hypothesis-18 is more likely because observation W3 occurred",
+      "created_at": 17
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-18",
+      "asserts": false,
+      "confidence": 0.65,
+      "evidence": [
+        "observation Y5 occurred"
+      ],
+      "raw": "I think hypothesis-18 is not the right one because observation Y5 occurred",
+      "created_at": 17
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-18",
+      "asserts": false,
+      "confidence": 0.9,
+      "evidence": [
+        "observation Z9 occurred"
+      ],
+      "raw": "I sure hypothesis-18 is not the right one because observation Z9 occurred",
+      "created_at": 17
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-19",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y3 occurred"
+      ],
+      "raw": "I would rule out hypothesis-19; I am likely because observation Y3 occurred",
+      "created_at": 18
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-19",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y8 occurred"
+      ],
+      "raw": "hypothesis-19 is unlikely, and I am likely of that because observation Y8 occurred",
+      "created_at": 18
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-19",
+      "asserts": false,
+      "confidence": 0.65,
+      "evidence": [
+        "observation W7 occurred"
+      ],
+      "raw": "I would rule out hypothesis-19; I am think because observation W7 occurred",
+      "created_at": 18
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-19",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation Z4 occurred"
+      ],
+      "raw": "I sure hypothesis-19 is more likely because observation Z4 occurred",
+      "created_at": 18
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-20",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z1 occurred"
+      ],
+      "raw": "I am likely that hypothesis-20 holds, because observation Z1 occurred",
+      "created_at": 19
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-20",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Y2 occurred"
+      ],
+      "raw": "hypothesis-20 looks correct to me; I am confident because observation Y2 occurred",
+      "created_at": 19
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-20",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z7 occurred"
+      ],
+      "raw": "hypothesis-20 is unlikely, and I am likely of that because observation Z7 occurred",
+      "created_at": 19
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-20",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y8 occurred"
+      ],
+      "raw": "I am likely that hypothesis-20 holds, because observation Y8 occurred",
+      "created_at": 19
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-21",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation W9 occurred"
+      ],
+      "raw": "I likely hypothesis-21 is more likely because observation W9 occurred",
+      "created_at": 20
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-21",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation X1 occurred"
+      ],
+      "raw": "I am sure that hypothesis-21 holds, because observation X1 occurred",
+      "created_at": 20
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-21",
+      "asserts": true,
+      "confidence": 0.65,
+      "evidence": [
+        "observation Z5 occurred"
+      ],
+      "raw": "I am think that hypothesis-21 holds, because observation Z5 occurred",
+      "created_at": 20
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-21",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation X4 occurred"
+      ],
+      "raw": "I am confident that hypothesis-21 holds, because observation X4 occurred",
+      "created_at": 20
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-22",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X4 occurred"
+      ],
+      "raw": "I would rule out hypothesis-22; I am likely because observation X4 occurred",
+      "created_at": 21
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-22",
+      "asserts": false,
+      "confidence": 0.85,
+      "evidence": [
+        "observation W9 occurred"
+      ],
+      "raw": "I would rule out hypothesis-22; I am confident because observation W9 occurred",
+      "created_at": 21
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-22",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X9 occurred"
+      ],
+      "raw": "hypothesis-22 is unlikely, and I am suspect of that because observation X9 occurred",
+      "created_at": 21
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-22",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y9 occurred"
+      ],
+      "raw": "hypothesis-22 looks correct to me; I am likely because observation Y9 occurred",
+      "created_at": 21
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-23",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z8 occurred"
+      ],
+      "raw": "I likely hypothesis-23 is not the right one because observation Z8 occurred",
+      "created_at": 22
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-23",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation W7 occurred"
+      ],
+      "raw": "I am confident that hypothesis-23 holds, because observation W7 occurred",
+      "created_at": 22
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-23",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z6 occurred"
+      ],
+      "raw": "hypothesis-23 is unlikely, and I am think of that because observation Z6 occurred",
+      "created_at": 22
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-23",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Z6 occurred"
+      ],
+      "raw": "I confident hypothesis-23 is more likely because observation Z6 occurred",
+      "created_at": 22
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-24",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y2 occurred"
+      ],
+      "raw": "hypothesis-24 is unlikely, and I am likely of that because observation Y2 occurred",
+      "created_at": 23
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-24",
+      "asserts": false,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Y7 occurred"
+      ],
+      "raw": "I confident hypothesis-24 is not the right one because observation Y7 occurred",
+      "created_at": 23
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-24",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation W7 occurred"
+      ],
+      "raw": "hypothesis-24 is unlikely, and I am think of that because observation W7 occurred",
+      "created_at": 23
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-24",
+      "asserts": false,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Y3 occurred"
+      ],
+      "raw": "I confident hypothesis-24 is not the right one because observation Y3 occurred",
+      "created_at": 23
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-25",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y3 occurred"
+      ],
+      "raw": "I likely hypothesis-25 is not the right one because observation Y3 occurred",
+      "created_at": 24
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-25",
+      "asserts": false,
+      "confidence": 0.9,
+      "evidence": [
+        "observation X7 occurred"
+      ],
+      "raw": "I would rule out hypothesis-25; I am sure because observation X7 occurred",
+      "created_at": 24
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-25",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X5 occurred"
+      ],
+      "raw": "I am likely that hypothesis-25 holds, because observation X5 occurred",
+      "created_at": 24
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-25",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y1 occurred"
+      ],
+      "raw": "hypothesis-25 is unlikely, and I am confident of that because observation Y1 occurred",
+      "created_at": 24
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-26",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X8 occurred"
+      ],
+      "raw": "I would rule out hypothesis-26; I am likely because observation X8 occurred",
+      "created_at": 25
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-26",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation X8 occurred"
+      ],
+      "raw": "hypothesis-26 looks correct to me; I am confident because observation X8 occurred",
+      "created_at": 25
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-26",
+      "asserts": false,
+      "confidence": 0.65,
+      "evidence": [
+        "observation Z4 occurred"
+      ],
+      "raw": "I would rule out hypothesis-26; I am think because observation Z4 occurred",
+      "created_at": 25
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-26",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation X8 occurred"
+      ],
+      "raw": "I am confident that hypothesis-26 holds, because observation X8 occurred",
+      "created_at": 25
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-27",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation W2 occurred"
+      ],
+      "raw": "I likely hypothesis-27 is not the right one because observation W2 occurred",
+      "created_at": 26
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-27",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X1 occurred"
+      ],
+      "raw": "hypothesis-27 is unlikely, and I am confident of that because observation X1 occurred",
+      "created_at": 26
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-27",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X6 occurred"
+      ],
+      "raw": "hypothesis-27 is unlikely, and I am think of that because observation X6 occurred",
+      "created_at": 26
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-27",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Y3 occurred"
+      ],
+      "raw": "I confident hypothesis-27 is more likely because observation Y3 occurred",
+      "created_at": 26
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-28",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Y7 occurred"
+      ],
+      "raw": "I confident hypothesis-28 is more likely because observation Y7 occurred",
+      "created_at": 27
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-28",
+      "asserts": false,
+      "confidence": 0.85,
+      "evidence": [
+        "observation W4 occurred"
+      ],
+      "raw": "I would rule out hypothesis-28; I am confident because observation W4 occurred",
+      "created_at": 27
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-28",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y2 occurred"
+      ],
+      "raw": "I am likely that hypothesis-28 holds, because observation Y2 occurred",
+      "created_at": 27
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-28",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z8 occurred"
+      ],
+      "raw": "hypothesis-28 is unlikely, and I am confident of that because observation Z8 occurred",
+      "created_at": 27
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-29",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation W7 occurred"
+      ],
+      "raw": "I would rule out hypothesis-29; I am likely because observation W7 occurred",
+      "created_at": 28
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-29",
+      "asserts": false,
+      "confidence": 0.9,
+      "evidence": [
+        "observation X5 occurred"
+      ],
+      "raw": "I sure hypothesis-29 is not the right one because observation X5 occurred",
+      "created_at": 28
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-29",
+      "asserts": false,
+      "confidence": 0.65,
+      "evidence": [
+        "observation W5 occurred"
+      ],
+      "raw": "I think hypothesis-29 is not the right one because observation W5 occurred",
+      "created_at": 28
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-29",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation X2 occurred"
+      ],
+      "raw": "I am confident that hypothesis-29 holds, because observation X2 occurred",
+      "created_at": 28
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-30",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X4 occurred"
+      ],
+      "raw": "I am likely that hypothesis-30 holds, because observation X4 occurred",
+      "created_at": 29
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-30",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation X9 occurred"
+      ],
+      "raw": "I sure hypothesis-30 is more likely because observation X9 occurred",
+      "created_at": 29
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-30",
+      "asserts": false,
+      "confidence": 0.65,
+      "evidence": [
+        "observation X9 occurred"
+      ],
+      "raw": "I think hypothesis-30 is not the right one because observation X9 occurred",
+      "created_at": 29
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-30",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation Y8 occurred"
+      ],
+      "raw": "I am sure that hypothesis-30 holds, because observation Y8 occurred",
+      "created_at": 29
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-31",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y8 occurred"
+      ],
+      "raw": "I likely hypothesis-31 is more likely because observation Y8 occurred",
+      "created_at": 30
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-31",
+      "asserts": false,
+      "confidence": 0.9,
+      "evidence": [
+        "observation X6 occurred"
+      ],
+      "raw": "I would rule out hypothesis-31; I am sure because observation X6 occurred",
+      "created_at": 30
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-31",
+      "asserts": true,
+      "confidence": 0.65,
+      "evidence": [
+        "observation X7 occurred"
+      ],
+      "raw": "hypothesis-31 looks correct to me; I am think because observation X7 occurred",
+      "created_at": 30
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-31",
+      "asserts": false,
+      "confidence": 0.85,
+      "evidence": [
+        "observation W4 occurred"
+      ],
+      "raw": "I confident hypothesis-31 is not the right one because observation W4 occurred",
+      "created_at": 30
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-32",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X5 occurred"
+      ],
+      "raw": "hypothesis-32 looks correct to me; I am likely because observation X5 occurred",
+      "created_at": 31
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-32",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation Y5 occurred"
+      ],
+      "raw": "I am sure that hypothesis-32 holds, because observation Y5 occurred",
+      "created_at": 31
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-32",
+      "asserts": true,
+      "confidence": 0.65,
+      "evidence": [
+        "observation X8 occurred"
+      ],
+      "raw": "I am think that hypothesis-32 holds, because observation X8 occurred",
+      "created_at": 31
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-32",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation W8 occurred"
+      ],
+      "raw": "I confident hypothesis-32 is more likely because observation W8 occurred",
+      "created_at": 31
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-33",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X8 occurred"
+      ],
+      "raw": "I likely hypothesis-33 is more likely because observation X8 occurred",
+      "created_at": 32
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-33",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation W9 occurred"
+      ],
+      "raw": "I am sure that hypothesis-33 holds, because observation W9 occurred",
+      "created_at": 32
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-33",
+      "asserts": true,
+      "confidence": 0.65,
+      "evidence": [
+        "observation Z4 occurred"
+      ],
+      "raw": "I think hypothesis-33 is more likely because observation Z4 occurred",
+      "created_at": 32
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-33",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation W1 occurred"
+      ],
+      "raw": "I likely hypothesis-33 is not the right one because observation W1 occurred",
+      "created_at": 32
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-34",
+      "asserts": false,
+      "confidence": 0.85,
+      "evidence": [
+        "observation X8 occurred"
+      ],
+      "raw": "I would rule out hypothesis-34; I am confident because observation X8 occurred",
+      "created_at": 33
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-34",
+      "asserts": false,
+      "confidence": 0.9,
+      "evidence": [
+        "observation Y2 occurred"
+      ],
+      "raw": "I sure hypothesis-34 is not the right one because observation Y2 occurred",
+      "created_at": 33
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-34",
+      "asserts": true,
+      "confidence": 0.65,
+      "evidence": [
+        "observation Y1 occurred"
+      ],
+      "raw": "hypothesis-34 looks correct to me; I am think because observation Y1 occurred",
+      "created_at": 33
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-34",
+      "asserts": false,
+      "confidence": 0.85,
+      "evidence": [
+        "observation W5 occurred"
+      ],
+      "raw": "I confident hypothesis-34 is not the right one because observation W5 occurred",
+      "created_at": 33
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-35",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation W6 occurred"
+      ],
+      "raw": "I would rule out hypothesis-35; I am likely because observation W6 occurred",
+      "created_at": 34
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-35",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z9 occurred"
+      ],
+      "raw": "hypothesis-35 is unlikely, and I am sure of that because observation Z9 occurred",
+      "created_at": 34
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-35",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z8 occurred"
+      ],
+      "raw": "hypothesis-35 is unlikely, and I am think of that because observation Z8 occurred",
+      "created_at": 34
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-35",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation X5 occurred"
+      ],
+      "raw": "hypothesis-35 looks correct to me; I am confident because observation X5 occurred",
+      "created_at": 34
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-36",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation X3 occurred"
+      ],
+      "raw": "hypothesis-36 looks correct to me; I am confident because observation X3 occurred",
+      "created_at": 35
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-36",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation Z3 occurred"
+      ],
+      "raw": "hypothesis-36 looks correct to me; I am confident because observation Z3 occurred",
+      "created_at": 35
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-36",
+      "asserts": true,
+      "confidence": 0.55,
+      "evidence": [
+        "observation Z3 occurred"
+      ],
+      "raw": "I suspect hypothesis-36 is more likely because observation Z3 occurred",
+      "created_at": 35
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-36",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y7 occurred"
+      ],
+      "raw": "hypothesis-36 is unlikely, and I am sure of that because observation Y7 occurred",
+      "created_at": 35
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-37",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X3 occurred"
+      ],
+      "raw": "I am likely that hypothesis-37 holds, because observation X3 occurred",
+      "created_at": 36
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-37",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation Z7 occurred"
+      ],
+      "raw": "hypothesis-37 looks correct to me; I am sure because observation Z7 occurred",
+      "created_at": 36
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-37",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z9 occurred"
+      ],
+      "raw": "hypothesis-37 is unlikely, and I am think of that because observation Z9 occurred",
+      "created_at": 36
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-37",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation Z7 occurred"
+      ],
+      "raw": "I am sure that hypothesis-37 holds, because observation Z7 occurred",
+      "created_at": 36
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-38",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation W7 occurred"
+      ],
+      "raw": "I would rule out hypothesis-38; I am likely because observation W7 occurred",
+      "created_at": 37
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-38",
+      "asserts": true,
+      "confidence": 0.9,
+      "evidence": [
+        "observation X3 occurred"
+      ],
+      "raw": "hypothesis-38 looks correct to me; I am sure because observation X3 occurred",
+      "created_at": 37
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-38",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z7 occurred"
+      ],
+      "raw": "hypothesis-38 looks correct to me; I am likely because observation Z7 occurred",
+      "created_at": 37
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-38",
+      "asserts": false,
+      "confidence": 0.9,
+      "evidence": [
+        "observation X3 occurred"
+      ],
+      "raw": "I would rule out hypothesis-38; I am sure because observation X3 occurred",
+      "created_at": 37
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-39",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation W7 occurred"
+      ],
+      "raw": "hypothesis-39 looks correct to me; I am likely because observation W7 occurred",
+      "created_at": 38
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-39",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Y2 occurred"
+      ],
+      "raw": "I am likely that hypothesis-39 holds, because observation Y2 occurred",
+      "created_at": 38
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-39",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z7 occurred"
+      ],
+      "raw": "hypothesis-39 is unlikely, and I am think of that because observation Z7 occurred",
+      "created_at": 38
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-39",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation W3 occurred"
+      ],
+      "raw": "hypothesis-39 looks correct to me; I am confident because observation W3 occurred",
+      "created_at": 38
+    },
+    {
+      "source": "AGENT-A",
+      "proposition": "hypothesis-40",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation Z1 occurred"
+      ],
+      "raw": "hypothesis-40 looks correct to me; I am likely because observation Z1 occurred",
+      "created_at": 39
+    },
+    {
+      "source": "AGENT-B",
+      "proposition": "hypothesis-40",
+      "asserts": true,
+      "confidence": 0.85,
+      "evidence": [
+        "observation X3 occurred"
+      ],
+      "raw": "I confident hypothesis-40 is more likely because observation X3 occurred",
+      "created_at": 39
+    },
+    {
+      "source": "AGENT-C",
+      "proposition": "hypothesis-40",
+      "asserts": true,
+      "confidence": 0.75,
+      "evidence": [
+        "observation X3 occurred"
+      ],
+      "raw": "I am likely that hypothesis-40 holds, because observation X3 occurred",
+      "created_at": 39
+    },
+    {
+      "source": "AGENT-D",
+      "proposition": "hypothesis-40",
+      "asserts": false,
+      "confidence": 0.75,
+      "evidence": [
+        "observation W9 occurred"
+      ],
+      "raw": "I would rule out hypothesis-40; I am likely because observation W9 occurred",
+      "created_at": 39
+    }
+  ],
+  "records": [
+    {
+      "source": "AGENT-A",
+      "resolved": 40,
+      "correct": 29,
+      "reliability": 0.7142857142857143,
+      "history": [
+        [
+          0,
+          true
+        ],
+        [
+          1,
+          true
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          4,
+          true
+        ],
+        [
+          5,
+          true
+        ],
+        [
+          6,
+          true
+        ],
+        [
+          7,
+          false
+        ],
+        [
+          8,
+          true
+        ],
+        [
+          9,
+          true
+        ],
+        [
+          10,
+          true
+        ],
+        [
+          11,
+          true
+        ],
+        [
+          12,
+          false
+        ],
+        [
+          13,
+          false
+        ],
+        [
+          14,
+          false
+        ],
+        [
+          15,
+          true
+        ],
+        [
+          16,
+          true
+        ],
+        [
+          17,
+          true
+        ],
+        [
+          18,
+          true
+        ],
+        [
+          19,
+          false
+        ],
+        [
+          20,
+          true
+        ],
+        [
+          21,
+          true
+        ],
+        [
+          22,
+          true
+        ],
+        [
+          23,
+          true
+        ],
+        [
+          24,
+          false
+        ],
+        [
+          25,
+          true
+        ],
+        [
+          26,
+          true
+        ],
+        [
+          27,
+          true
+        ],
+        [
+          28,
+          true
+        ],
+        [
+          29,
+          false
+        ],
+        [
+          30,
+          true
+        ],
+        [
+          31,
+          true
+        ],
+        [
+          32,
+          true
+        ],
+        [
+          33,
+          false
+        ],
+        [
+          34,
+          true
+        ],
+        [
+          35,
+          true
+        ],
+        [
+          36,
+          false
+        ],
+        [
+          37,
+          false
+        ],
+        [
+          38,
+          false
+        ],
+        [
+          39,
+          true
+        ]
+      ]
+    },
+    {
+      "source": "AGENT-B",
+      "resolved": 40,
+      "correct": 21,
+      "reliability": 0.5238095238095238,
+      "history": [
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          true
+        ],
+        [
+          2,
+          false
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          4,
+          true
+        ],
+        [
+          5,
+          true
+        ],
+        [
+          6,
+          true
+        ],
+        [
+          7,
+          false
+        ],
+        [
+          8,
+          false
+        ],
+        [
+          9,
+          true
+        ],
+        [
+          10,
+          true
+        ],
+        [
+          11,
+          true
+        ],
+        [
+          12,
+          true
+        ],
+        [
+          13,
+          false
+        ],
+        [
+          14,
+          false
+        ],
+        [
+          15,
+          false
+        ],
+        [
+          16,
+          false
+        ],
+        [
+          17,
+          true
+        ],
+        [
+          18,
+          true
+        ],
+        [
+          19,
+          false
+        ],
+        [
+          20,
+          true
+        ],
+        [
+          21,
+          true
+        ],
+        [
+          22,
+          false
+        ],
+        [
+          23,
+          true
+        ],
+        [
+          24,
+          false
+        ],
+        [
+          25,
+          false
+        ],
+        [
+          26,
+          true
+        ],
+        [
+          27,
+          false
+        ],
+        [
+          28,
+          true
+        ],
+        [
+          29,
+          false
+        ],
+        [
+          30,
+          false
+        ],
+        [
+          31,
+          true
+        ],
+        [
+          32,
+          true
+        ],
+        [
+          33,
+          false
+        ],
+        [
+          34,
+          true
+        ],
+        [
+          35,
+          true
+        ],
+        [
+          36,
+          false
+        ],
+        [
+          37,
+          true
+        ],
+        [
+          38,
+          false
+        ],
+        [
+          39,
+          true
+        ]
+      ]
+    },
+    {
+      "source": "AGENT-C",
+      "resolved": 40,
+      "correct": 38,
+      "reliability": 0.9285714285714286,
+      "history": [
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          true
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          4,
+          true
+        ],
+        [
+          5,
+          true
+        ],
+        [
+          6,
+          true
+        ],
+        [
+          7,
+          true
+        ],
+        [
+          8,
+          true
+        ],
+        [
+          9,
+          true
+        ],
+        [
+          10,
+          true
+        ],
+        [
+          11,
+          true
+        ],
+        [
+          12,
+          true
+        ],
+        [
+          13,
+          true
+        ],
+        [
+          14,
+          true
+        ],
+        [
+          15,
+          true
+        ],
+        [
+          16,
+          true
+        ],
+        [
+          17,
+          false
+        ],
+        [
+          18,
+          true
+        ],
+        [
+          19,
+          true
+        ],
+        [
+          20,
+          true
+        ],
+        [
+          21,
+          true
+        ],
+        [
+          22,
+          true
+        ],
+        [
+          23,
+          true
+        ],
+        [
+          24,
+          true
+        ],
+        [
+          25,
+          true
+        ],
+        [
+          26,
+          true
+        ],
+        [
+          27,
+          true
+        ],
+        [
+          28,
+          true
+        ],
+        [
+          29,
+          true
+        ],
+        [
+          30,
+          true
+        ],
+        [
+          31,
+          true
+        ],
+        [
+          32,
+          true
+        ],
+        [
+          33,
+          true
+        ],
+        [
+          34,
+          true
+        ],
+        [
+          35,
+          true
+        ],
+        [
+          36,
+          true
+        ],
+        [
+          37,
+          true
+        ],
+        [
+          38,
+          true
+        ],
+        [
+          39,
+          true
+        ]
+      ]
+    },
+    {
+      "source": "AGENT-D",
+      "resolved": 40,
+      "correct": 4,
+      "reliability": 0.11904761904761904,
+      "history": [
+        [
+          0,
+          false
+        ],
+        [
+          1,
+          false
+        ],
+        [
+          2,
+          true
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          4,
+          false
+        ],
+        [
+          5,
+          false
+        ],
+        [
+          6,
+          false
+        ],
+        [
+          7,
+          false
+        ],
+        [
+          8,
+          false
+        ],
+        [
+          9,
+          false
+        ],
+        [
+          10,
+          false
+        ],
+        [
+          11,
+          false
+        ],
+        [
+          12,
+          false
+        ],
+        [
+          13,
+          false
+        ],
+        [
+          14,
+          false
+        ],
+        [
+          15,
+          false
+        ],
+        [
+          16,
+          false
+        ],
+        [
+          17,
+          false
+        ],
+        [
+          18,
+          false
+        ],
+        [
+          19,
+          false
+        ],
+        [
+          20,
+          true
+        ],
+        [
+          21,
+          false
+        ],
+        [
+          22,
+          false
+        ],
+        [
+          23,
+          true
+        ],
+        [
+          24,
+          false
+        ],
+        [
+          25,
+          false
+        ],
+        [
+          26,
+          false
+        ],
+        [
+          27,
+          false
+        ],
+        [
+          28,
+          false
+        ],
+        [
+          29,
+          false
+        ],
+        [
+          30,
+          false
+        ],
+        [
+          31,
+          true
+        ],
+        [
+          32,
+          false
+        ],
+        [
+          33,
+          false
+        ],
+        [
+          34,
+          false
+        ],
+        [
+          35,
+          false
+        ],
+        [
+          36,
+          false
+        ],
+        [
+          37,
+          false
+        ],
+        [
+          38,
+          false
+        ],
+        [
+          39,
+          false
+        ]
+      ]
+    }
+  ],
+  "resolutions": [
+    {
+      "proposition": "hypothesis-1",
+      "was_true": false,
+      "tick": 0
+    },
+    {
+      "proposition": "hypothesis-2",
+      "was_true": false,
+      "tick": 1
+    },
+    {
+      "proposition": "hypothesis-3",
+      "was_true": true,
+      "tick": 2
+    },
+    {
+      "proposition": "hypothesis-4",
+      "was_true": false,
+      "tick": 3
+    },
+    {
+      "proposition": "hypothesis-5",
+      "was_true": false,
+      "tick": 4
+    },
+    {
+      "proposition": "hypothesis-6",
+      "was_true": false,
+      "tick": 5
+    },
+    {
+      "proposition": "hypothesis-7",
+      "was_true": true,
+      "tick": 6
+    },
+    {
+      "proposition": "hypothesis-8",
+      "was_true": true,
+      "tick": 7
+    },
+    {
+      "proposition": "hypothesis-9",
+      "was_true": false,
+      "tick": 8
+    },
+    {
+      "proposition": "hypothesis-10",
+      "was_true": false,
+      "tick": 9
+    },
+    {
+      "proposition": "hypothesis-11",
+      "was_true": true,
+      "tick": 10
+    },
+    {
+      "proposition": "hypothesis-12",
+      "was_true": true,
+      "tick": 11
+    },
+    {
+      "proposition": "hypothesis-13",
+      "was_true": true,
+      "tick": 12
+    },
+    {
+      "proposition": "hypothesis-14",
+      "was_true": true,
+      "tick": 13
+    },
+    {
+      "proposition": "hypothesis-15",
+      "was_true": false,
+      "tick": 14
+    },
+    {
+      "proposition": "hypothesis-16",
+      "was_true": false,
+      "tick": 15
+    },
+    {
+      "proposition": "hypothesis-17",
+      "was_true": false,
+      "tick": 16
+    },
+    {
+      "proposition": "hypothesis-18",
+      "was_true": true,
+      "tick": 17
+    },
+    {
+      "proposition": "hypothesis-19",
+      "was_true": false,
+      "tick": 18
+    },
+    {
+      "proposition": "hypothesis-20",
+      "was_true": false,
+      "tick": 19
+    },
+    {
+      "proposition": "hypothesis-21",
+      "was_true": true,
+      "tick": 20
+    },
+    {
+      "proposition": "hypothesis-22",
+      "was_true": false,
+      "tick": 21
+    },
+    {
+      "proposition": "hypothesis-23",
+      "was_true": false,
+      "tick": 22
+    },
+    {
+      "proposition": "hypothesis-24",
+      "was_true": false,
+      "tick": 23
+    },
+    {
+      "proposition": "hypothesis-25",
+      "was_true": true,
+      "tick": 24
+    },
+    {
+      "proposition": "hypothesis-26",
+      "was_true": false,
+      "tick": 25
+    },
+    {
+      "proposition": "hypothesis-27",
+      "was_true": false,
+      "tick": 26
+    },
+    {
+      "proposition": "hypothesis-28",
+      "was_true": true,
+      "tick": 27
+    },
+    {
+      "proposition": "hypothesis-29",
+      "was_true": false,
+      "tick": 28
+    },
+    {
+      "proposition": "hypothesis-30",
+      "was_true": false,
+      "tick": 29
+    },
+    {
+      "proposition": "hypothesis-31",
+      "was_true": true,
+      "tick": 30
+    },
+    {
+      "proposition": "hypothesis-32",
+      "was_true": true,
+      "tick": 31
+    },
+    {
+      "proposition": "hypothesis-33",
+      "was_true": true,
+      "tick": 32
+    },
+    {
+      "proposition": "hypothesis-34",
+      "was_true": true,
+      "tick": 33
+    },
+    {
+      "proposition": "hypothesis-35",
+      "was_true": false,
+      "tick": 34
+    },
+    {
+      "proposition": "hypothesis-36",
+      "was_true": true,
+      "tick": 35
+    },
+    {
+      "proposition": "hypothesis-37",
+      "was_true": false,
+      "tick": 36
+    },
+    {
+      "proposition": "hypothesis-38",
+      "was_true": true,
+      "tick": 37
+    },
+    {
+      "proposition": "hypothesis-39",
+      "was_true": false,
+      "tick": 38
+    },
+    {
+      "proposition": "hypothesis-40",
+      "was_true": true,
+      "tick": 39
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "predictions": [
+    {
+      "prediction_id": "PRED-7d09995073",
+      "proposition": "The next outcome will be OUTCOME_A.",
+      "predicted_probability": 0.8,
+      "prediction_time": 0,
+      "issued_at": "2026-08-10T22:42:37.118606+00:00",
+      "information_available_at_prediction_time": [],
+      "evidence_ids_used": [],
+      "belief_id": null,
+      "rationale": "",
+      "evaluation_status": "evaluated",
+      "actual_outcome": false,
+      "evaluation_time": 1,
+      "prediction_error": 0.8,
+      "evaluation": {
+        "evaluation_id": "EVAL-4fcc2f894c",
+        "actual_outcome": false,
+        "outcome_label": "OUTCOME_B",
+        "evaluation_time": 1,
+        "evaluated_at": "2026-08-10T22:42:37.118636+00:00",
+        "prediction_error": 0.8,
+        "brier_score": 0.6400000000000001,
+        "log_loss": 1.6094379124341005,
+        "correctly_anticipated": false
+      }
+    },
+    {
+      "prediction_id": "PRED-f61ffef99d",
+      "proposition": "The next outcome will be OUTCOME_A.",
+      "predicted_probability": 0.65,
+      "prediction_time": 1,
+      "issued_at": "2026-08-10T22:42:37.118668+00:00",
+      "information_available_at_prediction_time": [
+        "OBS-8e4dc006bd"
+      ],
+      "evidence_ids_used": [],
+      "belief_id": null,
+      "rationale": "",
+      "evaluation_status": "evaluated",
+      "actual_outcome": false,
+      "evaluation_time": 2,
+      "prediction_error": 0.65,
+      "evaluation": {
+        "evaluation_id": "EVAL-8ff9f56f53",
+        "actual_outcome": false,
+        "outcome_label": "OUTCOME_B",
+        "evaluation_time": 2,
+        "evaluated_at": "2026-08-10T22:42:37.118683+00:00",
+        "prediction_error": 0.65,
+        "brier_score": 0.42250000000000004,
+        "log_loss": 1.0498221244986778,
+        "correctly_anticipated": false
+      }
+    },
+    {
+      "prediction_id": "PRED-8f88a86d34",
+      "proposition": "The next outcome will be OUTCOME_A.",
+      "predicted_probability": 0.4,
+      "prediction_time": 2,
+      "issued_at": "2026-08-10T22:42:37.118707+00:00",
+      "information_available_at_prediction_time": [
+        "OBS-8e4dc006bd",
+        "OBS-79630eb7da"
+      ],
+      "evidence_ids_used": [],
+      "belief_id": null,
+      "rationale": "",
+      "evaluation_status": "pending",
+      "actual_outcome": null,
+      "evaluation_time": null,
+      "prediction_error": null,
+      "evaluation": null
+    }
+  ],
+  "experiences": [
+    {
+      "experience_id": "EXP-086e17c449",
+      "prediction_id": "PRED-7d09995073",
+      "proposition": "The next outcome will be OUTCOME_A.",
+      "prediction": 0.8,
+      "outcome": false,
+      "outcome_label": "OUTCOME_B",
+      "error": 0.8,
+      "evidence_available": [],
+      "timestamp": "2026-08-10T22:42:37.118655+00:00",
+      "tick": 1
+    },
+    {
+      "experience_id": "EXP-591042ffbb",
+      "prediction_id": "PRED-f61ffef99d",
+      "proposition": "The next outcome will be OUTCOME_A.",
+      "prediction": 0.65,
+      "outcome": false,
+      "outcome_label": "OUTCOME_B",
+      "error": 0.65,
+      "evidence_available": [
+        "OBS-8e4dc006bd"
+      ],
+      "timestamp": "2026-08-10T22:42:37.118694+00:00",
+      "tick": 2
+    }
+  ],
+  "observations": [
+    {
+      "id": "OBS-8e4dc006bd",
+      "content": "Trial 0 reported OUTCOME_B.",
+      "at": 0,
+      "payload": {
+        "outcome": false
+      },
+      "recorded_at": "2026-08-10T22:42:37.118620+00:00"
+    },
+    {
+      "id": "OBS-79630eb7da",
+      "content": "Trial 1 reported OUTCOME_B.",
+      "at": 1,
+      "payload": {
+        "outcome": false
+      },
+      "recorded_at": "2026-08-10T22:42:37.118677+00:00"
+    }
+  ]
+}
